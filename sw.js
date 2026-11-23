@@ -1,7 +1,7 @@
 // hk-guide sw_offline_template.js를 가져와 고친 것.
 // 오프라인 캐시: 앱 껍데기 + 지도 라이브러리·글꼴 + 시설 데이터(JSON). 지도 바탕 타일은 저장하지 않는다.
 // VERSION 은 배포할 때 build.mjs가 채운다 → 값이 바뀌면 새 캐시로 갈아탄다.
-const VERSION = "2026-11-24 00:06 KST";
+const VERSION = "2026-11-24 00:43 KST";
 const CACHE = "dongnecourt-" + VERSION;
 const DATA_CACHE = "dongnecourt-data";          // 데이터는 버전과 따로 (새 배포 전까지 마지막 데이터 유지)
 
@@ -16,12 +16,12 @@ const SHELL = [
   "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js",
-  "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap",
+  "https://cdn.jsdelivr.net/npm/wanted-sans@1.0.3/fonts/webfonts/variable/split/WantedSansVariable.min.css",
 ];
 const DATA_FILES = ["./data/all.json"];
 
-// 저장해 두는 곳: 우리 사이트 + 지도 라이브러리(cdnjs) + 구글 글꼴
-const SAVE = h => h === self.location.hostname || h === "cdnjs.cloudflare.com" || h === "fonts.googleapis.com" || h === "fonts.gstatic.com";
+// 저장해 두는 곳: 우리 사이트 + 지도 라이브러리(cdnjs) + 글꼴(원티드 산스, jsDelivr)
+const SAVE = h => h === self.location.hostname || h === "cdnjs.cloudflare.com" || h === "cdn.jsdelivr.net";
 
 self.addEventListener("install", e => {
   e.waitUntil((async () => {
