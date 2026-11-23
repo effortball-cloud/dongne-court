@@ -4,382 +4,447 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="동네코트: 서울 공공 체육시설 지도. 농구·야구·풋살·테니스·배드민턴 코트 위치, 예약 접수일, 이번 주말 날씨를 한 화면에.">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1217" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111513" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
 <link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="동네코트"><meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>동네코트 · 서울 공공 체육시설 지도</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/wanted-sans@1.0.3/fonts/webfonts/variable/split/WantedSansVariable.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
-<style>/* 동네코트 — 밝은 바탕 + 코발트 블루 1색 + 회색. ROOKIE B(어두운 초록)와 다른 별도 브랜드.
-   색·글자 크기·간격은 아래 토큰만 쓴다. 어두운 모드는 토큰만 바꾼다. 대비 4.5:1 이상(tests/test_ui_tokens.py). */
+<style>/* 동네코트 — 2026-11-23 디자인 개편 '코트 도면'
+   브랜드는 먹(잉크)과 콘크리트 바탕 두 색뿐이고, 색은 종목만 쓴다(실제 코트 바닥색: 농구공 주황·내야 흙·잔디·하드코트 파랑·체육관 보라·회색).
+   종목색은 '어떤 종목인가'라는 한 가지 뜻에만. 글꼴 원티드 산스 한 가지, 굵기·자간으로 위계.
+   색·글자 크기는 아래 토큰만 쓴다. 어두운 모드는 토큰만 바꾼다. 대비 4.5:1 이상(tests/test_ui_tokens.py). */
 :root{
   color-scheme:light;
-  /* 바탕 */
-  --bg:#f4f5f7; --card:#fff; --soft:#eef0f3; --veil:rgba(255,255,255,.96); --line:#e1e4e9; --line2:#c4cad3;
+  /* 바탕: 콘크리트 · 카드(시트·목록) · 눌린 칸 */
+  --bg:#eef0ec; --card:#fbfcfa; --soft:#e3e7e1; --veil:rgba(251,252,250,.93); --line:#d9ded7; --line2:#c3cac2;
   /* 글자 */
-  --tx:#14171c; --tx2:#434b59; --tx3:#5c6472;
-  /* 강조 1색: 채움(--ac) · 채움 위 글자(--on-ac) · 강조 글자(--ac-tx) · 옅은 바탕(--ac-bg) */
-  --ac:#1a5cff; --on-ac:#ffffff; --ac-tx:#0f44cc; --ac-bg:#e8eeff; --ac-line:#b3c6ff;
-  --warn:#8a4b00; --warn-bg:#fff4e5; --warn-line:#f5cf99;
-  --shade:rgba(16,24,40,.38);
-  /* 글자 크기 6단계 */
-  --fs-cap:12px; --fs-sm:13.5px; --fs-body:15px; --fs-lg:17px; --fs-xl:20px; --fs-2xl:24px;
-  /* 모양 */
-  --r-sm:8px; --r:12px; --r-lg:16px; --tap:44px;
-  --sh-1:0 1px 2px rgba(16,24,40,.08),0 1px 3px rgba(16,24,40,.06);
-  --sh-2:0 2px 6px rgba(16,24,40,.08),0 8px 24px rgba(16,24,40,.08);
-  --head-h:56px; --tab-h:60px; --notice-h:0px;
+  --tx:#141a17; --tx2:#4a544e; --tx3:#5d6761;
+  /* 주 버튼·선택 = 먹 한 가지 */
+  --ac:#141a17; --on-ac:#fbfcfa; --ac-tx:#141a17; --ac-bg:#dde3dc; --ac-line:#b6bfb7;
+  --warn:#8a4300; --warn-bg:#fbeedd; --warn-line:#ecc79a;
+  --rain:#24589a;
+  --shade:rgba(14,19,16,.42);
+  /* 종목색 (흰 선 아이콘과 3:1 이상) */
+  --sp-basketball:#c9522a; --sp-baseball:#8b5a34; --sp-soccer:#2e7a4c; --sp-tennis:#2b62a6; --sp-badminton:#73509a; --sp-etc:#5b6770;
+  /* 글자 */
+  --sans:"Wanted Sans Variable","Wanted Sans",-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --fs-cap:12.5px; --fs-sm:13.5px; --fs-body:15.5px; --fs-lg:17px; --fs-xl:22px; --fs-2xl:28px;
+  /* 모양: 떠 있는 것만 그림자 */
+  --tap:44px; --tab-h:62px; --notice-h:0px;
+  --sh-float:0 1px 0 rgba(255,255,255,.5) inset,0 10px 28px -12px rgba(14,19,16,.38),0 0 0 1px rgba(14,19,16,.06);
+  --sh-chip:0 1px 2px rgba(14,19,16,.10),0 0 0 1px rgba(14,19,16,.07);
 }
 @media (prefers-color-scheme:dark){
   :root{
     color-scheme:dark;
-    --bg:#0f1217; --card:#171b22; --soft:#20252e; --veil:rgba(23,27,34,.95); --line:#2a303a; --line2:#434b58;
-    --tx:#eef1f5; --tx2:#c3cad5; --tx3:#9ea7b4;
-    --ac:#2f62f0; --on-ac:#ffffff; --ac-tx:#93b2ff; --ac-bg:#17223f; --ac-line:#2e4682;
+    --bg:#111513; --card:#191e1b; --soft:#232a26; --veil:rgba(25,30,27,.93); --line:#2c3430; --line2:#3d4741;
+    --tx:#eef1ee; --tx2:#c2cbc5; --tx3:#a0aaa3;
+    --ac:#eef1ee; --on-ac:#111513; --ac-tx:#eef1ee; --ac-bg:#2c3530; --ac-line:#4a554f;
     --warn:#ffc37a; --warn-bg:#2d2114; --warn-line:#5c4220;
-    --shade:rgba(0,0,0,.55);
-    --sh-1:0 1px 2px rgba(0,0,0,.4); --sh-2:0 4px 20px rgba(0,0,0,.45);
+    --rain:#93b8ee;
+    --shade:rgba(0,0,0,.58);
+    --sp-basketball:#d9623a; --sp-baseball:#a06c44; --sp-soccer:#3a8c5c; --sp-tennis:#3f76bd; --sp-badminton:#8a68b2; --sp-etc:#6c7880;
+    --sh-float:0 10px 28px -10px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06);
+    --sh-chip:0 1px 2px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07);
   }
-  .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.92) contrast(.88) saturate(.7)}
-  #map{background:#1b1f26!important}
+  .leaflet-tile-pane{filter:invert(1) grayscale(1) brightness(.74) contrast(.9)!important}
+  #map{background:#1a1f1c!important}
 }
+.c-basketball{--c:var(--sp-basketball)} .c-baseball{--c:var(--sp-baseball)} .c-soccer{--c:var(--sp-soccer)}
+.c-tennis{--c:var(--sp-tennis)} .c-badminton{--c:var(--sp-badminton)} .c-etc{--c:var(--sp-etc)}
 
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);
-  font-family:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:var(--fs-body);line-height:1.5;
-  word-break:keep-all;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
-a{color:var(--ac-tx)}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+html{background:var(--bg)}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:var(--fs-body);line-height:1.55;letter-spacing:-.01em;
+  word-break:keep-all;overflow-wrap:anywhere;font-variant-numeric:lining-nums tabular-nums;-webkit-font-smoothing:antialiased}
+a{color:var(--tx);text-underline-offset:3px;text-decoration-thickness:1px}
+button{font:inherit;color:inherit;cursor:pointer;letter-spacing:inherit}
+h1,h2,h3,h4{text-wrap:balance}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:2px solid var(--ac);outline-offset:2px}
 .i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-4px}
 .i.s{width:16px;height:16px;vertical-align:-3px}
-.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-#app{max-width:820px;margin:0 auto;min-height:100%;position:relative;background:var(--bg)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
+#app{max-width:820px;margin:0 auto;min-height:100%;position:relative}
 
-/* 머리줄: 이름 · 한 줄 설명 · 주 행동 */
-header{position:sticky;top:0;z-index:1000;display:flex;align-items:center;gap:10px;padding:0 12px 0 16px;
-  height:calc(var(--head-h) + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);
-  background:var(--veil);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-.brand{display:flex;align-items:center;gap:9px;min-width:0;flex:1}
-.mark{width:26px;height:26px;border-radius:7px;background:var(--ac);position:relative;flex:none}
-.mark:before{content:"";position:absolute;inset:5px;border:2px solid #fff;border-radius:2px}
-.mark:after{content:"";position:absolute;left:50%;top:5px;bottom:5px;width:2px;margin-left:-1px;background:#fff}
-.bt{min-width:0;line-height:1.2}
-.logo{margin:0;font-weight:900;font-size:var(--fs-xl);letter-spacing:-.5px;color:var(--tx);white-space:nowrap}
-.tag{margin:1px 0 0;font-size:var(--fs-cap);font-weight:500;color:var(--tx3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cta{flex:none;display:inline-flex;align-items:center;gap:6px;height:var(--tap);padding:0 14px;border:0;border-radius:var(--r);
-  background:var(--ac);color:var(--on-ac);font-weight:800;font-size:var(--fs-sm);white-space:nowrap}
-.cta:active{filter:brightness(.92)}
-.notice{position:sticky;top:calc(var(--head-h) + env(safe-area-inset-top));z-index:999;min-height:32px;display:flex;align-items:center;gap:6px;
-  padding:6px 16px;font-size:var(--fs-cap);font-weight:700;background:var(--ac-bg);color:var(--ac-tx);border-bottom:1px solid var(--ac-line)}
-.notice.warn{background:var(--warn-bg);color:var(--warn);border-color:var(--warn-line)}
+/* 맨 위 알림 띠 (예시 화면·점검 중일 때만) */
+.notice{position:relative;z-index:1010;min-height:36px;display:flex;align-items:center;gap:6px;
+  padding:calc(6px + env(safe-area-inset-top)) 16px 6px;font-size:var(--fs-cap);font-weight:600;background:var(--soft);color:var(--tx)}
+.notice.warn{background:var(--warn-bg);color:var(--warn)}
 .notice[hidden]{display:none}
-body.has-notice{--notice-h:33px}
+body.has-notice{--notice-h:calc(36px + env(safe-area-inset-top))}
 
-/* 아래 탭 */
-nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:1200;display:flex;max-width:820px;margin:0 auto;
-  height:calc(var(--tab-h) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);
-  background:var(--veil);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
-nav.tabs button{flex:1;background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:2px;font-size:var(--fs-cap);color:var(--tx3);font-weight:700;min-width:0}
-nav.tabs button .i{width:22px;height:22px}
-nav.tabs button.on{color:var(--ac-tx)}
-nav.tabs button.on .i{stroke-width:2.2}
+/* 떠 있는 알약 탭바 */
+nav.tabs{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:1200;
+  width:calc(100% - 24px);max-width:440px;height:var(--tab-h);display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:5px;
+  border-radius:999px;background:var(--veil);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);box-shadow:var(--sh-float)}
+nav.tabs button{border:0;background:none;border-radius:999px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  font-size:11px;font-weight:600;color:var(--tx2);min-width:0;transition:background .2s,color .2s}
+nav.tabs button .i{width:21px;height:21px}
+nav.tabs button.on{color:var(--tx);background:var(--ac-bg)}
+nav.tabs button.on .i{stroke-width:2.1}
 
-main{padding-bottom:calc(var(--tab-h) + 24px + env(safe-area-inset-bottom))}
-section.page{display:none;padding:16px}
+main{padding-bottom:calc(var(--tab-h) + 40px + env(safe-area-inset-bottom))}
+section.page{display:none;padding:calc(22px + env(safe-area-inset-top)) 18px 16px}
+body.has-notice section.page{padding-top:22px}
 section.page.on{display:block}
 section#p-map{padding:0}
-.ph{margin:4px 0 12px}
-.ph h2{font-size:var(--fs-2xl);margin:0;letter-spacing:-.5px;line-height:1.3}
-.ph p{margin:4px 0 0;font-size:var(--fs-sm);color:var(--tx2)}
-h3{margin:20px 0 8px;font-size:var(--fs-lg);letter-spacing:-.3px}
-h3 .n{font-size:var(--fs-sm);color:var(--tx3);font-weight:700;margin-left:4px}
+.ph{margin:6px 0 18px}
+.ph h2{font-size:var(--fs-2xl);font-weight:600;letter-spacing:-.035em;line-height:1.2;margin:0}
+.ph p{margin:8px 0 0;font-size:14.5px;color:var(--tx2);line-height:1.55;max-width:34em}
+h3{margin:28px 0 10px;font-size:var(--fs-lg);font-weight:600;letter-spacing:-.02em}
+h3 .n{font-size:var(--fs-sm);color:var(--tx2);font-weight:500;margin-left:6px}
 .muted{color:var(--tx2)} .tiny{font-size:var(--fs-cap);color:var(--tx3)}
 
-/* 칩 · 두 칸 고르기 */
-.chips{display:flex;gap:6px;overflow-x:auto;padding:4px 0 6px;scrollbar-width:none}
+/* 칩 */
+.chips{display:flex;gap:6px;overflow-x:auto;padding:5px 0;scrollbar-width:none;align-items:center}
 .chips::-webkit-scrollbar{display:none}
-.chips.fade{-webkit-mask-image:linear-gradient(to right,#000 88%,transparent);mask-image:linear-gradient(to right,#000 88%,transparent);padding-right:28px}
-.chip{position:relative;flex:0 0 auto;border:1px solid var(--line2);background:var(--card);color:var(--tx2);border-radius:999px;
-  padding:0 14px;height:38px;font-size:var(--fs-sm);font-weight:700;white-space:nowrap;display:inline-flex;align-items:center;gap:5px}
-.chip:after{content:"";position:absolute;left:-1px;right:-1px;top:-4px;bottom:-4px}     /* 테두리 밖 3px씩 → 누르는 영역 44px */
-.chip.on{color:var(--on-ac);background:var(--ac);border-color:var(--ac)}
-.chip.cond.on{color:var(--ac-tx);background:var(--ac-bg);border-color:var(--ac)}
-.chip.cond.on:before{content:"✓";font-weight:900}
-.seg{display:flex;background:var(--soft);border-radius:var(--r);padding:3px;gap:3px;margin:4px 0 8px}
-.seg button{flex:1;white-space:nowrap;border:0;background:none;border-radius:9px;padding:0 8px;font-weight:800;color:var(--tx2);min-height:var(--tap);font-size:var(--fs-sm)}
-.seg button.on{background:var(--card);color:var(--ac-tx);box-shadow:var(--sh-1)}
+.chips.fade{-webkit-mask-image:linear-gradient(to right,#000 86%,transparent);mask-image:linear-gradient(to right,#000 86%,transparent);padding-right:28px}
+.chip{position:relative;flex:0 0 auto;border:0;background:var(--card);color:var(--tx);border-radius:999px;box-shadow:var(--sh-chip);
+  padding:0 13px;height:38px;font-size:14px;font-weight:550;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.chip:after{content:"";position:absolute;left:0;right:0;top:-3px;bottom:-3px}     /* 겉모습 38px + 위아래 3px → 누르는 영역 44px */
+.chip .sw{width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
+.chip .i{width:16px;height:16px}
+.chip.on{color:var(--on-ac);background:var(--ac);box-shadow:none}
+.chip.on .sw{box-shadow:0 0 0 1.5px var(--on-ac)}
+.chips .sep{flex:0 0 1px;align-self:stretch;margin:10px 3px;background:var(--line2)}
+.seg{display:flex;background:var(--soft);border-radius:999px;padding:3px;gap:3px;margin:4px 0 10px}
+.seg button{flex:1;white-space:nowrap;border:0;background:none;border-radius:999px;padding:0 10px;font-weight:600;color:var(--tx2);min-height:var(--tap);font-size:14.5px}
+.seg button.on{background:var(--card);color:var(--tx);box-shadow:var(--sh-chip)}
 
-/* 지도 */
-.map-wrap{position:relative;height:calc(100dvh - var(--head-h) - var(--notice-h) - var(--tab-h) - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
-#map{position:absolute;inset:0;background:#e9ecef}
-.map-top{position:absolute;top:8px;left:8px;right:8px;z-index:1010;display:flex;flex-direction:column;gap:2px;pointer-events:none}
+/* 구 고르기: 알약 모양 select */
+.gubox{position:relative;flex:0 0 auto}
+.gubox:after{content:"";position:absolute;right:15px;top:50%;width:7px;height:7px;margin-top:-6px;border-right:1.7px solid var(--tx2);border-bottom:1.7px solid var(--tx2);
+  transform:rotate(45deg);pointer-events:none}
+.gubox select{appearance:none;-webkit-appearance:none;height:var(--tap);padding:0 34px 0 15px;border-radius:999px;border:0;background:var(--card);color:var(--tx);
+  font-family:inherit;font-weight:600;box-shadow:var(--sh-chip);max-width:150px;text-overflow:ellipsis}
+.gubox.wide select{width:100%;max-width:none}
+
+/* ── 지도 ── */
+.map-wrap{position:relative;height:calc(100dvh - var(--notice-h))}
+#map{position:absolute;inset:0;background:#e6e9e4}
+.leaflet-tile-pane{filter:grayscale(1) contrast(.86) brightness(1.07)}
+.map-top{position:absolute;top:calc(10px + env(safe-area-inset-top));left:10px;right:10px;z-index:1010;display:flex;flex-direction:column;pointer-events:none}
+body.has-notice .map-top{top:10px}
 .map-top>*{pointer-events:auto}
-.tbar{display:flex;gap:6px;align-items:center;margin-bottom:2px}
-.map-top .chips{align-self:stretch}
-.map-top .chip{box-shadow:var(--sh-1)}
-.map-top .chip:not(.on){background:var(--veil)}
-select.gu{flex:1 1 auto;min-width:0;max-width:170px;height:var(--tap);padding:0 10px;border-radius:var(--r);border:1px solid var(--line2);background:var(--card);
-  font-weight:800;color:var(--tx);box-shadow:var(--sh-1)}
-.fab{flex:0 0 auto;height:var(--tap);min-width:var(--tap);border:1px solid var(--line2);background:var(--card);border-radius:var(--r);padding:0 12px;
-  font-weight:800;font-size:var(--fs-sm);color:var(--tx);box-shadow:var(--sh-1);white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:5px}
-.fab.ic{padding:0}
-.fab.on{border-color:var(--ac);color:var(--ac-tx);background:var(--ac-bg)}
-.fab.add{color:var(--ac-tx)}
-.map-top .sum{align-self:flex-start;max-width:100%;background:var(--veil);border-radius:var(--r-sm);padding:4px 10px;font-size:var(--fs-cap);color:var(--tx2);
-  box-shadow:var(--sh-1)}
-.map-top .sum b{color:var(--tx);font-size:var(--fs-sm)}
-.map-top .sum .linkbtn{min-height:0;padding:0 2px}
-.map-top .sum .wn{display:block;color:var(--ac-tx);font-weight:700}
-.chip.when:not(.on){color:var(--ac-tx);border-color:var(--ac-line)}
+.tbar{display:flex;gap:8px;align-items:center;margin-bottom:3px}
+.sbox{flex:1 1 auto;min-width:0;display:flex;align-items:center;height:48px;padding:0 4px 0 12px;border-radius:999px;background:var(--card);box-shadow:var(--sh-float)}
+.sbox input{flex:1;min-width:0;height:100%;border:0;background:none;color:var(--tx);font-family:inherit;font-weight:500;padding:0 6px 0 10px;outline-offset:-2px}
+.sbox input::-webkit-search-cancel-button{display:none}
+.sbtn{flex:none;width:var(--tap);height:var(--tap);border:0;background:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--tx)}
+.sbtn.on{background:var(--soft)}
+.map-top .gubox select{height:48px;box-shadow:var(--sh-float)}
+/* 브랜드 표식: 위에서 본 코트(가운데 줄 + 가운데 원) */
+.mark{position:relative;flex:none;width:24px;height:24px;border-radius:7px;background:var(--tx)}
+.mark:before{content:"";position:absolute;left:50%;top:4px;bottom:4px;width:1.6px;margin-left:-.8px;background:var(--bg)}
+.mark:after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border:1.6px solid var(--bg);border-radius:50%;box-sizing:border-box;background:var(--tx)}
+.mapbtn{position:absolute;right:12px;bottom:calc(var(--dh,220px) + 12px);z-index:1004;width:46px;height:46px;border:0;border-radius:50%;background:var(--card);color:var(--tx);
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-float)}
+.mapbtn.on{color:#2f6fed}
 .leaflet-container{font-family:inherit}
-.leaflet-control-attribution{font-size:10px;background:var(--veil)!important;color:var(--tx3)!important}
+.leaflet-control-attribution{font-size:10px;background:var(--veil)!important;color:var(--tx2)!important;border-radius:6px 0 0 0}
 .leaflet-control-attribution a{color:var(--tx2)!important}
 .leaflet-touch .leaflet-bar a,.leaflet-bar a{width:var(--tap);height:var(--tap);line-height:var(--tap);font-size:20px;background:var(--card);color:var(--tx);border-color:var(--line)}
-.leaflet-bar{border:1px solid var(--line2)!important;box-shadow:var(--sh-1)!important}
-.leaflet-bottom.leaflet-right{margin-bottom:4px}
+.leaflet-bar{border:0!important;box-shadow:var(--sh-float)!important;border-radius:14px!important;overflow:hidden}
+@media (pointer:coarse){ .leaflet-control-zoom{display:none} }
 
-/* 날씨 줄 (지도 아래) · 카드 안 날씨 */
-.wxbar{position:absolute;left:8px;bottom:12px;right:64px;max-width:420px;z-index:1000;background:var(--veil);border:1px solid var(--line);border-radius:var(--r);
-  padding:8px 12px;font-size:var(--fs-sm);color:var(--tx2);box-shadow:var(--sh-2);line-height:1.45}
-.wxh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:2px}
-.wxh b{color:var(--tx);font-size:var(--fs-sm)}
-.wxh span{font-size:var(--fs-cap);color:var(--tx3);text-align:right}
-.wxd{display:grid;grid-template-columns:22px 24px 1fr auto;align-items:center;gap:0 4px;min-height:24px}
-.wxd .d{font-weight:800;color:var(--tx)}
-.wxd .w{min-width:0}
-.wxd .w b{color:var(--tx)}
-.wxd .w.rain b{color:var(--ac-tx)}
-.wxd .t{font-weight:700;color:var(--tx);white-space:nowrap}
-.wxd .t .lo{color:var(--tx3);font-weight:500}
-.wxa{font-size:var(--fs-cap);color:var(--tx3);margin-top:2px}
+/* 아래 서랍: 몇 곳인지 한 문장 + 내 주변·목록 + 날씨 한 줄. 목록을 열면 위로 펼쳐진다 */
+.drawer{position:absolute;left:0;right:0;bottom:0;z-index:1005;display:flex;flex-direction:column;background:var(--card);border-radius:22px 22px 0 0;
+  box-shadow:0 -10px 30px -14px rgba(14,19,16,.35),0 0 0 1px rgba(14,19,16,.05);padding:6px 16px calc(var(--tab-h) + 22px + env(safe-area-inset-bottom))}
+.dgrab{width:36px;height:4px;border-radius:4px;background:var(--line2);margin:0 auto 8px;flex:none}
+.dhead{position:relative;flex:none;min-height:46px}
+.dbtns{position:absolute;top:0;right:0;display:flex;gap:6px}
+.pbtn{height:var(--tap);display:inline-flex;align-items:center;gap:6px;padding:0 15px;border:0;border-radius:999px;background:var(--soft);color:var(--tx);font-weight:600;font-size:14.5px;white-space:nowrap}
+.pbtn.p{background:var(--ac);color:var(--on-ac)}
+.pbtn .i{width:18px;height:18px}
+.sum{font-size:15px;color:var(--tx);line-height:1.4}
+.sum b{display:block;font-size:28px;font-weight:600;letter-spacing:-.04em;line-height:44px;height:44px}
+.sum b small{font-size:17px;font-weight:550;letter-spacing:-.02em;margin-left:2px}
+.sum .cap{display:block;font-weight:500;margin-top:2px}
+.sum .ex{display:block;font-size:var(--fs-sm);color:var(--tx2);margin-top:2px}
+.sum .wn{display:block;font-size:var(--fs-sm);color:var(--tx2);margin-top:2px}
+.sum .linkbtn{padding:0;min-height:var(--tap)}
+.wxstrip{flex:none;display:flex;align-items:center;gap:6px 16px;flex-wrap:wrap;margin-top:12px;padding-top:11px;border-top:1px solid var(--line);font-size:var(--fs-sm);color:var(--tx2)}
+.wxstrip[hidden]{display:none}
+.wxstrip .wl{font-weight:600;color:var(--tx)}
+.wxstrip .wdy{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.wxstrip .wdy b{color:var(--tx);font-weight:600}
+.wxstrip .wdy .i{width:18px;height:18px}
+.wxstrip .rain,.rain{color:var(--rain);font-weight:600}
+.maplist{flex:1;min-height:0;overflow:auto;margin:10px -16px 0;padding:0 16px 8px;border-top:1px solid var(--line);overscroll-behavior:contain}
+.map-wrap.listing .drawer{border-radius:22px 22px 0 0}
+.map-wrap.listing .mapbtn{display:none}
+.lhead{font-size:var(--fs-cap);color:var(--tx2);margin:12px 0 2px}
 
-/* 핀 */
-.pin{position:relative;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;
-  background:#fff;border:2px solid #8f98a6;box-shadow:0 1px 4px rgba(16,24,40,.3)}
-.pin.free{border-color:var(--ac);border-width:3px}
-.pin.mine{border-style:dashed;border-color:#434b59}
-.pin.sel{transform:scale(1.25);box-shadow:0 0 0 4px rgba(26,92,255,.3),0 2px 8px rgba(16,24,40,.3);z-index:2}
-.pin .dot{position:absolute;top:-2px;right:-2px;width:11px;height:11px;border-radius:50%;background:var(--ac);border:2px solid #fff}
-.pin .ok{position:absolute;bottom:-4px;right:-6px;font-size:9px;font-weight:900;line-height:13px;padding:0 3px;border-radius:7px;background:#14171c;color:#fff}
-.pin.fav:after{content:"♥";position:absolute;top:-8px;left:-6px;font-size:12px;color:var(--ac)}
-.cl{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;color:#fff;
-  background:var(--ac);border:3px solid rgba(255,255,255,.9);box-shadow:0 1px 5px rgba(16,24,40,.35)}
-.me{width:16px;height:16px;border-radius:50%;background:#1a5cff;border:3px solid #fff;box-shadow:0 0 0 4px rgba(26,92,255,.25)}
-
-/* 목록 */
-.maplist{position:absolute;left:0;right:0;bottom:0;top:180px;z-index:1005;overflow:auto;background:var(--bg);padding:8px 12px 24px;border-top:1px solid var(--line)}
-.lhead{font-size:var(--fs-cap);color:var(--tx3);margin:2px 2px 8px}
-.lhead b{color:var(--tx);font-size:var(--fs-sm)}
-.row{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px 12px;margin-bottom:8px;cursor:pointer;min-height:64px}
+/* 목록 한 줄: 종목 타일 + 이름 + 한 줄 정보 */
+.row{display:flex;gap:13px;align-items:center;padding:12px 2px;border-bottom:1px solid var(--line);cursor:pointer;min-height:70px}
+.row:last-child{border-bottom:0}
 .row:active{background:var(--soft)}
-.ric{width:40px;height:40px;flex:0 0 40px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--line2);font-size:18px;background:var(--card)}
-.ric.free{border:3px solid var(--ac)}
+.ric{width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--c);color:#fff}
+.ric .i{width:23px;height:23px;stroke-width:1.7}
+.ric.free{border-radius:50%}
+.ric.mine{background:var(--card);color:var(--tx);border:1.6px dashed var(--tx2)}
 .rmain{flex:1;min-width:0}
-.rnm{font-weight:800;font-size:var(--fs-body);line-height:1.35}
-.rmeta{font-size:var(--fs-sm);color:var(--tx2);margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.rmeta .rain{color:var(--ac-tx);font-weight:700}
-.rnext{font-size:var(--fs-sm);margin-top:4px;color:var(--tx2)}
-.rdist{flex:0 0 auto;font-size:var(--fs-cap);color:var(--tx3);font-weight:700}
+.rnm{font-weight:600;font-size:16px;line-height:1.35;letter-spacing:-.02em}
+.rmeta{font-size:var(--fs-sm);color:var(--tx2);margin-top:2px;display:flex;flex-wrap:wrap;gap:0 10px}
+.rnext{font-size:var(--fs-sm);margin-top:4px;color:var(--tx);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.rdist{flex:0 0 auto;font-size:var(--fs-cap);color:var(--tx2);font-weight:600}
+.cur{display:inline-flex;align-items:center;gap:2px;color:var(--tx);font-weight:600}
+.cur .i{width:15px;height:15px;stroke-width:2.2}
 
-/* 아래에서 올라오는 시트 */
-.backdrop{position:fixed;inset:0;z-index:1090;background:var(--shade);opacity:0;pointer-events:none;transition:opacity .2s}
+/* 핀: 종목색 네모(예약) · 동그라미(무료) */
+.pin{position:relative;width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+  background:var(--c);color:#fff;border:2px solid #fff;box-shadow:0 2px 6px rgba(14,19,16,.32)}
+.pin .i{width:17px;height:17px;stroke-width:2}
+.pin.free{border-radius:50%}
+.pin.mine{background:#fff;color:#141a17;border:2px dashed #141a17}
+.pin.sel{transform:scale(1.22);box-shadow:0 0 0 4px rgba(20,26,23,.28),0 3px 10px rgba(14,19,16,.35);z-index:2}
+.pin .dot{position:absolute;top:-4px;right:-4px;width:11px;height:11px;border-radius:50%;background:#141a17;border:2px solid #fff}
+.pin .ok{position:absolute;bottom:-5px;right:-6px;width:15px;height:15px;border-radius:50%;background:#fff;color:#141a17;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.pin .ok .i{width:11px;height:11px;stroke-width:3}
+
+.cl{width:40px;height:40px;border-radius:50%;padding:4px;box-shadow:0 2px 7px rgba(14,19,16,.3)}
+.cl b{display:flex;width:100%;height:100%;border-radius:50%;align-items:center;justify-content:center;background:#141a17;color:#fff;font-weight:650;font-size:13px;
+  box-shadow:0 0 0 1.5px rgba(255,255,255,.9)}
+.me{width:16px;height:16px;border-radius:50%;background:#2f6fed;border:3px solid #fff;box-shadow:0 0 0 5px rgba(47,111,237,.22)}
+
+/* ── 아래에서 올라오는 시트 ── */
+.backdrop{position:fixed;inset:0;z-index:1250;background:var(--shade);opacity:0;pointer-events:none;transition:opacity .2s}
 .backdrop.on{opacity:1;pointer-events:auto}
-.sheet{position:fixed;left:0;right:0;bottom:calc(var(--tab-h) + env(safe-area-inset-bottom));z-index:1100;max-width:820px;margin:0 auto;max-height:72dvh;overflow:auto;
-  background:var(--bg);border-radius:var(--r-lg) var(--r-lg) 0 0;box-shadow:0 -10px 30px rgba(16,24,40,.2);
-  transform:translateY(calc(100% + 90px));transition:transform .22s ease;padding:0 12px 16px;overscroll-behavior:contain}
-.sheet.on{transform:none}
-.sbar{position:sticky;top:0;z-index:3;height:48px;display:flex;align-items:center;justify-content:flex-end;background:var(--bg);margin:0 -12px;padding:0 6px}
-.sbar .grab{position:absolute;left:50%;top:8px;width:40px;height:5px;margin-left:-20px;border-radius:9px;background:var(--line2)}
-.sbar .x{width:var(--tap);height:var(--tap);border:0;background:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--tx2)}
-.sbar .x .i{width:22px;height:22px}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:1300;max-width:820px;margin:0 auto;max-height:88dvh;overflow:auto;
+  background:var(--card);border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(14,19,16,.22);
+  transform:translateY(calc(100% + 40px));visibility:hidden;transition:transform .24s cubic-bezier(.2,.8,.2,1),visibility 0s .24s;padding:0 0 calc(16px + env(safe-area-inset-bottom));overscroll-behavior:contain}
+.sheet.on{transform:none;visibility:visible;transition:transform .24s cubic-bezier(.2,.8,.2,1)}
+.sbar{position:sticky;top:0;z-index:5;height:0}
+.sbar .grab{position:absolute;left:50%;top:8px;width:36px;height:4px;margin-left:-18px;border-radius:4px;background:rgba(128,136,130,.55)}
+.sbar .x{position:absolute;right:10px;top:10px;width:var(--tap);height:var(--tap);border:0;background:var(--veil);border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:var(--tx);box-shadow:var(--sh-chip)}
+.sbar .x .i{width:20px;height:20px}
 
-/* 시설 카드 */
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 16px;margin:0 0 12px}
-.card .top{display:flex;gap:10px;align-items:flex-start}
-.card .ic{font-size:26px;line-height:1.15;flex:none}
-.card .nm{font-weight:900;font-size:var(--fs-lg);line-height:1.35;letter-spacing:-.3px;min-width:0;flex:1}
-.card .nm small{display:block;font-weight:500;font-size:var(--fs-sm);color:var(--tx3);margin-top:2px;letter-spacing:0}
-.heart{margin:-8px -8px 0 0;border:0;background:none;min-width:var(--tap);min-height:var(--tap);display:flex;align-items:center;justify-content:center;
-  color:var(--tx3);flex:0 0 auto}
-.heart .i{width:24px;height:24px}
-.ibtn{margin:-8px -6px 0 0;border:0;background:none;min-width:var(--tap);min-height:var(--tap);display:flex;align-items:center;justify-content:center;
-  color:var(--tx3);flex:0 0 auto}
-.ibtn .i{width:22px;height:22px}
-.heart.on{color:var(--ac)}
+/* 시설 카드: 맨 위에 그 종목 코트 도면 */
+.card{padding:0 20px 6px}
+.card.form,.card.sub{padding-top:26px}
+.card.form .nm,.card.sub .nm{margin-right:48px}
+.plate{position:relative;margin:0 -20px 18px;height:124px;background:var(--c);overflow:hidden}
+.plate svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:rgba(255,255,255,.82);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.plate svg .net{stroke-width:3.2;stroke:rgba(255,255,255,.95)}
+.plate .spn{position:absolute;left:20px;bottom:12px;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;gap:6px}
+.plate .spn .i{width:18px;height:18px}
+.plate.mine{background:var(--soft)}
+.plate.mine svg{stroke:var(--line2)}
+.plate.mine .spn{color:var(--tx)}
+.card .nm{font-weight:600;font-size:var(--fs-xl);line-height:1.28;letter-spacing:-.035em;margin:0}
+.card .loc{margin:5px 0 0;font-size:14px;color:var(--tx2)}
+.tags{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:10px 0 0;font-size:var(--fs-sm);color:var(--tx2);font-weight:500}
+.tags .ex{color:var(--warn);font-weight:600}
+.acts{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px;margin:18px 0 2px}
+.act{min-height:62px;border:0;border-radius:16px;background:var(--soft);color:var(--tx);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  font-size:12.5px;font-weight:600;text-decoration:none;padding:6px 1px;text-align:center;line-height:1.2;min-width:0}
+.act .i{width:22px;height:22px}
+.act:active{filter:brightness(.95)}
 .heart.on .i{fill:currentColor}
-.badges{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
-.b{font-size:var(--fs-cap);font-weight:800;border-radius:6px;padding:2px 8px;border:1px solid var(--line2);color:var(--tx2);background:var(--card);white-space:nowrap}
-.b.ac{color:var(--on-ac);background:var(--ac);border-color:var(--ac)}
-.b.acl{color:var(--ac-tx);background:var(--ac-bg);border-color:var(--ac-line)}
-.b.gray{color:var(--tx3);background:var(--soft);border-color:var(--line)}
-.b.ex{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-line)}
-.kv{display:grid;grid-template-columns:68px 1fr;gap:6px 12px;font-size:var(--fs-sm);margin:12px 0 0}
-.kv dt{color:var(--tx3);font-weight:700}
+.sec{border-top:1px solid var(--line);padding:16px 0 2px;margin-top:18px}
+.sec h4{margin:0 0 8px;font-size:16px;font-weight:600;letter-spacing:-.02em;display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sec h4 small{font-size:var(--fs-cap);color:var(--tx2);font-weight:500;letter-spacing:0}
+.facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.kv{display:grid;grid-template-columns:72px 1fr;gap:8px 14px;font-size:14px;margin:0}
+.kv dt{color:var(--tx2);font-weight:500}
 .kv dd{margin:0;min-width:0}
 .kv a{display:inline-block;min-height:24px}
-.box{border-radius:var(--r);padding:12px;margin-top:12px;background:var(--soft);font-size:var(--fs-sm)}
-.box.line{background:var(--card);border:1px solid var(--line)}
-.box.ac{background:var(--ac-bg)}
-.box h4{margin:0 0 6px;font-size:var(--fs-sm);color:var(--tx);display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
-.box h4 .tiny{font-weight:500}
-.box .wxd{min-height:28px}
-.facts{display:flex;flex-wrap:wrap;gap:6px}
-.facts span{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:3px 8px;font-size:var(--fs-cap);font-weight:700}
-.svc{border-top:1px solid var(--line);padding:10px 0 4px}
-.svc:first-of-type{border-top:0;padding-top:4px}
-.svc .sn{font-weight:800;font-size:var(--fs-sm);line-height:1.4}
-.svc .sm{font-size:var(--fs-cap);color:var(--tx2);margin-top:2px}
-.st{display:inline-block;font-size:var(--fs-cap);font-weight:900;border-radius:999px;padding:1px 8px;margin-right:6px;vertical-align:1px;white-space:nowrap;line-height:1.5}
+.svc{border-top:1px solid var(--line);padding:12px 0 6px}
+.svc:first-of-type{border-top:0;padding-top:2px}
+.svc .sn{font-weight:600;font-size:15px;line-height:1.4;display:flex;align-items:baseline;gap:8px}
+.svc .sm{font-size:var(--fs-sm);color:var(--tx2);margin-top:3px}
+.svc .sm b{color:var(--tx);font-weight:600}
+.st{display:inline-flex;align-items:center;flex:none;font-size:12px;font-weight:650;border-radius:999px;padding:0 8px;height:22px;white-space:nowrap;letter-spacing:0}
 .st.open{background:var(--ac);color:var(--on-ac)}
-.st.soon{background:var(--card);color:var(--ac-tx);border:1.5px solid var(--ac)}
-.st.full,.st.closed,.st.paused{background:var(--soft);color:var(--tx3)}
-.st.info{background:var(--card);color:var(--tx3);border:1px solid var(--line2)}
+.st.soon{color:var(--tx);box-shadow:inset 0 0 0 1.3px var(--tx)}
+.st.full,.st.closed,.st.paused,.st.info{background:var(--soft);color:var(--tx2)}
 .btns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.btn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;text-decoration:none;font-weight:800;font-size:var(--fs-sm);
-  border-radius:var(--r);padding:0 14px;min-height:var(--tap);border:1px solid var(--line2);background:var(--card);color:var(--tx);min-width:0}
-.btn.p{background:var(--ac);border-color:var(--ac);color:var(--on-ac)}
-.btn.sm{flex:0 0 auto;padding:0 12px}
-.btn[disabled]{opacity:.5;cursor:default}
+.btn{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;text-decoration:none;font-weight:600;font-size:14.5px;
+  border-radius:999px;padding:0 16px;min-height:var(--tap);border:0;background:var(--soft);color:var(--tx);min-width:0}
+.btn.p{background:var(--ac);color:var(--on-ac)}
+.btn.sm{flex:0 0 auto;padding:0 14px;font-size:14px}
+.btn .i{width:18px;height:18px}
+.btn[disabled]{opacity:.45;cursor:default}
 .btn:active:not([disabled]){filter:brightness(.95)}
-details.more>summary{cursor:pointer;font-weight:800;font-size:var(--fs-sm);color:var(--ac-tx);min-height:var(--tap);display:flex;align-items:center;list-style:none}
+details.more>summary{cursor:pointer;font-weight:600;font-size:14px;min-height:var(--tap);display:flex;align-items:center;list-style:none;text-decoration:underline;text-underline-offset:3px}
 details.more>summary::-webkit-details-marker{display:none}
-.warnline{color:var(--warn);font-size:var(--fs-cap);font-weight:800;margin:6px 0 0}
-.src{font-size:var(--fs-cap);color:var(--tx3);margin:12px 0 0}
+.warnline{color:var(--warn);font-size:var(--fs-sm);font-weight:600;margin:8px 0 0}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:18px;padding-top:4px}
+.foot .src{font-size:var(--fs-cap);color:var(--tx3);margin:0}
+.wxd{display:grid;grid-template-columns:24px 22px 1fr auto;align-items:center;gap:0 8px;min-height:32px;font-size:14px}
+.wxd .d{font-weight:600}
+.wxd .i{width:20px;height:20px}
+.wxd .w{min-width:0;color:var(--tx2)}
+.wxd .t{font-weight:600;white-space:nowrap}
+.wxd .t .lo{color:var(--tx2);font-weight:500}
+.wxa{font-size:var(--fs-sm);color:var(--tx2);margin-top:6px}
 
-/* 접수 달력 */
-.toolbar{display:flex;flex-direction:column;gap:4px;margin:4px 0 8px}
-.field{display:flex;align-items:center;gap:10px}
-.field label{font-size:var(--fs-sm);font-weight:800;color:var(--tx2);flex:none}
-.toolbar select,.mform select{width:100%;height:var(--tap);padding:0 10px;border-radius:var(--r);border:1px solid var(--line2);background:var(--card);color:var(--tx)}
-.count{font-size:var(--fs-cap);color:var(--tx3);margin:6px 0 4px}
-.count b{color:var(--tx);font-size:var(--fs-sm)}
-h3.wk{margin:22px 0 2px;font-size:var(--fs-lg);color:var(--tx)}
-h3.wk:first-child{margin-top:8px}
-h4.day{margin:12px 0 6px;font-size:var(--fs-sm);color:var(--ac-tx);display:flex;gap:6px;align-items:baseline}
-h4.day small{color:var(--tx3);font-weight:700;font-size:var(--fs-cap)}
-.crow{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin-bottom:8px}
-.crow .t{font-weight:900;font-size:var(--fs-sm);color:var(--ac-tx)}
-.crow .t.end{color:var(--tx)}
-.crow .f{font-weight:800;font-size:var(--fs-body);line-height:1.35;margin-top:2px}
-.crow .s{font-size:var(--fs-cap);color:var(--tx2);margin-top:2px}
-.crow .btns{margin-top:10px}
-.allbox{margin-top:16px}
-.subrow{margin:2px 0 4px}
+/* ── 접수 달력: 왼쪽 날짜 칸 + 오른쪽 그날 접수 ── */
+.toolbar{display:flex;flex-direction:column;gap:6px;margin:2px 0 4px}
+.subrow{margin:8px 0 4px}
 .subrow .btn{flex:1 1 0}
-/* 구독 안내 · 제보 시트 */
-.card p.lead{margin:6px 0 0;font-size:var(--fs-sm);line-height:1.55}
+.count{font-size:var(--fs-sm);color:var(--tx2);margin:18px 0 0}
+.count b{color:var(--tx);font-weight:600}
+h3.wk{margin:26px 0 0;font-size:15px;color:var(--tx2);font-weight:600;letter-spacing:-.01em}
+.dgrp{display:grid;grid-template-columns:50px 1fr;gap:14px;padding:14px 0 4px;border-top:1px solid var(--line);margin-top:10px}
+h3.wk+.dgrp{border-top:0;margin-top:4px}
+.dcol{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15;padding-top:2px}
+.dcol b{font-size:27px;font-weight:600;letter-spacing:-.04em}
+.dcol span{font-size:var(--fs-sm);color:var(--tx2);margin-top:3px}
+.dcol em{font-style:normal;font-size:12px;font-weight:650;margin-top:6px;padding:1px 7px;border-radius:999px;background:var(--ac);color:var(--on-ac)}
+.dcol em.later{background:none;color:var(--tx2);padding:0;font-weight:600}
+.crow{padding:0 0 14px;margin-bottom:14px;border-bottom:1px solid var(--line);cursor:pointer}
+.drows .crow:last-child{border-bottom:0;margin-bottom:0}
+#calList>.crow{padding-top:14px;margin:0}
+.crow .t{font-weight:600;font-size:var(--fs-sm);color:var(--tx2)}
+.crow .t b{color:var(--tx);font-weight:650}
+.crow .f{font-weight:600;font-size:16px;line-height:1.35;margin-top:2px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.crow .f .sw{width:10px;height:10px;border-radius:3px;background:var(--c);flex:none}
+.crow .s{font-size:var(--fs-sm);color:var(--tx2);margin-top:2px}
+.crow .btns{margin-top:10px}
+.allbox{margin-top:22px}
+.allbox .btn{width:100%}
+
+/* 구독 안내 · 제보 · 내 코트 시트 */
+.card p.lead{margin:8px 0 0;font-size:14.5px;line-height:1.6}
 .btns.col{flex-direction:column}
 .btns.col .btn{width:100%}
-ol.steps{padding-left:20px;margin:12px 0 0;font-size:var(--fs-sm);color:var(--tx2)}
-ol.steps li{margin:4px 0}
-fieldset.kinds{border:0;padding:0;margin:12px 0 0;min-width:0}
-fieldset.kinds legend{font-size:var(--fs-sm);font-weight:800;color:var(--tx2);padding:0;margin-bottom:2px}
+ol.steps{padding-left:20px;margin:16px 0 0;font-size:var(--fs-sm);color:var(--tx2)}
+ol.steps li{margin:6px 0}
+fieldset.kinds{border:0;padding:0;margin:14px 0 0;min-width:0}
+fieldset.kinds legend{font-size:var(--fs-sm);font-weight:600;color:var(--tx2);padding:0;margin-bottom:2px}
 .mform fieldset.kinds label.chk{margin:0;border-top:1px solid var(--line)}
 .mform fieldset.kinds label.chk:first-of-type{border-top:0}
-.favacts{margin:0 0 10px}
+.favacts{margin:0 0 6px}
 
-/* 정보 */
-details.acc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);margin-bottom:10px}
-details.acc>summary{padding:0 16px;min-height:52px;display:flex;align-items:center;justify-content:space-between;font-weight:800;cursor:pointer;list-style:none}
+/* 내 장소 · 정보: 흰 묶음 */
+.group{background:var(--card);border-radius:18px;padding:2px 14px}
+.group .row:last-child{border-bottom:0}
+.group.pad{padding:16px}
+.group.pad p{margin:0}
+.intro{font-size:15px;line-height:1.65;margin:0 0 6px}
+.numline{font-size:var(--fs-sm);color:var(--tx2);margin:6px 0 20px}
+.numline b{color:var(--tx);font-weight:600}
+details.acc{border-top:1px solid var(--line)}
+details.acc:last-of-type{border-bottom:1px solid var(--line)}
+details.acc>summary{min-height:58px;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:16px;letter-spacing:-.02em;cursor:pointer;list-style:none}
 details.acc>summary::-webkit-details-marker{display:none}
-details.acc>summary:after{content:"";width:8px;height:8px;border-right:2px solid var(--tx3);border-bottom:2px solid var(--tx3);transform:rotate(45deg);margin:-4px 4px 0 0}
-details.acc[open]>summary:after{transform:rotate(225deg);margin-top:4px}
-details.acc>div{padding:0 16px 14px;font-size:var(--fs-sm)}
+details.acc>summary:after{content:"";width:8px;height:8px;border-right:1.7px solid var(--tx2);border-bottom:1.7px solid var(--tx2);transform:rotate(45deg);margin:-4px 6px 0 0;transition:transform .2s}
+details.acc[open]>summary:after{transform:rotate(-135deg);margin-top:4px}
+details.acc>div{padding:0 0 18px;font-size:14.5px}
 details.acc ul{padding-left:18px;margin:4px 0}
-details.acc li{margin:5px 0}
-.srcrow{border-top:1px solid var(--line);padding:10px 0;font-size:var(--fs-sm)}
+details.acc li{margin:6px 0}
+.srcrow{border-top:1px solid var(--line);padding:12px 0;font-size:14px}
 .srcrow:first-child{border-top:0;padding-top:0}
-.srcrow a{display:inline-flex;align-items:center;min-height:32px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 0}
-.stats div{background:var(--soft);border-radius:var(--r);padding:8px 10px}
-.stats b{display:block;font-size:var(--fs-xl);line-height:1.2}
-.stats span{font-size:var(--fs-cap);color:var(--tx3)}
+.srcrow b{font-weight:600}
+.srcrow a{display:inline-flex;align-items:center;gap:3px;min-height:32px}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;margin:4px 0 12px}
+.legend span{display:flex;align-items:center;gap:8px;font-size:14px}
+.legend .pin{width:26px;height:26px;border-width:1.6px;box-shadow:none}
+.legend .pin .i{width:15px;height:15px}
+.endnote{font-size:var(--fs-cap);color:var(--tx3);margin:22px 0 0}
 
 /* 입력 */
-.search{width:100%;height:var(--tap);padding:0 12px;border-radius:var(--r);border:1px solid var(--line2);background:var(--card);color:var(--tx)}
-.search.sm{box-shadow:var(--sh-1);margin:2px 0}
-textarea.search{height:auto;padding:10px 12px}
-.mform label{display:block;margin:14px 0 6px;font-size:var(--fs-sm);font-weight:800;color:var(--tx2)}
-.mform label.chk{display:flex;align-items:center;gap:10px;min-height:var(--tap);margin:8px 0 0;color:var(--tx);font-weight:700}
-.mform label.chk input{width:22px;height:22px;margin:0;accent-color:var(--ac)}
-.mform textarea{resize:vertical;min-height:80px;font-family:inherit}
+.search{width:100%;height:var(--tap);padding:0 14px;border-radius:14px;border:1px solid var(--line2);background:var(--card);color:var(--tx);font-family:inherit}
+textarea.search{height:auto;padding:12px 14px}
+.mform label{display:block;margin:16px 0 6px;font-size:var(--fs-sm);font-weight:600;color:var(--tx2)}
+.mform label.chk{display:flex;align-items:center;gap:10px;min-height:var(--tap);margin:8px 0 0;color:var(--tx);font-weight:500;font-size:15px}
+.mform label.chk input{width:20px;height:20px;margin:0;accent-color:var(--ac)}
+.mform select{width:100%;height:var(--tap);padding:0 12px;border-radius:14px;border:1px solid var(--line2);background:var(--card);color:var(--tx);font-family:inherit}
+.mform textarea{resize:vertical;min-height:84px;font-family:inherit}
 input,select,textarea{font-size:16px!important}
 ::placeholder{color:var(--tx3);opacity:1}
-.linkbtn{border:0;background:none;color:var(--ac-tx);font-weight:800;text-decoration:underline;padding:0 6px;font-size:var(--fs-sm);min-height:var(--tap)}
-.toast{position:fixed;left:50%;bottom:calc(var(--tab-h) + 16px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--tx);color:var(--bg);font-weight:700;
-  padding:10px 16px;border-radius:999px;z-index:3000;opacity:0;transition:.2s;pointer-events:none;font-size:var(--fs-sm);max-width:90vw;text-align:center}
+.linkbtn{border:0;background:none;color:var(--tx);font-weight:600;text-decoration:underline;text-underline-offset:3px;padding:0 4px;font-size:var(--fs-sm);min-height:var(--tap);
+  display:inline-flex;align-items:center;gap:6px}
+.linkbtn .i{width:16px;height:16px}
+.toast{position:fixed;left:50%;bottom:calc(var(--tab-h) + 22px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--tx);color:var(--bg);font-weight:600;
+  padding:11px 18px;border-radius:999px;z-index:3000;opacity:0;transition:.2s;pointer-events:none;font-size:var(--fs-sm);max-width:90vw;text-align:center}
 .toast.on{opacity:1}
 
 /* 빈 화면 · 불러오는 중 · 오류 */
-.empty{padding:28px 16px;text-align:center;color:var(--tx2);font-size:var(--fs-sm)}
-.empty b{display:block;color:var(--tx);font-size:var(--fs-body);margin-bottom:4px}
-.empty .btn{margin-top:12px;flex:0 0 auto}
+.empty{padding:30px 16px;text-align:center;color:var(--tx2);font-size:var(--fs-sm)}
+.empty b{display:block;color:var(--tx);font-size:16px;font-weight:600;margin-bottom:4px}
+.empty .btn{margin-top:14px;flex:0 0 auto}
 .state{position:absolute;inset:0;z-index:1020;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:24px;text-align:center;
   background:var(--bg);color:var(--tx2);font-size:var(--fs-sm)}
-.state b{color:var(--tx);font-size:var(--fs-lg)}
-.state .btn{flex:0 0 auto;margin-top:10px}
-.spin{width:28px;height:28px;border-radius:50%;border:3px solid var(--ac-bg);border-top-color:var(--ac);animation:spin .8s linear infinite;margin-bottom:6px}
+.state b{color:var(--tx);font-size:var(--fs-lg);font-weight:600}
+.state .btn{flex:0 0 auto;margin-top:12px}
+.spin{width:28px;height:28px;border-radius:50%;border:3px solid var(--soft);border-top-color:var(--tx);animation:spin .8s linear infinite;margin-bottom:6px}
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* 내 코트 위치 고르기 */
 .pickx,.pickbar{display:none}
-.picking .map-top,.picking .maplist,.picking .wxbar,.picking .leaflet-control-zoom{display:none!important}
+.picking .map-top,.picking .drawer,.picking .mapbtn,.picking .leaflet-control-zoom{display:none!important}
 .picking .pickx{display:block;position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;z-index:600;pointer-events:none}
-.pickx:before,.pickx:after{content:"";position:absolute;background:var(--ac)}
+.pickx:before,.pickx:after{content:"";position:absolute;background:var(--tx)}
 .pickx:before{left:21px;top:0;width:2px;height:44px}
 .pickx:after{top:21px;left:0;width:44px;height:2px}
-.picking .pickbar{display:block;position:absolute;left:8px;right:8px;bottom:12px;z-index:650;background:var(--card);border:1px solid var(--ac);border-radius:var(--r-lg);padding:12px;font-size:var(--fs-sm);box-shadow:var(--sh-2)}
+.picking .pickbar{display:block;position:absolute;left:10px;right:10px;bottom:calc(var(--tab-h) + 22px + env(safe-area-inset-bottom));z-index:650;background:var(--card);
+  border-radius:20px;padding:14px;font-size:14.5px;box-shadow:var(--sh-float)}
+.pickbar p{margin:0}
 
 body.map-on main{padding-bottom:0}
 body.map-on{overflow:hidden;overscroll-behavior:none}
-@media (max-width:419px){ .tag .w{display:none} }
-@media (max-width:374px){
-  .fab .t{display:none}
-  .fab{padding:0;width:var(--tap)}
-  .tbar{gap:5px}
-  select.gu{max-width:none}
-  .cta{padding:0 10px}
+/* 지도 아래 컨트롤(출처 표시)은 서랍 위로 */
+@media (max-width:999px){ .leaflet-bottom{bottom:var(--dh,0px)} }
+@media (max-width:359px){
+  .act{font-size:11.5px}
+  .card{padding:0 16px 6px}
+  .plate{margin:0 -16px 16px}
+  .pbtn{padding:0 12px}
+  #nearBtn .t{display:none}
+  #nearBtn{width:var(--tap);padding:0;justify-content:center}
+  .map-top .gubox select{max-width:118px;padding-left:12px}
 }
-@media (max-width:340px){ .tag{display:none} }
-@media (max-height:520px){
-  :root{--head-h:48px;--tab-h:52px}
-  .map-top .sum,.wxbar{display:none}
-  .sheet{max-height:80dvh}
+@media (max-height:600px){
+  .wxstrip{display:none!important}
+  .sum .wn,.sum .ex{display:none}
+  .sheet{max-height:92dvh}
 }
-/* 태블릿 이상: 시트·글은 가운데 폭을 줄여 읽기 쉽게 */
+/* 태블릿 이상: 글은 가운데 폭을 줄여 읽기 쉽게 */
 @media (min-width:700px){
-  section.page:not(#p-map)>*{max-width:680px;margin-left:auto;margin-right:auto}
-  .sheet{max-width:640px}
+  section.page:not(#p-map)>*{max-width:640px;margin-left:auto;margin-right:auto}
+  .sheet{max-width:600px;border-radius:24px 24px 0 0}
+  .drawer{left:50%;right:auto;width:560px;margin-left:-280px}
 }
-/* 데스크톱: 시설 카드는 오른쪽 패널, 목록은 왼쪽 패널 (지도가 같이 보이게) */
+/* 데스크톱: 서랍은 왼쪽 아래 떠 있는 판, 시설 카드는 오른쪽 패널 (지도가 같이 보이게) */
 @media (min-width:1000px){
-  #app,nav.tabs{max-width:1200px}
-  .sheet{left:auto;right:max(16px,calc((100vw - 1200px) / 2 + 16px));top:calc(var(--head-h) + var(--notice-h) + 16px);bottom:calc(var(--tab-h) + 16px);
-    width:420px;max-height:none;border-radius:var(--r-lg);box-shadow:var(--sh-2);transform:translateX(calc(100% + 40px));border:1px solid var(--line)}
+  #app{max-width:1200px}
+  .drawer{left:16px;right:auto;margin:0;width:400px;bottom:calc(var(--tab-h) + 26px);border-radius:20px;padding:6px 18px 16px;box-shadow:var(--sh-float)}
+  .map-wrap.listing .drawer{border-radius:20px}
+  .map-top{right:auto;width:600px;left:16px;top:16px}
+  .mapbtn{right:16px;bottom:calc(var(--tab-h) + 128px)}
+  .leaflet-bottom.leaflet-right{bottom:calc(var(--tab-h) + 20px)}
+  .sheet{left:auto;right:max(16px,calc((100vw - 1200px) / 2 + 16px));top:16px;bottom:calc(var(--tab-h) + 26px);
+    width:420px;max-width:none;max-height:none;border-radius:20px;box-shadow:var(--sh-float);transform:translateX(calc(100% + 40px))}
   .sheet.on{transform:none}
   .backdrop{background:transparent}
-  .maplist{right:auto;width:420px;border-right:1px solid var(--line);box-shadow:var(--sh-2)}
-  .map-top{right:auto;width:640px}
   /* 카드 패널이 열리면 확대·축소 버튼을 패널 왼쪽으로 옮기고 투명 배경막 위로 올려 바로 누를 수 있게
      (지도 오른쪽 끝 → 패널 바깥 여백 16 + 패널 폭 420 + 간격 10 = 446) */
   .leaflet-right .leaflet-control-zoom{transition:margin-right .22s ease}
-  body.sheet-on .leaflet-bottom.leaflet-right{z-index:1095}
+  body.sheet-on .leaflet-bottom.leaflet-right{z-index:1255}
   body.sheet-on .leaflet-right .leaflet-control-zoom{margin-right:446px}
+  body.sheet-on .mapbtn{display:none}
 }
+@media (prefers-reduced-transparency:reduce){ nav.tabs,.sbar .x{background:var(--card);backdrop-filter:none;-webkit-backdrop-filter:none} }
 @media (prefers-reduced-motion:reduce){ *{transition:none!important;animation:none!important} }
+.card .loc{display:flex;flex-wrap:wrap;gap:0 10px}
+.crow .s{display:flex;flex-wrap:wrap;gap:0 10px}
+.pin.fav{box-shadow:0 0 0 2.5px #141a17,0 2px 6px rgba(14,19,16,.32)}
 </style>
 </head>
 <body class="map-on">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- 화면 아이콘: 24px 격자, 선 굵기 1.8 한 벌 -->
   <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4.5 3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2-6-2z"/><path d="M9 4.5v13M15 6.5v13"/></symbol>
   <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
   <symbol id="i-calplus" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M12 12.5v5M9.5 15h5"/></symbol>
@@ -403,38 +468,59 @@ body.map-on{overflow:hidden;overscroll-behavior:none}
   <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 14.5V3.5M7.5 8 12 3.5 16.5 8"/><path d="M5 11.5v7A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-7"/></symbol>
   <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6A1.5 1.5 0 0 0 14 4.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A15.5 15.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18h6.3a3.5 3.5 0 0 0 0-7h-5a3.5 3.5 0 0 1 0-7h6.3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <!-- 날씨 -->
+  <symbol id="w-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2M12 19.2v2M2.8 12h2M19.2 12h2M5.5 5.5l1.4 1.4M17.1 17.1l1.4 1.4M5.5 18.5l1.4-1.4M17.1 6.9l1.4-1.4"/></symbol>
+  <symbol id="w-part" viewBox="0 0 24 24"><path d="M8.5 4.2V2.8M4.3 6l-1-1M2.8 10.3H1.5M10.9 6.6a3.4 3.4 0 0 0-5.6 3.1"/><path d="M8.5 19.5h8.8a3.4 3.4 0 0 0 .4-6.8 5.1 5.1 0 0 0-9.8-.9 3.9 3.9 0 0 0 .6 7.7z"/></symbol>
+  <symbol id="w-cloud" viewBox="0 0 24 24"><path d="M7.5 18.5h9.8a3.7 3.7 0 0 0 .4-7.4 5.5 5.5 0 0 0-10.6-1 4.2 4.2 0 0 0 .4 8.4z"/></symbol>
+  <symbol id="w-rain" viewBox="0 0 24 24"><path d="M7.5 14.5h9.8a3.5 3.5 0 0 0 .4-7 5.2 5.2 0 0 0-10-1 3.8 3.8 0 0 0-.2 8z"/><path d="m9 17.5-1 2.7M13 17.5l-1 2.7M17 17.5l-1 2.7"/></symbol>
+  <symbol id="w-snow" viewBox="0 0 24 24"><path d="M7.5 14.5h9.8a3.5 3.5 0 0 0 .4-7 5.2 5.2 0 0 0-10-1 3.8 3.8 0 0 0-.2 8z"/><path d="M8.5 18.5h.01M12 20h.01M15.5 18.5h.01"/></symbol>
+  <!-- 종목: 같은 선 굵기로 -->
+  <symbol id="s-basketball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17M6.2 5.8c2.4 2 3.6 4 3.6 6.2s-1.2 4.2-3.6 6.2M17.8 5.8c-2.4 2-3.6 4-3.6 6.2s1.2 4.2 3.6 6.2"/></symbol>
+  <symbol id="s-baseball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M7.4 5c1.8 1.9 2.7 4.3 2.7 7s-.9 5.1-2.7 7M16.6 5c-1.8 1.9-2.7 4.3-2.7 7s.9 5.1 2.7 7"/></symbol>
+  <symbol id="s-soccer" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m12 8.4 3.2 2.3-1.2 3.8h-4l-1.2-3.8z"/><path d="M12 8.4V3.6M15.2 10.7l4.4-1.5M14 14.5l2.7 3.8M10 14.5l-2.7 3.8M8.8 10.7 4.4 9.2"/></symbol>
+  <symbol id="s-tennis" viewBox="0 0 24 24"><ellipse cx="9.6" cy="9.6" rx="5.4" ry="6.6" transform="rotate(-45 9.6 9.6)"/><path d="m13.7 13.7 6.6 6.6M6.6 9.5l6-6M9.5 12.6l6-6"/><circle cx="18.8" cy="5.2" r="1.7"/></symbol>
+  <symbol id="s-badminton" viewBox="0 0 24 24"><circle cx="7" cy="17" r="2.6"/><path d="M8.8 15.2 12.6 4M8.8 15.2 20 11.4M12.6 4l7.4 7.4M8.8 15.2l7.5-7.5"/></symbol>
+  <symbol id="s-etc" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="M12 5.5v13"/><circle cx="12" cy="12" r="2.6"/></symbol>
 </svg>
 <div id="app">
-  <header>
-    <div class="brand">
-      <span class="mark" aria-hidden="true"></span>
-      <div class="bt"><h1 class="logo">동네코트</h1><p class="tag">서울 공공 체육시설<span class="w"> 지도</span> · 접수일 · 날씨</p></div>
-    </div>
-    <button class="cta" id="nearBtn" type="button"><svg class="i"><use href="#i-near"/></svg>내 주변</button>
-  </header>
   <div class="notice" id="notice" role="status" hidden></div>
   <main>
     <section class="page on" id="p-map" aria-label="지도">
+      <h1 class="sr">동네코트 · 서울 공공 체육시설 지도</h1>
       <div class="map-wrap">
         <div id="map"></div>
         <div class="map-top">
           <div class="tbar">
-            <select id="guSel" class="gu" aria-label="구 고르기"><option>서울 전체</option></select>
-            <button class="fab" id="listBtn" type="button" aria-label="목록 보기"><svg class="i"><use href="#i-list"/></svg><span class="t">목록</span></button>
-            <button class="fab ic" id="searchBtn" type="button" aria-label="이름으로 찾기"><svg class="i"><use href="#i-search"/></svg></button>
-            <button class="fab ic" id="locBtn" type="button" aria-label="지도를 내 위치로"><svg class="i"><use href="#i-loc"/></svg></button>
-            <button class="fab ic add" id="addBtn" type="button" aria-label="내 코트 추가"><svg class="i"><use href="#i-plus"/></svg></button>
+            <div class="sbox">
+              <span class="mark" aria-hidden="true"></span>
+              <input id="mapQ" type="search" placeholder="코트 이름이나 동네" aria-label="시설 이름·동네로 찾기" enterkeyhint="search" autocomplete="off">
+              <button class="sbtn" id="searchBtn" type="button" aria-label="찾기"><svg class="i"><use href="#i-search"/></svg></button>
+            </div>
+            <div class="gubox"><select id="guSel" class="gu" aria-label="구 고르기"><option>서울 전체</option></select></div>
           </div>
-          <input class="search sm" id="mapQ" type="search" placeholder="시설 이름·동네로 찾기" aria-label="시설 이름·동네로 찾기" enterkeyhint="search" hidden>
           <div class="chips fade" id="spChips" role="group" aria-label="종목"></div>
           <div class="chips fade" id="condChips" role="group" aria-label="조건"></div>
-          <div class="sum" id="mapcount" aria-live="polite"></div>
         </div>
-        <div class="wxbar" id="wxbar" hidden></div>
-        <div class="maplist" id="mapList" hidden></div>
+        <button class="mapbtn" id="locBtn" type="button" aria-label="지도를 내 위치로"><svg class="i"><use href="#i-loc"/></svg></button>
+        <div class="drawer" id="drawer">
+          <div class="dgrab" aria-hidden="true"></div>
+          <div class="dhead">
+            <div class="sum" id="mapcount" aria-live="polite"></div>
+            <div class="dbtns">
+              <button class="pbtn" id="nearBtn" type="button"><svg class="i"><use href="#i-near"/></svg><span class="t">내 주변</span></button>
+              <button class="pbtn p" id="listBtn" type="button" aria-label="목록 보기"><svg class="i"><use href="#i-list"/></svg><span class="t">목록</span></button>
+            </div>
+          </div>
+          <div class="wxstrip" id="wxbar" hidden></div>
+          <div class="maplist" id="mapList" hidden></div>
+        </div>
         <div class="pickx" aria-hidden="true"></div>
         <div class="pickbar" role="dialog" aria-label="내 코트 위치 고르기">
-          <div>지도를 움직여 가운데 <b>＋</b> 표시를 코트에 맞추세요</div>
+          <p>지도를 움직여 가운데 <b>＋</b>를 코트에 맞추세요</p>
           <div class="btns"><button class="btn" data-pick="me"><svg class="i"><use href="#i-loc"/></svg>내 위치</button><button class="btn" data-pick="cancel">취소</button><button class="btn p" data-pick="ok">여기로</button></div>
         </div>
         <div class="state" id="loadState" role="status"><div class="spin" aria-hidden="true"></div><b>시설 정보를 불러오는 중</b><span>처음 열 때는 몇 초 걸릴 수 있어요.</span></div>
@@ -443,11 +529,11 @@ body.map-on{overflow:hidden;overscroll-behavior:none}
 
     <section class="page" id="p-cal" aria-labelledby="calTitle">
       <div class="ph"><h2 id="calTitle">접수 달력</h2>
-        <p>서울 공공서비스예약에 올라온 체육시설 예약의 접수일이에요. 캘린더에 넣으면 접수 시작 하루 전과 30분 전에 알림이 와요.</p></div>
+        <p>예약 접수가 열리는 날을 모았어요. 캘린더에 넣으면 하루 전과 30분 전에 알려 줘요.</p></div>
       <div class="seg" id="calSeg" role="group" aria-label="보기"><button data-m="soon" class="on" type="button">접수 예정</button><button data-m="open" type="button">지금 접수중</button></div>
       <div class="toolbar">
-        <div class="chips" id="calChips" role="group" aria-label="종목"></div>
-        <div class="field"><label for="calGu">지역</label><select id="calGu"></select></div>
+        <div class="chips fade" id="calChips" role="group" aria-label="종목"></div>
+        <div class="gubox wide"><select id="calGu" aria-label="지역 고르기"></select></div>
       </div>
       <div class="btns subrow" id="calSubBox"></div>
       <div class="count" id="calCount" aria-live="polite"></div>
@@ -456,12 +542,12 @@ body.map-on{overflow:hidden;overscroll-behavior:none}
     </section>
 
     <section class="page" id="p-mine" aria-labelledby="mineTitle">
-      <div class="ph"><h2 id="mineTitle">내 장소</h2><p>찜한 시설과 직접 넣은 코트가 모여요. 이 폰 브라우저에만 저장돼요.</p></div>
+      <div class="ph"><h2 id="mineTitle">내 장소</h2><p>찜한 시설과 직접 넣은 코트예요. 이 폰에만 저장돼요.</p></div>
       <div id="mineBox"></div>
     </section>
 
     <section class="page" id="p-info" aria-labelledby="infoTitle">
-      <div class="ph"><h2 id="infoTitle">정보</h2><p>데이터 출처와 기준 시각, 제보 방법이에요.</p></div>
+      <div class="ph"><h2 id="infoTitle">동네코트</h2><p>서울 공공 체육시설의 위치, 접수일, 날씨를 한 지도에 모았어요.</p></div>
       <div id="infoList"></div>
     </section>
   </main>
@@ -488,7 +574,7 @@ window.DC_CONFIG = {
   // 브이월드 배경지도 키 (VWORLD_KEY). 브라우저에 보이는 키라 브이월드에서 도메인 제한을 꼭 건다. 비어 있으면 OpenStreetMap.
   VWORLD_KEY: "",
   DATA_URL: "data/all.json",
-  BUILT: "2026-11-23 23:26 KST",
+  BUILT: "2026-11-24 00:06 KST",
 };
 </script>
 <script>// .ics(캘린더 파일) 만들기 — 브라우저와 Node(테스트) 둘 다에서 쓴다. 시간대는 Asia/Seoul(KST, 서머타임 없음).
@@ -625,7 +711,27 @@ let D = null, META = {}, SP = {}, F = [], byId = {};
 const favs = new Set(store.get("fav", []));
 const saveFav = () => store.set("fav", [...favs]);
 const mainSport = f => (f.sp || []).find(s => s !== "etc") || "etc";
-const spIc = f => (SP[mainSport(f)] || {}).ic || "🏃";
+const spKey = k => (SP[k] ? k : "etc");
+const sg = k => `<svg class="i" aria-hidden="true"><use href="#s-${spKey(k)}"/></svg>`;      // 종목 선 아이콘
+const spIc = f => sg(mainSport(f));
+const cOf = f => "c-" + spKey(mainSport(f));                                                  // 종목색
+// 시설 카드 맨 위 '코트 도면' (위에서 본 바닥 선, 400×140 안에서 가운데 맞춤)
+const COURT = {
+  basketball: `<path d="M60 -5H340V145H60Z M200 -5V145 M60 45.5H118V94.5H60 M340 45.5H282V94.5H340 M118 52A18 18 0 0 1 118 88 M282 52A18 18 0 0 0 282 88
+    M60 4H89.9A67.5 67.5 0 0 1 89.9 136H60 M340 4H310.1A67.5 67.5 0 0 0 310.1 136H340 M72 61V79 M328 61V79"/><circle cx="200" cy="70" r="18"/><circle cx="76" cy="70" r="2.4"/><circle cx="324" cy="70" r="2.4"/>`,
+  tennis: `<path d="M57 4H343V136H57Z M57 20.4H343 M57 119.6H343 M123.2 20.4V119.6 M276.8 20.4V119.6 M123.2 70H276.8 M57 70H64 M343 70H336"/><path class="net" d="M200 -2V142"/>`,
+  soccer: `<path d="M50 -5H350V145H50Z M200 -5V145 M50 13A45 45 0 0 1 95 58V82A45 45 0 0 1 50 127 M350 13A45 45 0 0 0 305 58V82A45 45 0 0 0 350 127
+    M50 58.8H43V81.2H50 M350 58.8H357V81.2H350"/><circle cx="200" cy="70" r="22.5"/><circle cx="200" cy="70" r="1.8"/><circle cx="118" cy="70" r="1.6"/><circle cx="282" cy="70" r="1.6"/>`,
+  baseball: `<path d="M200 132L40 -28 M200 132L360 -28 M200 132L262 70L200 8L138 70Z M115 54A95 95 0 0 1 285 54 M188 125h-9v13h9 M212 125h9v13h-9"/>
+    <circle cx="200" cy="77" r="9"/><path d="M262 66l4 4-4 4-4-4z M200 4l4 4-4 4-4-4z M138 66l4 4-4 4-4-4z M196 128h8v5l-4 3-4-3z"/>`,
+  badminton: `<path d="M59.5 6H340.5V134H59.5Z M59.5 15.7H340.5 M59.5 124.3H340.5 M158.4 6V134 M241.6 6V134 M75.5 6V134 M324.5 6V134 M59.5 70H158.4 M241.6 70H340.5"/><path class="net" d="M200 0V140"/>`,
+  etc: `<path d="M40 10H360V130H40Z M200 10V130 M40 40H86V100H40 M360 40H314V100H360"/><circle cx="200" cy="70" r="22"/>`,
+};
+const plateHTML = f => {
+  const k = spKey(mainSport(f));
+  return `<div class="plate ${f.mine ? "mine" : cOf(f)}"><svg viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${COURT[k]}</svg>
+</div>`;
+};
 const isFree = f => f.fee === "free" || f.fee === "mixed";
 const isOut = f => f.io === "out" || f.io === "mixed";
 const isIn = f => f.io === "in" || f.io === "mixed";
@@ -662,7 +768,9 @@ const distTxt = d => d < 1 ? Math.round(d * 1000) + "m" : d.toFixed(1) + "km";
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("on"), 2200); }
 
 // ── 날씨·미세먼지 ──
-const SKY_IC = {"맑음": "☀️", "구름많음": "⛅", "흐림": "☁️"};
+const SKY_IC = {"맑음": "sun", "구름많음": "part", "흐림": "cloud"};
+const isRainy = x => !!(x.pty || (x.pop != null && x.pop >= 50));
+const wIc = x => `<svg class="i" aria-hidden="true"><use href="#w-${isRainy(x) ? (/눈/.test(x.pty || "") ? "snow" : "rain") : (SKY_IC[x.sky] || "part")}"/></svg>`;
 // 날짜별 예보: 시설 격자의 단기예보(오늘~3일 뒤) + 그 뒤는 중기예보(서울·인천·경기 한 구역, 있으면)
 function gridDays(key) {
   const W = D && D.weather; if (!W) return null;
@@ -683,13 +791,12 @@ function wxDays(key) {
 }
 // 하루 한 줄: 요일 · 그림 · 하늘/강수 · 최저/최고
 function wxDayHTML([d, x]) {
-  const rain = x.pty || (x.pop != null && x.pop >= 50);
-  const ic = rain ? (/눈/.test(x.pty || "") ? "🌨️" : "☔") : (SKY_IC[x.sky] || "🌤️");
-  const when = x.popH != null ? ` · ${x.popH}시부터` : "";   // 강수확률이 가장 높아지는 첫 시각
-  const w = (rain ? `<b>강수 ${x.pop}%</b>${when}` : `${esc(x.sky || "")}${x.pop != null ? ` · 강수 ${x.pop}%` : ""}`)
+  const rain = isRainy(x);
+  const when = x.popH != null ? `, ${x.popH}시부터` : "";   // 강수확률이 가장 높아지는 첫 시각
+  const w = (rain ? `<span class="rain">비 ${x.pop}%</span>${when}` : `${esc(x.sky || "")}${x.pop != null ? `, 강수 ${x.pop}%` : ""}`)
     + (x.mid ? ` <span class="tiny">서울 전체 예보</span>` : "");   // 4일 뒤부터는 구역 하나짜리 중기예보
   const t = x.tmn != null && x.tmx != null ? `<span class="lo">${x.tmn}°</span> / ${x.tmx}°` : "";
-  return `<div class="wxd"><span class="d">${DOW[dowOf(d)]}</span><span aria-hidden="true">${ic}</span><span class="w${rain ? " rain" : ""}">${w}</span><span class="t">${t}</span></div>`;
+  return `<div class="wxd"><span class="d">${DOW[dowOf(d)]}</span>${wIc(x)}<span class="w">${w}</span><span class="t">${t}</span></div>`;
 }
 const rainRisk = key => { const w = wxDays(key); return !!(w && w.list.some(([, x]) => (x.pop || 0) >= 60)); };
 // ── 언제 칠 수 있나: 오늘 저녁 / 이번 주말 ──
@@ -713,64 +820,63 @@ function whenNote() {
 function whenRow(f) {          // 이번 주말을 고르면 목록 줄에 요일별 하늘을 붙인다
   if (!MF.conds.has("weekend") || roofed(f)) return "";
   const parts = weekendDays().map(d => { const x = dayOf(f, d); return x ? `${DOW[dowOf(d)]} ${wet(x) ? "비" : esc(x.sky || "비 없음")}` : ""; }).filter(Boolean);
-  return parts.join(" · ");
+  return parts.join(", ");
 }
 function airTxt(gu) {
   const a = D && D.air && D.air.gu && D.air.gu[gu]; if (!a) return "";
-  return `미세먼지 ${a.g10 || "-"}${a.pm10 != null ? ` ${a.pm10}㎍` : ""} · 초미세먼지 ${a.g25 || "-"}${a.pm25 != null ? ` ${a.pm25}㎍` : ""}`;
+  return `미세먼지 ${a.g10 || "-"}${a.pm10 != null ? ` ${a.pm10}㎍` : ""}, 초미세먼지 ${a.g25 || "-"}${a.pm25 != null ? ` ${a.pm25}㎍` : ""}`;
 }
 const wxBase = () => D.weather && D.weather.base ? `기상청 ${fmtStamp(D.weather.base)} 발표` : "";
 
 // ── 카드 ──
-function badges(f) {
+function tags(f) {
   const b = [];
-  if (f.fee) b.push(`<span class="b ${f.fee === "free" ? "ac" : f.fee === "mixed" ? "acl" : "gray"}">${FEE_TXT[f.fee]}</span>`);
-  if (f.io) b.push(`<span class="b">${IO_TXT[f.io]}${f.ioG ? "(추정)" : ""}</span>`);
-  if (f.night) b.push(`<span class="b">${f.cur && f.cur.light ? "조명 있음" : "야간 이용"}</span>`);
-  if (f.cur) b.push(`<span class="b acl">✓ 확인한 코트</span>`);
-  if (openSvcs(f).length) b.push(`<span class="b ac">지금 접수중</span>`);
-  if (f.wx && isOut(f) && rainRisk(f.wx)) b.push(`<span class="b acl">☔ 비 예보</span>`);
-  if (f.mine) b.push(`<span class="b">내 코트</span>`);
-  if (f.ex) b.push(`<span class="b ex">예시 데이터</span>`);
-  return b.length ? `<div class="badges">${b.join("")}</div>` : "";
+  if (openSvcs(f).length) b.push(stPill("open"));
+  if (f.fee) b.push(esc(FEE_TXT[f.fee]));
+  if (f.io) b.push(esc(IO_TXT[f.io] + (f.ioG ? "(추정)" : "")));
+  if (f.night) b.push(f.cur && f.cur.light ? "조명 있음" : "야간 이용");
+  if (f.cur) b.push(`<span class="cur">${ico("check")}확인한 코트</span>`);
+  if (f.wx && isOut(f) && rainRisk(f.wx)) b.push(`<span class="rain">비 예보</span>`);
+  if (f.ex) b.push(`<span class="ex">예시 데이터</span>`);
+  return b.length ? `<p class="tags">${b.map(x => x.startsWith("<") ? x : `<span>${x}</span>`).join("")}</p>` : "";
 }
 function curatedBox(f) {
   const c = f.cur; if (!c) return "";
-  const yn = v => v === true ? "○" : v === false ? "✕" : "?";
+  const yn = v => v === true ? "있음" : v === false ? "없음" : "모름";
   const facts = [];
-  if (c.hoops != null) facts.push(`골대 ${esc(c.hoops)}`);
+  if (c.hoops != null) facts.push(`골대 ${esc(c.hoops)}개`);
   if (c.light != null) facts.push(`조명 ${yn(c.light)}${c.light && c.lightTo ? `(${esc(c.lightTo)}까지)` : ""}`);
   if (c.floor) facts.push(esc(c.floor) + " 바닥");
   if (c.wc != null) facts.push(`화장실 ${yn(c.wc)}`);
   if (c.park != null) facts.push(`주차 ${yn(c.park)}`);
-  return `<div class="box ac"><h4>현장 확인 정보 <span class="tiny">${esc(c.checked || "")} 확인</span></h4>
+  return `<div class="sec"><h4>가서 확인한 것 <small>${esc(c.checked || "")}</small></h4>
     <div class="facts">${facts.map(x => `<span>${x}</span>`).join("")}</div>
-    ${c.note ? `<div class="tiny" style="margin-top:6px">${esc(c.note)}</div>` : ""}
+    ${c.note ? `<p class="muted" style="margin:8px 0 0;font-size:14px">${esc(c.note)}</p>` : ""}
     ${oldInfo(c) ? `<p class="warnline">확인한 지 6개월이 넘었어요. 지금과 다를 수 있어요.</p>` : ""}</div>`;
 }
 function wxBox(f) {
   const w = f.wx && wxDays(f.wx), air = airTxt(f.gu);
   if (!w && !air) return "";
-  return `<div class="box"><h4>${w ? esc(w.label) : "공기"} <span class="tiny">${wxBase()}</span></h4>
+  return `<div class="sec"><h4>${w ? esc(w.label) : "공기"} <small>${wxBase()}</small></h4>
     ${w ? w.list.map(wxDayHTML).join("") : ""}
     ${w && isOut(f) && rainRisk(f.wx) ? `<p class="warnline">실외 시설이라 비가 오면 쓰기 어려워요.</p>` : ""}
-    ${air ? `<div class="wxa">${air} · ${esc(f.gu)} ${fmtStamp(D.air.time).split(" ")[1] || ""} 측정</div>` : ""}</div>`;
+    ${air ? `<div class="wxa">${air}, ${esc(f.gu)} ${fmtStamp(D.air.time).split(" ")[1] || ""} 측정</div>` : ""}</div>`;
 }
 function svcHTML(f, s) {
   const st = stateOf(s);
   const range = s.rb || s.re ? `접수 ${when(s.rb)} ~ ${when(s.re)}` : "";
-  const meta = [s.pay, s.sel, s.unit && `${s.unit} 단위`, s.rolling, s.vmin && s.vmax && `이용 ${s.vmin}~${s.vmax}`].filter(Boolean).map(esc).join(" · ");
+  const meta = [s.pay, s.sel, s.unit && `${s.unit} 단위`, s.rolling, s.vmin && s.vmax && `이용 ${s.vmin}~${s.vmax}`].filter(Boolean).map(esc).join(", ");
   const calBtn = st === "soon" ? `<button class="btn sm" data-ics="${esc(s.id)}" data-fid="${esc(f.id)}">${ico("calplus")}캘린더에 넣기</button>`
     : st === "open" && s.re && dayDiff(kstNow(), s.re) <= 45 ? `<button class="btn sm" data-ics="${esc(s.id)}" data-fid="${esc(f.id)}" data-end="1">${ico("calplus")}마감 알림 넣기</button>` : "";
   const url = safeUrl(s.url);
-  return `<div class="svc"><div class="sn">${stPill(st)}${esc(s.n)}</div>
+  return `<div class="svc"><div class="sn">${stPill(st)}<span>${esc(s.n)}</span></div>
     <div class="sm">${esc(range)}${st === "soon" ? ` <b>${esc(relDay(s.rb))}</b>` : ""}</div>
     ${meta ? `<div class="sm">${meta}</div>` : ""}
     ${s.fee ? `<div class="sm">이용료(원문): ${esc(s.fee)}</div>` : ""}
-    <div class="btns">${calBtn}${url ? `<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">예약 사이트${ico("ext", "s")}</a>` : ""}</div></div>`;
+    <div class="btns">${url ? `<a class="btn sm p" href="${esc(url)}" target="_blank" rel="noopener">예약 사이트${ico("ext", "s")}</a>` : ""}${calBtn}</div></div>`;
 }
 function cardHTML(f, opts = {}) {
-  const loc = [guOf(f), f.subs && f.subs.length ? f.subs.slice(0, 3).join(" · ") + (f.subs.length > 3 ? " 외" : "") : f.typ].filter(Boolean).map(esc).join(" · ");
+  const loc = [f.mine ? "내 코트" : null, (SP[mainSport(f)] || {}).n, guOf(f), f.subs && f.subs.length ? f.subs.slice(0, 3).join(", ") + (f.subs.length > 3 ? " 외" : "") : f.typ].filter(Boolean).map(x => `<span>${esc(x)}</span>`).join("");
   const kv = [];
   if (f.ad) kv.push(["주소", esc(f.ad)]);
   if (f.llSrc) kv.push(["위치", `<span class="tiny">${f.llSrc === "장소검색" ? "이름으로 검색해 찾은 위치" : "주소로 찾은 위치"}라 조금 다를 수 있어요</span>`]);
@@ -787,50 +893,57 @@ function cardHTML(f, opts = {}) {
     return (o[stateOf(a)] - o[stateOf(b)]) || ((a.rb || "") < (b.rb || "") ? -1 : 1);
   });
   const shown = rs.slice(0, 4), rest = rs.slice(4);
-  const res = rs.length ? `<div class="box line"><h4>예약 ${num(rs.length)}건 <span class="tiny">예약·결제는 각 예약 사이트에서 해요</span></h4>
+  const res = rs.length ? `<div class="sec"><h4>예약 ${num(rs.length)}건 <small>예약·결제는 각 예약 사이트에서 해요</small></h4>
       ${shown.map(s => svcHTML(f, s)).join("")}
       ${rest.length ? `<details class="more"><summary>예약 ${num(rest.length)}건 더 보기</summary>${rest.map(s => svcHTML(f, s)).join("")}</details>` : ""}</div>`
-    : (f.mine ? "" : `<p class="tiny" style="margin:12px 0 0">예약 없이 쓰는 곳이거나, 서울 공공서비스예약에 없는 시설이에요.</p>`);
+    : (f.mine ? "" : `<p class="muted" style="margin:16px 0 0;font-size:14px">예약 없이 쓰는 곳이거나, 서울 공공서비스예약에 없는 시설이에요.</p>`);
   const ll = f.ll;
   const kakao = ll ? `https://map.kakao.com/link/to/${encodeURIComponent(f.n)},${ll[0]},${ll[1]}` : `https://map.kakao.com/?q=${encodeURIComponent(f.n)}`;
   const naver = `https://map.naver.com/p/search/${encodeURIComponent((f.gu || "") + " " + f.n)}`;
   const fav = favs.has(f.id);
+  // 자주 누르는 것(길찾기·지도·공유·찜)은 이름 바로 아래 한 줄로
+  const acts = [`<a class="act" href="${kakao}" target="_blank" rel="noopener">${ico("route")}길찾기</a>`,
+    `<a class="act" href="${naver}" target="_blank" rel="noopener">${ico("map")}네이버 지도</a>`];
+  if (opts.mapBtn && ll) acts.push(`<button class="act" data-onmap="${esc(f.id)}">${ico("pin")}지도에서</button>`);
+  if (!f.mine) acts.push(`<button class="act" data-share="${esc(f.id)}">${ico("share")}공유</button>`,
+    `<button class="act heart ${fav ? "on" : ""}" data-fav="${esc(f.id)}" aria-label="찜하기" aria-pressed="${fav}">${ico("heart")}찜</button>`);
   return `<div class="card">
-    <div class="top"><div class="ic" aria-hidden="true">${spIc(f)}</div><div class="nm">${esc(f.n)}<small>${loc}</small></div>
-      ${f.mine ? "" : `<button class="ibtn" data-share="${esc(f.id)}" aria-label="공유하기">${ico("share")}</button><button class="heart ${fav ? "on" : ""}" data-fav="${esc(f.id)}" aria-label="찜하기" aria-pressed="${fav}">${ico("heart")}</button>`}</div>
-    ${badges(f)}
+    ${plateHTML(f)}
+    <h2 class="nm">${esc(f.n)}</h2>
+    ${loc ? `<p class="loc">${loc}</p>` : ""}
+    ${tags(f)}
     ${opts.note ? `<p class="warnline">${opts.note}</p>` : ""}
-    ${kv.length ? `<dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>` : ""}
+    <div class="acts">${acts.join("")}</div>
     ${curatedBox(f)}${res}${wxBox(f)}
-    <div class="btns"><a class="btn" href="${kakao}" target="_blank" rel="noopener">${ico("near")}카카오맵 길찾기</a><a class="btn" href="${naver}" target="_blank" rel="noopener">네이버 지도${ico("ext", "s")}</a></div>
-    <div class="btns">${opts.mapBtn && ll ? `<button class="btn" data-onmap="${esc(f.id)}">${ico("pin")}지도에서 보기</button>` : ""}
-      ${f.mine ? `<button class="btn" data-mine-edit="${esc(f.id)}">${ico("edit")}고치기</button><button class="btn" data-mine-del="${esc(f.id)}">${ico("trash")}지우기</button>`
-        : `<button class="btn" data-report="${esc(f.id)}">${ico("flag")}정보가 틀렸어요</button>`}</div>
-    <p class="src">출처: ${srcTxt(f)}</p>
+    ${kv.length ? `<div class="sec"><h4>시설 정보</h4><dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>` : ""}
+    <div class="foot">${f.mine ? `<div class="btns" style="margin:8px 0"><button class="btn sm" data-mine-edit="${esc(f.id)}">${ico("edit")}고치기</button><button class="btn sm" data-mine-del="${esc(f.id)}">${ico("trash")}지우기</button></div>`
+        : `<button class="linkbtn" data-report="${esc(f.id)}">${ico("flag")}정보가 틀렸어요</button>`}
+      <p class="src">출처 ${srcTxt(f)}</p></div>
   </div>`;
 }
 function srcTxt(f) {
   const n = {seoul_yeyak: "서울시 공공서비스예약", kspo_faci: "국민체육진흥공단 전국체육시설", kspo_badminton: "국민체육진흥공단 배드민턴 시설",
     curated: "직접 확인", mine: "내가 추가(이 폰에만 저장)"};
-  return (f.src || []).map(s => n[s] || s).join(" · ") + (f.cur && !(f.src || []).includes("curated") ? " · 직접 확인" : "");
+  return (f.src || []).map(s => n[s] || s).join(", ") + (f.cur && !(f.src || []).includes("curated") ? ", 직접 확인" : "");
 }
 function nextTxt(f) {
   const soon = soonSvcs(f)[0];
-  if (soon) return `${stPill("soon")}${when(soon.rb)} <b>${relDay(soon.rb)}</b>`;
+  if (soon) return `${stPill("soon")}<span>${when(soon.rb)} <b>${relDay(soon.rb)}</b></span>`;
   const op = openSvcs(f);
-  if (op.length) return `${stPill("open")}예약 ${num(op.length)}건`;
-  if ((f.rs || []).length) return `<span class="tiny">예약 ${num(f.rs.length)}건 · 지금 접수 없음</span>`;
+  if (op.length) return `${stPill("open")}<span>예약 ${num(op.length)}건</span>`;
+  if ((f.rs || []).length) return `<span class="muted">예약 ${num(f.rs.length)}건, 지금은 접수 없음</span>`;
   return "";
 }
 function rowHTML(f, origin) {
-  const meta = [guOf(f), f.io && IO_TXT[f.io], f.fee && FEE_TXT[f.fee], f.cur && "✓ 확인한 코트", f.ex && "예시"].filter(Boolean).map(esc);
+  const meta = [guOf(f), f.io && IO_TXT[f.io], f.fee && FEE_TXT[f.fee], f.ex && "예시"].filter(Boolean).map(x => `<span>${esc(x)}</span>`);
+  if (f.cur) meta.push(`<span class="cur">${ico("check")}확인한 코트</span>`);
   const wr = whenRow(f);
-  if (wr) meta.push(wr);
-  else if (f.wx && isOut(f) && rainRisk(f.wx)) meta.push(`<span class="rain">☔ 비 예보</span>`);
+  if (wr) meta.push(`<span>${wr}</span>`);
+  else if (f.wx && isOut(f) && rainRisk(f.wx)) meta.push(`<span class="rain">비 예보</span>`);
   const nx = nextTxt(f);
   return `<div class="row" data-open="${esc(f.id)}" role="button" tabindex="0">
-    <div class="ric ${isFree(f) ? "free" : ""}" aria-hidden="true">${spIc(f)}</div>
-    <div class="rmain"><div class="rnm">${esc(f.n)}</div><div class="rmeta">${meta.join(" · ")}</div>${nx ? `<div class="rnext">${nx}</div>` : ""}</div>
+    <div class="ric ${f.mine ? "mine" : cOf(f) + (isFree(f) ? " free" : "")}" aria-hidden="true">${spIc(f)}</div>
+    <div class="rmain"><div class="rnm">${esc(f.n)}</div><div class="rmeta">${meta.join("")}</div>${nx ? `<div class="rnext">${nx}</div>` : ""}</div>
     ${origin && f.ll ? `<div class="rdist">${distTxt(km(origin, f.ll))}</div>` : ""}</div>`;
 }
 
@@ -844,7 +957,7 @@ function go(tab, fromPop) {
   $$("nav.tabs button").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
   closeSheet(true);
   if (location.hash !== "#" + tab) { if (fromPop || !location.hash) history.replaceState(null, "", "#" + tab); else history.pushState(null, "", "#" + tab); }
-  if (tab === "map") setTimeout(() => { if (map) { map.invalidateSize(); if (!mapViewSet) { mapViewSet = true; map.fitBounds(SEOUL_VIEW); } } }, 30);
+  if (tab === "map") setTimeout(() => { if (map) { map.invalidateSize(); if (!mapViewSet) { mapViewSet = true; fitSeoul(); } } }, 30);
   if (tab === "cal") renderCal();
   if (tab === "mine") renderMine();
   window.scrollTo(0, 0);
@@ -872,10 +985,11 @@ function matchMap(f, needLL) {
   if (MF.q && !searchText(f).includes(MF.q.toLowerCase())) return false;
   return true;
 }
+// 핀: 종목색 + 종목 선 아이콘. 네모 = 예약하는 곳, 동그라미 = 무료로 여는 곳, 검은 점 = 지금 접수중
 function pinIcon(f, sel) {
-  const cls = ["pin", isFree(f) ? "free" : "", f.mine ? "mine" : "", favs.has(f.id) ? "fav" : "", sel ? "sel" : ""].join(" ");
-  return L.divIcon({className: "", iconSize: [32, 32], iconAnchor: [16, 16],
-    html: `<div class="${cls}">${spIc(f)}${openSvcs(f).length ? '<span class="dot"></span>' : ""}${f.cur ? '<span class="ok">✓</span>' : ""}</div>`});
+  const cls = ["pin", f.mine ? "mine" : cOf(f), isFree(f) && !f.mine ? "free" : "", favs.has(f.id) ? "fav" : "", sel ? "sel" : ""].join(" ");
+  return L.divIcon({className: "", iconSize: [30, 30], iconAnchor: [15, 15],
+    html: `<div class="${cls}">${spIc(f)}${openSvcs(f).length ? '<span class="dot"></span>' : ""}${f.cur ? `<span class="ok">${ico("check")}</span>` : ""}</div>`});
 }
 function tileLayer() {
   const vk = cfg(CFG.VWORLD_KEY);
@@ -884,24 +998,27 @@ function tileLayer() {
   return L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",
     {maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'});
 }
+// 서랍 맨 위 한 문장: "서울에서 오늘 저녁 농구할 수 있는 곳 47곳"
+const DO = {basketball: "농구할", baseball: "야구할", tennis: "테니스 칠", badminton: "배드민턴 칠"};
 function summary(n) {
-  const all = Object.keys(SP).every(k => MF.sp.has(k));
-  const spTxt = all ? "전체 종목" : Object.keys(SP).filter(k => MF.sp.has(k)).map(k => SP[k].n).join("·");
-  const cond = [...MF.conds].map(k => COND[k].n).join(" · ");
-  const guTxt = MF.gu === "all" ? "서울 전체" : MF.gu === "out" ? "서울 밖" : MF.gu;
-  return `<b>${num(n)}곳</b> · ${esc(guTxt)} · ${esc(spTxt)}${cond ? " · " + esc(cond) : ""}${MF.q ? ` · "${esc(MF.q)}"` : ""}`;
+  const keys = Object.keys(SP), on = keys.filter(k => MF.sp.has(k)), all = on.length === keys.length;
+  const place = MF.gu === "all" ? "서울에서" : MF.gu === "out" ? "서울 밖에서" : `${MF.gu}에서`;
+  const time = MF.conds.has("tonight") ? "오늘 저녁 " : MF.conds.has("weekend") ? "이번 주말 " : "";
+  const act = all ? "운동할" : on.length === 1 ? DO[on[0]] || `${SP[on[0]].n} 할` : `${on.map(k => SP[k].n).join("·")} 할`;
+  const cap = MF.q ? `${place} ‘${MF.q}’로 찾은 곳` : `${place} ${time}${act} 수 있는 곳`;
+  const extra = [...MF.conds].filter(k => !COND[k].g).map(k => COND[k].n);
+  return `<b>${num(n)}<small>곳</small></b><span class="cap">${esc(cap)}</span>${extra.length ? `<span class="ex">${esc(extra.join(", "))}만 골랐어요</span>` : ""}`;
 }
 function renderMarkers() {
   if (!NOMAP) F.forEach(f => {
     const m = markers[f.id], show = matchMap(f, true);
-    if (show && !m) { const mk = L.marker(f.ll, {icon: pinIcon(f, selId === f.id), keyboard: true, title: f.n}).on("click", () => openSheet(f.id)); markers[f.id] = mk; cluster.addLayer(mk); }
+    if (show && !m) { const mk = L.marker(f.ll, {icon: pinIcon(f, selId === f.id), keyboard: true, title: f.n, sp: mainSport(f)}).on("click", () => openSheet(f.id)); markers[f.id] = mk; cluster.addLayer(mk); }
     else if (!show && m) { cluster.removeLayer(m); delete markers[f.id]; }
   });
   const all = F.filter(f => matchMap(f, false));
-  const noLL = all.filter(f => !f.ll).length;
-  $("#mapcount").innerHTML = summary(all.length) + (noLL ? ` <span class="tiny">· 위치 없는 ${num(noLL)}곳은 목록에만</span>` : "")
-    + (all.length ? "" : ` <button class="linkbtn" data-reset="map">조건 지우기</button>`)
-    + (whenNote() ? `<span class="wn">${esc(whenNote())}</span>` : "");
+  $("#mapcount").innerHTML = summary(all.length)
+    + (whenNote() ? `<span class="wn">${esc(whenNote())}</span>` : "")
+    + (all.length ? "" : `<button class="linkbtn" data-reset="map">조건 지우기</button>`);
   if (listMode) { renderMapList(all); placeList(); }
   renderWxBar();
 }
@@ -909,25 +1026,26 @@ function renderMapList(all) {
   all = all || F.filter(f => matchMap(f, false));
   const c = map && map.getCenter(), origin = myPos || (c ? [c.lat, c.lng] : null);
   if (origin) all.sort((a, b) => (a.ll ? km(origin, a.ll) : 999) - (b.ll ? km(origin, b.ll) : 999));
-  $("#mapList").innerHTML = (all.length ? `<div class="lhead">${myPos ? "내 위치에서 가까운 순" : "지도 가운데에서 가까운 순"}이에요</div>` : "")
+  const noLL = all.filter(f => !f.ll).length;
+  $("#mapList").innerHTML = (all.length ? `<div class="lhead">${myPos ? "내 위치에서 가까운 순" : "지도 가운데에서 가까운 순"}이에요.${noLL ? ` 위치를 모르는 ${num(noLL)}곳은 맨 아래에 있어요.` : ""}</div>` : "")
     + (all.map(f => rowHTML(f, origin)).join("")
-      || `<div class="empty"><b>조건에 맞는 시설이 없어요</b>구·종목·조건을 넓혀 보세요.<br><button class="btn" data-reset="map">조건 지우기</button></div>`);
+      || `<div class="empty"><b>조건에 맞는 시설이 없어요</b>구, 종목, 조건을 넓혀 보세요.<br><button class="btn" data-reset="map">조건 지우기</button></div>`);
 }
+// 서랍 아래 날씨 한 줄: 이번 주말(또는 다가오는 이틀) + 미세먼지
 function renderWxBar() {
   const el = $("#wxbar"); if (!el || !D) return;
-  let key = META.city_wx, where = "서울시청";
+  let key = META.city_wx, where = "";
   if (MF.gu !== "all" && MF.gu !== "out") {
     const f = F.find(x => x.gu === MF.gu && x.wx && D.weather.grids[x.wx]);
-    if (f) { key = f.wx; where = MF.gu; }
+    if (f) { key = f.wx; where = MF.gu + " "; }
   }
   const w = key && wxDays(key);
-  const airGu = MF.gu !== "all" && MF.gu !== "out" ? MF.gu : "중구";
-  const air = airTxt(airGu);
-  if (!w && !air) { el.hidden = true; return; }
+  const a = D.air && D.air.gu && D.air.gu[MF.gu !== "all" && MF.gu !== "out" ? MF.gu : "중구"];
+  if (!w && !a) { el.hidden = true; return; }
   el.hidden = listMode;
-  const head = w ? `<div class="wxh"><b>${esc(w.label)}</b><span>${esc(where)} · ${wxBase()}</span></div>`
-    : `<div class="wxh"><b>공기</b><span>${esc(airGu)} · ${fmtStamp(D.air.time)} 측정</span></div>`;
-  el.innerHTML = head + (w ? w.list.map(wxDayHTML).join("") : "") + (air ? `<div class="wxa">${air}</div>` : "");
+  const day = ([d, x]) => `<span class="wdy">${wIc(x)}<b>${DOW[dowOf(d)]}</b>${isRainy(x) ? `<span class="rain">비 ${x.pop}%</span>` : esc(x.sky || "")}${x.tmn != null && x.tmx != null ? ` ${x.tmn}°/${x.tmx}°` : ""}</span>`;
+  el.innerHTML = (w ? `<span class="wl">${esc(where + w.label)}</span>${w.list.map(day).join("")}` : "")
+    + (a && a.g10 ? `<span class="wdy">미세먼지 <b>${esc(a.g10)}</b></span>` : "");
 }
 let selId = null, sheetOpen = false;
 function openSheet(id, opts) {
@@ -956,7 +1074,7 @@ function showOnMap(id) {
   if (!f.ll) { openSheet(id, {note: "위치 정보가 없는 시설이라 지도에 핀이 없어요. 카카오맵·네이버 지도로 찾아보세요."}); return; }
   mapViewSet = true; go("map"); setListMode(false);
   if (NOMAP) { openSheet(id); return; }
-  if (!matchMap(f, true)) { MF.gu = "all"; $("#guSel").value = "all"; (f.sp || []).forEach(s => MF.sp.add(s)); MF.conds.clear(); MF.q = ""; $("#mapQ").value = ""; syncChips(); renderMarkers(); }
+  if (!matchMap(f, true)) { MF.gu = "all"; $("#guSel").value = "all"; (f.sp || []).forEach(s => MF.sp.add(s)); MF.conds.clear(); MF.q = ""; $("#mapQ").value = ""; syncSearchBtn(); syncChips(); renderMarkers(); }
   setTimeout(() => { map.invalidateSize(); map.setView(f.ll, 16, {animate: false}); openSheet(id); }, 60);
 }
 function syncChips() {
@@ -965,31 +1083,43 @@ function syncChips() {
   $$("#condChips .chip").forEach(ch => { const on = MF.conds.has(ch.dataset.k); ch.classList.toggle("on", on); ch.setAttribute("aria-pressed", on); });
 }
 function resetMap() {
-  MF.sp = new Set(Object.keys(SP)); MF.conds.clear(); MF.q = ""; $("#mapQ").value = ""; $("#mapQ").hidden = true; $("#searchBtn").classList.remove("on");
+  MF.sp = new Set(Object.keys(SP)); MF.conds.clear(); MF.q = ""; $("#mapQ").value = ""; syncSearchBtn();
   MF.gu = "all"; $("#guSel").value = "all"; store.set("gu", "all");
-  syncChips(); renderMarkers(); if (map) map.fitBounds(SEOUL_VIEW);
+  syncChips(); renderMarkers(); fitSeoul();
 }
+// 목록: 서랍이 위(검색·칩 바로 아래)까지 펼쳐진다
 function setListMode(on) {
   listMode = on;
   $("#mapList").hidden = !on;
-  $("#listBtn").classList.toggle("on", on);
+  $(".map-wrap").classList.toggle("listing", on);
   $("#listBtn").innerHTML = on ? `${ico("map")}<span class="t">지도</span>` : `${ico("list")}<span class="t">목록</span>`;
   $("#listBtn").setAttribute("aria-label", on ? "지도 보기" : "목록 보기");
-  if (on) { closeSheet(); renderMapList(); placeList(); }
+  if (on) { closeSheet(); renderMapList(); }
+  placeList();
   renderWxBar();
 }
-function showSearch(on) {
-  $("#mapQ").hidden = !on; $("#searchBtn").classList.toggle("on", on);
-  if (on) $("#mapQ").focus(); else if (MF.q) { MF.q = ""; $("#mapQ").value = ""; renderMarkers(); }
-  if (listMode) placeList();
+function syncSearchBtn() {
+  const has = !!MF.q;
+  $("#searchBtn").innerHTML = ico(has ? "x" : "search");
+  $("#searchBtn").setAttribute("aria-label", has ? "검색어 지우기" : "찾기");
 }
-const placeList = () => { $("#mapList").style.top = ($(".map-top").offsetHeight + 14) + "px"; };
+function placeList() {
+  const dr = $("#drawer"), wrap = $(".map-wrap");
+  if (!listMode) { dr.style.top = ""; return; }
+  dr.style.top = Math.round($(".map-top").getBoundingClientRect().bottom - wrap.getBoundingClientRect().top + 6) + "px";
+}
 window.addEventListener("resize", () => listMode && placeList());
+function viewPad(extra) {
+  const wrap = $(".map-wrap").getBoundingClientRect(), top = $(".map-top").getBoundingClientRect().bottom - wrap.top;
+  const desk = innerWidth >= 1000, dh = listMode || desk ? 0 : $("#drawer").offsetHeight;
+  return Object.assign({paddingTopLeft: [desk ? 432 : 8, Math.max(0, top) + 8], paddingBottomRight: [8, dh + 8]}, extra || {});
+}
+const fitSeoul = () => { if (map) map.fitBounds(SEOUL_VIEW, viewPad()); };
 function fitGu() {
   if (!map) return;
-  if (MF.gu === "all") { map.fitBounds(SEOUL_VIEW); return; }
+  if (MF.gu === "all") { fitSeoul(); return; }
   const lls = F.filter(f => f.ll && (MF.gu === "out" ? !f.gu : f.gu === MF.gu)).map(f => f.ll);
-  if (lls.length) map.fitBounds(L.latLngBounds(lls).pad(0.2), {maxZoom: 15});
+  if (lls.length) map.fitBounds(L.latLngBounds(lls).pad(0.15), viewPad({maxZoom: 15}));
 }
 function guOptions(sel, withOut) {
   const used = new Set(F.map(f => f.gu).filter(Boolean));
@@ -1000,20 +1130,34 @@ function guOptions(sel, withOut) {
 function initMap() {
   if (NOMAP) $("#map").innerHTML = '<div class="empty" style="padding:200px 20px 0"><b>지도 그림을 불러오지 못했어요</b>인터넷이 되는 곳에서 새로고침하면 다시 떠요.<br>목록 버튼으로는 지금도 시설을 볼 수 있어요.</div>';
   else {
-    map = L.map("map", {zoomControl: false, attributionControl: true, maxZoom: 19}).setView([37.5665, 126.978], 11);
+    map = L.map("map", {zoomControl: false, attributionControl: true, maxZoom: 19, zoomSnap: 0.5}).setView([37.5665, 126.978], 11);
     tileLayer().addTo(map);
     cluster = L.markerClusterGroup({maxClusterRadius: 42, disableClusteringAtZoom: 16, showCoverageOnHover: false, spiderfyOnMaxZoom: true,
-      iconCreateFunction: c => L.divIcon({className: "", html: `<div class="cl">${c.getChildCount()}</div>`, iconSize: [38, 38], iconAnchor: [19, 19]})});
+      iconCreateFunction: c => {
+        const cnt = {}, tot = c.getChildCount(); let acc = 0;
+        c.getAllChildMarkers().forEach(m => { const k = spKey(m.options.sp); cnt[k] = (cnt[k] || 0) + 1; });
+        const ring = Object.keys(SP).map(spKey).filter((k, i, a) => cnt[k] && a.indexOf(k) === i)
+          .map(k => `var(--sp-${k}) ${(acc / tot * 360).toFixed(1)}deg ${((acc += cnt[k]) / tot * 360).toFixed(1)}deg`).join(",");
+        return L.divIcon({className: "", html: `<div class="cl" style="background:conic-gradient(${ring})"><b>${tot}</b></div>`, iconSize: [40, 40], iconAnchor: [20, 20]});
+      }});
     map.addLayer(cluster);
     L.control.zoom({position: "bottomright"}).addTo(map);
     map.on("click", () => closeSheet());
   }
+  // 서랍 높이만큼 지도 아래 컨트롤(출처 표시)·내 위치 버튼을 올린다
+  const wrap = $(".map-wrap"), dr = $("#drawer");
+  const setDH = () => { if (!listMode) wrap.style.setProperty("--dh", dr.offsetHeight + "px"); };
+  if (window.ResizeObserver) new ResizeObserver(setDH).observe(dr); else window.addEventListener("resize", setDH);
+  setDH();
   MF.sp = new Set(Object.keys(SP));
   if (MF.gu !== "all" && MF.gu !== "out" && !SEOUL_GU.includes(MF.gu)) MF.gu = "all";
   $("#guSel").innerHTML = guOptions(MF.gu, true);
   $("#spChips").innerHTML = `<button class="chip" data-all="1">전체</button>` +
-    Object.entries(SP).map(([k, s]) => `<button class="chip" data-k="${k}">${s.ic} ${esc(s.n)}</button>`).join("");
-  $("#condChips").innerHTML = Object.entries(COND).map(([k, c]) => `<button class="chip cond${c.g ? " when" : ""}" data-k="${k}" aria-pressed="false">${c.n}</button>`).join("");
+    Object.entries(SP).map(([k, s]) => `<button class="chip c-${spKey(k)}" data-k="${esc(k)}"><span class="sw" aria-hidden="true"></span>${esc(s.n)}</button>`).join("");
+  const CIC = {tonight: "moon", weekend: "cal"};
+  const conds = Object.entries(COND);
+  $("#condChips").innerHTML = conds.map(([k, c], i) => (i && !c.g && conds[i - 1][1].g ? '<span class="sep" aria-hidden="true"></span>' : "")
+    + `<button class="chip cond${c.g ? " when" : ""}" data-k="${k}" aria-pressed="false">${CIC[k] ? ico(CIC[k]) : ""}${c.n}</button>`).join("");
   $("#spChips").addEventListener("click", e => {
     const ch = e.target.closest(".chip"); if (!ch) return;
     if (ch.dataset.all) Object.keys(SP).forEach(k => MF.sp.add(k));
@@ -1036,12 +1180,14 @@ function initMap() {
     syncChips(); renderMarkers();
   });
   $("#guSel").addEventListener("change", e => { MF.gu = e.target.value; store.set("gu", MF.gu); renderMarkers(); fitGu(); });
-  $("#mapQ").addEventListener("input", e => { MF.q = e.target.value.trim(); renderMarkers(); });
+  $("#mapQ").addEventListener("input", e => { MF.q = e.target.value.trim(); renderMarkers(); syncSearchBtn(); });
+  $("#mapQ").addEventListener("keydown", e => { if (e.key === "Enter") e.target.blur(); });
   $("#locBtn").addEventListener("click", locate);
   $("#nearBtn").addEventListener("click", nearMe);
   $("#listBtn").addEventListener("click", () => setListMode(!listMode));
-  $("#searchBtn").addEventListener("click", () => showSearch($("#mapQ").hidden));
-  $("#addBtn").addEventListener("click", () => startPick({}));
+  $("#searchBtn").addEventListener("click", () => {
+    if (MF.q) { MF.q = ""; $("#mapQ").value = ""; renderMarkers(); syncSearchBtn(); } else $("#mapQ").focus();
+  });
   syncChips(); renderMarkers();
   if (MF.gu !== "all") { mapViewSet = true; setTimeout(fitGu, 80); }
 }
@@ -1094,26 +1240,32 @@ function renderCal() {
   $$("#calSeg button").forEach(b => b.classList.toggle("on", b.dataset.m === CF.mode));
   const allOn = Object.keys(SP).every(k => CF.sp.has(k));
   $$("#calChips .chip").forEach(ch => ch.classList.toggle("on", ch.dataset.all ? allOn : (!allOn && CF.sp.has(ch.dataset.k))));
-  $("#calCount").innerHTML = CF.mode === "soon" ? `<b>${num(items.length)}건</b> · 접수 시작이 빠른 순` : `<b>${num(items.length)}건</b> · 마감이 가까운 순`;
-  let html = "", lastWk = "", lastDay = "";
+  $("#calCount").innerHTML = `<b>${num(items.length)}건</b>, ${CF.mode === "soon" ? "접수 시작이 빠른 순이에요" : "마감이 가까운 순이에요"}`;
+  // 접수 예정: 이번 주 / 다음 주 / 그 뒤 → 왼쪽 날짜 칸 + 오른쪽 그날 접수. 줄을 누르면 시설 카드
+  let html = "", lastWk = "", lastDay = "", open = false;
   items.slice(0, 300).forEach(({f, s, st}) => {
-    const d = (CF.mode === "soon" ? s.rb : s.re) || "";
-    if (CF.mode === "soon") {          // 이번 주 / 다음 주 / 그 뒤 → 날짜별로 묶기 (날짜는 머리줄에, 줄에는 시각만)
-      const day = d.slice(0, 10), wk = weekLabel(day);
-      if (wk !== lastWk) { html += `<h3 class="wk">${wk}</h3>`; lastWk = wk; }
-      if (day !== lastDay) { html += `<h4 class="day">${md(day)} <small>${relDay(day)}</small></h4>`; lastDay = day; }
+    if (CF.mode === "soon") {
+      const day = s.rb.slice(0, 10), wk = weekLabel(day);
+      if (day !== lastDay) {
+        if (open) html += `</div></div>`;
+        if (wk !== lastWk) { html += `<h3 class="wk">${wk}</h3>`; lastWk = wk; }
+        const rel = relDay(day);
+        html += `<div class="dgrp"><div class="dcol"><b>${+day.slice(8, 10)}</b><span>${+day.slice(5, 7)}월 ${DOW[dowOf(day)]}</span>${rel ? `<em class="${/^D-/.test(rel) ? "later" : ""}">${rel}</em>` : ""}</div><div class="drows">`;
+        open = true; lastDay = day;
+      }
     }
     const url = safeUrl(s.url);
-    const top = CF.mode === "soon" ? `<div class="t">${esc(s.rb.slice(11, 16))} 접수 시작</div>`
-      : `<div class="t end">마감 ${esc(when(s.re))}${s.re ? ` · D-${Math.max(0, dayDiff(kstNow(), s.re))}` : ""}</div>`;
+    const top = CF.mode === "soon" ? `<div class="t"><b>${esc(s.rb.slice(11, 16))}</b> 접수 시작</div>`
+      : `<div class="t"><b>마감 ${esc(when(s.re))}</b>${s.re ? `, ${Math.max(0, dayDiff(kstNow(), s.re))}일 남음` : ""}</div>`;
     const canCal = st === "soon" || (s.re && dayDiff(kstNow(), s.re) <= 45);
-    html += `<div class="crow">${top}
-      <div class="f"><span aria-hidden="true">${(SP[s.sp] || {}).ic || ""}</span> ${esc(f.n)}</div>
-      <div class="s">${esc(s.n)} · ${esc(guOf(f))}${s.pay ? " · " + esc(s.pay) : ""}${s.sel ? " · " + esc(s.sel) : ""}</div>
-      <div class="btns">${canCal ? `<button class="btn sm" data-ics="${esc(s.id)}" data-fid="${esc(f.id)}" ${st === "open" ? 'data-end="1"' : ""}>${ico("calplus")}${st === "open" ? "마감 알림" : "캘린더"}</button>` : ""}
-        ${url ? `<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">예약 사이트${ico("ext", "s")}</a>` : ""}
-        <button class="btn sm" data-open="${esc(f.id)}">시설 정보</button></div></div>`;
+    const sub = [s.n, guOf(f), s.pay, s.sel].filter(Boolean).map(x => `<span>${esc(x)}</span>`).join("");
+    html += `<div class="crow" data-open="${esc(f.id)}" role="button" tabindex="0">${top}
+      <div class="f c-${spKey(s.sp)}"><span class="sw" aria-hidden="true"></span>${esc(f.n)}</div>
+      <div class="s">${sub}</div>
+      <div class="btns">${url ? `<a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">예약 사이트${ico("ext", "s")}</a>` : ""}
+        ${canCal ? `<button class="btn sm" data-ics="${esc(s.id)}" data-fid="${esc(f.id)}" ${st === "open" ? 'data-end="1"' : ""}>${ico("calplus")}${st === "open" ? "마감 알림" : "캘린더에 넣기"}</button>` : ""}</div></div>`;
   });
+  if (open) html += `</div></div>`;
   if (items.length > 300) html += `<p class="tiny">앞의 300건만 보여요. 종목이나 지역으로 좁혀 보세요.</p>`;
   $("#calList").innerHTML = html || `<div class="empty"><b>${CF.mode === "soon" ? "앞으로 접수가 시작되는 예약이 없어요" : "지금 접수중인 예약이 없어요"}</b>종목이나 지역을 바꿔 보세요.</div>`;
   const soonN = CF.mode === "soon" ? Math.min(items.length, 50) : 0;
@@ -1134,7 +1286,7 @@ function subHTML() {
   const fd = feedFor(); if (!fd) return "";
   const google = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(fd.webcal);
   return `<div class="card sub">
-    <div class="nm">접수일 캘린더 구독</div>
+    <h2 class="nm">접수일 캘린더 구독</h2>
     <p class="lead"><b>${esc(fd.label)}</b> 접수 시작일이 내 캘린더에 저절로 들어와요. 새 접수가 올라오면 따라 들어와요.</p>
     ${fd.partial ? `<p class="warnline">종목을 여러 개 골라서 전체 종목으로 구독돼요. 종목 하나만 고르면 그 종목만 받아요.</p>` : ""}
     ${fd.out ? `<p class="warnline">서울 밖 시설은 서울 전체 캘린더에 들어 있어요.</p>` : ""}
@@ -1185,7 +1337,7 @@ function applyLink() {          // 공유 링크로 들어왔을 때. 처리한 
 function initCal() {
   CF.sp = new Set(Object.keys(SP));
   $("#calChips").innerHTML = `<button class="chip" data-all="1">전체</button>` +
-    Object.entries(SP).map(([k, s]) => `<button class="chip" data-k="${k}">${s.ic} ${esc(s.n)}</button>`).join("");
+    Object.entries(SP).map(([k, s]) => `<button class="chip c-${spKey(k)}" data-k="${esc(k)}"><span class="sw" aria-hidden="true"></span>${esc(s.n)}</button>`).join("");
   $("#calGu").innerHTML = guOptions("all", true);
   $("#calSeg").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { CF.mode = b.dataset.m; renderCal(); } });
   $("#calChips").addEventListener("click", e => {
@@ -1241,9 +1393,9 @@ function reportURL(f, kind, memo) {
 }
 function reportHTML(f) {
   const can = !!cfg(CFG.REPORT_URL);
-  return `<div class="mform card" id="rpForm" data-fid="${f ? esc(f.id) : ""}">
-    <div class="nm">${f ? "정보가 틀렸어요" : "새 코트 알리기"}</div>
-    ${f ? `<p class="tiny" style="margin:4px 0 0">${esc(f.n)} · ${esc(guOf(f))}</p>
+  return `<div class="mform card form" id="rpForm" data-fid="${f ? esc(f.id) : ""}">
+    <h2 class="nm">${f ? "정보가 틀렸어요" : "새 코트 알리기"}</h2>
+    ${f ? `<p class="loc">${esc(f.n)}, ${esc(guOf(f))}</p>
       <fieldset class="kinds"><legend>무엇이 다른가요</legend>${REPORT_KINDS.map(([k, n], i) =>
         `<label class="chk"><input type="radio" name="rpK" value="${k}" ${i === 0 ? "checked" : ""}>${n}</label>`).join("")}</fieldset>` : ""}
     <label for="rpM">${f ? "자세히 (선택)" : "코트 이름과 위치"}</label>
@@ -1274,10 +1426,10 @@ function startPick(draft, back) {
 }
 function endPick() { picking = null; $(".map-wrap").classList.remove("picking"); }
 function mineFormHTML(d) {
-  const sps = Object.entries(SP).map(([k, s]) => `<option value="${k}" ${(d.sp || "basketball") === k ? "selected" : ""}>${s.ic} ${esc(s.n)}</option>`).join("");
-  return `<div class="mform card">
-    <div class="nm">${d.id ? "내 코트 고치기" : "내 코트 추가"}</div>
-    <p class="tiny" style="margin:4px 0 0">이 폰 브라우저에만 저장돼요. 모두에게 알리려면 정보 탭의 제보를 써 주세요.</p>
+  const sps = Object.entries(SP).map(([k, s]) => `<option value="${esc(k)}" ${(d.sp || "basketball") === k ? "selected" : ""}>${esc(s.n)}</option>`).join("");
+  return `<div class="mform card form">
+    <h2 class="nm">${d.id ? "내 코트 고치기" : "내 코트 추가"}</h2>
+    <p class="loc">이 폰에만 저장돼요. 모두에게 알리려면 정보 탭의 제보를 써 주세요.</p>
     <label for="mfN">이름 (필수)</label><input class="search" id="mfN" maxlength="60" value="${esc(d.n || "")}" placeholder="예: 우리 동네 공원 농구코트" autocomplete="off" required>
     <label for="mfS">종목</label><select id="mfS">${sps}</select>
     <label for="mfF">이용료</label><select id="mfF"><option value="">모름</option><option value="y" ${d.free === true ? "selected" : ""}>무료</option><option value="n" ${d.free === false ? "selected" : ""}>유료</option></select>
@@ -1318,19 +1470,18 @@ function renderMine() {
   const favList = F.filter(f => favs.has(f.id) && !f.mine);
   const mineList = F.filter(f => f.mine);
   const favSoonN = favSoon().length;
-  el.innerHTML = `<h3>찜한 시설<span class="n">${num(favList.length)}곳</span></h3>
+  el.innerHTML = `<h3>찜한 곳<span class="n">${num(favList.length)}곳</span></h3>
     ${favList.length ? `<div class="btns favacts"><button class="btn" data-fav-map="1">${ico("map")}지도에서 모아 보기</button>
-      ${favSoonN ? `<button class="btn" data-ics-fav="1">${ico("calplus")}접수일 ${num(favSoonN)}건 캘린더에</button>` : ""}</div>` : ""}
-    ${favList.length ? favList.map(f => rowHTML(f, myPos)).join("")
-      : `<div class="card empty"><b>아직 찜한 시설이 없어요</b>시설 카드 오른쪽 위의 하트를 누르면 여기에 모여요.</div>`}
+      ${favSoonN ? `<button class="btn" data-ics-fav="1">${ico("calplus")}접수일 ${num(favSoonN)}건 캘린더에</button>` : ""}</div>
+      <div class="group">${favList.map(f => rowHTML(f, myPos)).join("")}</div>`
+      : `<div class="group pad empty"><b>아직 찜한 곳이 없어요</b>시설 카드에서 찜을 누르면 여기에 모여요.</div>`}
     <h3>내 코트<span class="n">${num(mineList.length)}곳</span></h3>
-    <div class="card">
-      <p style="margin:0 0 8px">지도에 없는 코트를 직접 넣어 쓸 수 있어요. 지도에는 점선 핀으로 보이고, <b>이 폰 브라우저에만</b> 저장돼요.</p>
-      ${mineList.length ? mineList.map(f => rowHTML(f, myPos)).join("") : ""}
-      <div class="btns"><button class="btn p" data-mine="add">${ico("plus")}지도에서 추가</button></div>
-      <div class="btns"><button class="btn" data-mine="export" ${mine.length || favs.size ? "" : "disabled"}>${ico("down")}파일로 내보내기</button><button class="btn" data-mine="import">${ico("up")}파일 불러오기</button></div>
-      <p class="tiny" style="margin:10px 0 0">폰을 바꿀 때 파일로 내보낸 뒤 새 폰에서 불러오세요. 찜 목록도 같이 저장돼요.</p>
-      <input type="file" id="mineFile" accept=".json,application/json" hidden></div>`;
+    <p class="muted" style="margin:0 0 10px;font-size:14.5px">지도에 없는 코트를 직접 넣어 둘 수 있어요. 지도에는 점선 핀으로 보여요.</p>
+    ${mineList.length ? `<div class="group">${mineList.map(f => rowHTML(f, myPos)).join("")}</div>` : ""}
+    <div class="btns"><button class="btn p" data-mine="add">${ico("plus")}지도에서 코트 추가</button></div>
+    <div class="btns"><button class="btn" data-mine="export" ${mine.length || favs.size ? "" : "disabled"}>${ico("down")}파일로 내보내기</button><button class="btn" data-mine="import">${ico("up")}파일 불러오기</button></div>
+    <p class="endnote">폰을 바꿀 때는 파일로 내보낸 뒤 새 폰에서 불러오세요. 찜 목록도 같이 옮겨져요.</p>
+    <input type="file" id="mineFile" accept=".json,application/json" hidden>`;
 }
 // 찜한 곳 묶음: 앞으로 접수가 시작되는 예약(최대 50건)
 function favSoon() {
@@ -1341,11 +1492,11 @@ function icsFav() {
   saveICS(ICS.makeICS(items.map(({f, s}) => svcEvent(f, s, false)), {calName: "동네코트 찜한 곳 접수"}), `dongne-court-fav-${todayStr()}.ics`);
 }
 function favOnMap() {
-  MF.sp = new Set(Object.keys(SP)); MF.conds = new Set(["fav"]); MF.q = ""; $("#mapQ").value = "";
+  MF.sp = new Set(Object.keys(SP)); MF.conds = new Set(["fav"]); MF.q = ""; $("#mapQ").value = ""; syncSearchBtn();
   MF.gu = "all"; $("#guSel").value = "all";
   mapViewSet = true; go("map"); setListMode(false); syncChips(); renderMarkers();
   const lls = F.filter(f => favs.has(f.id) && f.ll).map(f => f.ll);
-  if (map && lls.length) setTimeout(() => { map.invalidateSize(); map.fitBounds(L.latLngBounds(lls).pad(0.25), {maxZoom: 15}); }, 60);
+  if (map && lls.length) setTimeout(() => { map.invalidateSize(); map.fitBounds(L.latLngBounds(lls).pad(0.2), viewPad({maxZoom: 15})); }, 60);
 }
 async function exportMine() {
   const day = kstNow().slice(0, 10);
@@ -1407,18 +1558,21 @@ function renderInfo() {
   const modeTxt = k => modes[k] === "online" || !modes[k] ? "" : ` <span class="b ex">${modes[k] === "offline-sample" ? "sample 5건씩" : modes[k] === "none" ? "아직 연결 안 됨" : "예시"}</span>`;
   const staleTxt = k => (m.stale || {})[k] ? ` <span class="warnline">· 원천 서비스 점검 중일 수 있어요</span>` : "";
   const rows = (m.sources || []).map(s => `<div class="srcrow"><b>${esc(s.n)}</b>${modeTxt(s.k)}<br>
-    <span class="tiny">${esc(s.by)} · ${esc(s.lic)}</span><br>
-    <span class="tiny">기준 ${fmtStamp(st[s.k])}${staleTxt(s.k)}</span> <a class="tiny" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">원본 보기${ico("ext", "s")}</a></div>`).join("");
+    <span class="tiny">${esc(s.by)}, ${esc(s.lic)}</span><br>
+    <span class="tiny">${fmtStamp(st[s.k])} 기준${staleTxt(s.k)}</span> <a class="tiny" href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener">원본 보기${ico("ext", "s")}</a></div>`).join("");
   const c = m.counts || {};
   const rep = cfg(CFG.REPORT_URL);
+  const lg = (cls, k, t) => `<span><i class="pin ${cls}">${sg(k)}</i>${t}</span>`;
   $("#infoList").innerHTML = `
-    <div class="card"><b>동네코트</b>는 서울 공공 체육시설의 위치, 예약 접수일, 날씨를 한 화면에 모은 무료 지도예요.
-      예약과 결제는 하지 않고, 원래 예약 사이트(서울 공공서비스예약, 구 시설관리공단)로 연결해요.
-      <div class="stats"><div><b>${num(c.facilities)}</b><span>시설(곳)</span></div><div><b>${num(c.services)}</b><span>예약(건)</span></div><div><b>${fmtStamp(m.built).split(" ")[0]}</b><span>${fmtStamp(m.built).split(" ")[1] || ""} 갱신</span></div></div>
-      ${c.reservations_reported ? `<p class="tiny" style="margin:8px 0 0">서울 체육시설 예약 전체 ${num(c.reservations_reported)}건 기준</p>` : ""}</div>
-    <details class="acc" open><summary>데이터 출처와 기준 시각</summary><div>${rows}
-      <div class="srcrow"><b>지도</b><br><span class="tiny">${cfg(CFG.VWORLD_KEY) ? "브이월드(국토교통부)" : "© OpenStreetMap 기여자"} · 지도 라이브러리 Leaflet</span></div>
-      <div class="srcrow"><b>✓ 확인한 코트</b><br><span class="tiny">직접 가서 골대, 조명, 바닥, 화장실, 주차를 확인한 곳이에요. 확인한 지 6개월이 넘으면 오래된 정보라고 표시해요.</span></div>
+    <p class="intro">예약과 결제는 하지 않고, 원래 예약 사이트(서울 공공서비스예약, 구 시설관리공단)로 보내 드려요.</p>
+    <p class="numline">시설 <b>${num(c.facilities)}곳</b>과 예약 <b>${num(c.services)}건</b>을 담고 있어요. ${fmtStamp(m.built)}에 새로 받았어요.</p>
+    <details class="acc" open><summary>지도 보는 법</summary><div>
+      <div class="legend">${Object.keys(SP).map(k => lg("c-" + spKey(k), k, esc(SP[k].n))).join("")}</div>
+      <ul><li>네모 핀은 예약하는 곳, 동그라미 핀은 무료로 여는 곳이에요</li><li>핀 위 검은 점은 지금 접수중인 예약이 있다는 뜻이에요</li>
+        <li>체크 표시는 직접 가서 골대, 조명, 바닥을 확인한 곳이에요</li></ul></div></details>
+    <details class="acc"><summary>데이터 출처와 기준 시각</summary><div>${rows}
+      <div class="srcrow"><b>지도</b><br><span class="tiny">${cfg(CFG.VWORLD_KEY) ? "브이월드(국토교통부)" : "© OpenStreetMap 기여자"}, 지도 라이브러리 Leaflet</span></div>
+      <div class="srcrow"><b>확인한 코트</b><br><span class="tiny">확인한 지 6개월이 넘으면 오래된 정보라고 표시해요.</span></div>
     </div></details>
     <details class="acc"><summary>제보하기</summary><div>
       <p>정보가 틀렸거나 지도에 없는 코트를 알고 계시면 알려 주세요. 확인한 뒤에 반영해요.</p>
@@ -1436,7 +1590,7 @@ function renderInfo() {
       <li>한 번 열어 두면 신호가 없어도 목록, 시설 카드, 접수 달력이 열려요(지도 바탕 그림만 인터넷이 필요해요)</li>
       <li>찜과 내 코트는 이 폰 브라우저에만 저장돼요</li></ul>
       <p class="tiny" id="swState"></p></div></details>
-    <p class="tiny">예약 상태와 이용료는 바뀔 수 있으니 예약 전에 원래 사이트에서 꼭 확인하세요. 만든 사람: hwarang</p>`;
+    <p class="endnote">예약 상태와 이용료는 바뀔 수 있으니 예약 전에 원래 사이트에서 꼭 확인하세요. 만든 사람 hwarang</p>`;
   const sw = $("#swState");
   if (sw) sw.textContent = navigator.serviceWorker && navigator.serviceWorker.controller ? "오프라인 준비 완료" : "오프라인 준비 중이에요. 다음에 열면 끝나요.";
 }
@@ -1454,6 +1608,8 @@ function renderNotice() {
 
 // ── 전역 클릭 ──
 document.addEventListener("click", e => {
+  const a = e.target.closest("a[href]");
+  if (a && !a.matches("[data-open],[data-report]")) return;          // 줄 안의 바깥 링크는 링크로만 (줄 열기와 같이 안 일어나게)
   if (mineClick(e)) return;
   const fav = e.target.closest("[data-fav]");
   if (fav) {

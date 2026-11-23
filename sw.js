@@ -1,7 +1,7 @@
 // hk-guide sw_offline_template.js를 가져와 고친 것.
 // 오프라인 캐시: 앱 껍데기 + 지도 라이브러리·글꼴 + 시설 데이터(JSON). 지도 바탕 타일은 저장하지 않는다.
 // VERSION 은 배포할 때 build.mjs가 채운다 → 값이 바뀌면 새 캐시로 갈아탄다.
-const VERSION = "2026-11-23 23:26 KST";
+const VERSION = "2026-11-24 00:06 KST";
 const CACHE = "dongnecourt-" + VERSION;
 const DATA_CACHE = "dongnecourt-data";          // 데이터는 버전과 따로 (새 배포 전까지 마지막 데이터 유지)
 

@@ -1,5 +1,5 @@
 {
- "built": "2026-11-23T09:23",
+ "built": "2026-11-23T23:41",
  "offline": false,
  "modes": {
   "reservations": "online",
@@ -16,8 +16,8 @@
  "src_time": {
   "reservations": "2026-11-23T00:41",
   "facilities": "2026-11-23T00:36",
-  "weather": "2026-11-22T23:00",
-  "air": "2026-11-23T00:00"
+  "weather": "2026-11-23T23:00",
+  "air": "2026-11-23T23:00"
  },
  "sources": [
   {
