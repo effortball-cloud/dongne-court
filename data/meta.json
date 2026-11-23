@@ -1,0 +1,163 @@
+{
+ "built": "2026-11-23T09:23",
+ "offline": false,
+ "modes": {
+  "reservations": "online",
+  "facilities": "online",
+  "weather": "online",
+  "air": "online"
+ },
+ "stale": {
+  "reservations": false,
+  "facilities": false,
+  "weather": false,
+  "air": false
+ },
+ "src_time": {
+  "reservations": "2026-11-23T00:41",
+  "facilities": "2026-11-23T00:36",
+  "weather": "2026-11-22T23:00",
+  "air": "2026-11-23T00:00"
+ },
+ "sources": [
+  {
+   "k": "reservations",
+   "n": "서울시 체육시설 공공서비스예약 정보",
+   "by": "서울 열린데이터광장 (OA-2266)",
+   "url": "https://data.seoul.go.kr/dataList/OA-2266/S/1/datasetView.do",
+   "lic": "공공누리 제1유형(출처표시)"
+  },
+  {
+   "k": "facilities",
+   "n": "전국체육시설 정보 · 전국 배드민턴 시설 현황",
+   "by": "서울올림픽기념국민체육진흥공단 (공공데이터포털 15113986 · 15161298)",
+   "url": "https://www.data.go.kr/data/15113986/openapi.do",
+   "lic": "이용허락범위 제한 없음(공공데이터포털 표기)"
+  },
+  {
+   "k": "weather",
+   "n": "단기예보",
+   "by": "기상청 (공공데이터포털 15084084)",
+   "url": "https://www.data.go.kr/data/15084084/openapi.do",
+   "lic": "공공누리 제1유형(출처표시)"
+  },
+  {
+   "k": "air",
+   "n": "서울시 실시간 대기환경 정보",
+   "by": "서울 열린데이터광장",
+   "url": "https://data.seoul.go.kr/",
+   "lic": "공공누리 제1유형(출처표시)"
+  }
+ ],
+ "states": {
+  "soon": "접수예정",
+  "open": "접수중",
+  "full": "예약마감",
+  "closed": "접수종료",
+  "paused": "일시중지",
+  "info": "안내중"
+ },
+ "counts": {
+  "facilities": 670,
+  "services": 648,
+  "reservations_reported": 648,
+  "by_sport": {
+   "basketball": 57,
+   "baseball": 24,
+   "soccer": 124,
+   "tennis": 108,
+   "badminton": 89,
+   "etc": 317
+  },
+  "match": {
+   "auto": 52,
+   "confirmed": 0,
+   "review": 15,
+   "rejected": 0,
+   "alone": 505
+  },
+  "review_rows": 18,
+  "master_dups_merged": 89,
+  "geocode": {
+   "master": {
+    "missing": 99,
+    "cached": 99,
+    "called": 0,
+    "found": 41
+   },
+   "reservation": {
+    "missing": 24,
+    "cached": 24,
+    "called": 0,
+    "found": 5
+   },
+   "rest": {
+    "missing": 77,
+    "cached": 77,
+    "called": 0,
+    "found": 0
+   }
+  }
+ },
+ "city_wx": "60_127",
+ "gu_files": {
+  "종로구": "gu/01.json",
+  "중구": "gu/02.json",
+  "용산구": "gu/03.json",
+  "성동구": "gu/04.json",
+  "광진구": "gu/05.json",
+  "동대문구": "gu/06.json",
+  "중랑구": "gu/07.json",
+  "성북구": "gu/08.json",
+  "강북구": "gu/09.json",
+  "도봉구": "gu/10.json",
+  "노원구": "gu/11.json",
+  "은평구": "gu/12.json",
+  "서대문구": "gu/13.json",
+  "마포구": "gu/14.json",
+  "양천구": "gu/15.json",
+  "강서구": "gu/16.json",
+  "구로구": "gu/17.json",
+  "금천구": "gu/18.json",
+  "영등포구": "gu/19.json",
+  "동작구": "gu/20.json",
+  "관악구": "gu/21.json",
+  "서초구": "gu/22.json",
+  "강남구": "gu/23.json",
+  "송파구": "gu/24.json",
+  "강동구": "gu/25.json"
+ },
+ "feeds": {
+  "dir": "ics/",
+  "gu": {
+   "종로구": "gu01",
+   "중구": "gu02",
+   "용산구": "gu03",
+   "성동구": "gu04",
+   "광진구": "gu05",
+   "동대문구": "gu06",
+   "중랑구": "gu07",
+   "성북구": "gu08",
+   "강북구": "gu09",
+   "도봉구": "gu10",
+   "노원구": "gu11",
+   "은평구": "gu12",
+   "서대문구": "gu13",
+   "마포구": "gu14",
+   "양천구": "gu15",
+   "강서구": "gu16",
+   "구로구": "gu17",
+   "금천구": "gu18",
+   "영등포구": "gu19",
+   "동작구": "gu20",
+   "관악구": "gu21",
+   "서초구": "gu22",
+   "강남구": "gu23",
+   "송파구": "gu24",
+   "강동구": "gu25"
+  },
+  "events": 173,
+  "files": 182,
+  "nonempty": 58
+ }
+}

@@ -1,0 +1,848 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 서울 풋살·축구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S250521110752802541-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261112T100000
+DTEND;TZID=Asia/Seoul:20261112T103000
+SUMMARY:[접수 시작] 안양천 체육시설 풋살경기장B(구일역
+ 하부)
+DESCRIPTION:안양천 체육시설 · 풋살경기장B(구일역하부)\n
+ 접수 11/12(목) 10:00 ~ 12/31(목) 17:00\n선정 방법: 추첨\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S250521110752802541\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:안양천 체육시설 · 서울특별시 구로구 구로동 642-
+ 71(안양천변 구일역 하부)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250521110752802541
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 안양천 체육시설 풋살경기장B(구일
+ 역하부)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112111121633305-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (주말-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112111121633305\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112111121633305
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112110251056776-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112110251056776\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112110251056776
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S190522144836251426-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T100000
+DTEND;TZID=Asia/Seoul:20261115T103000
+SUMMARY:[접수 시작] 안양천 체육시설 풋살경기장A(구일역
+ 하부)
+DESCRIPTION:안양천 체육시설 · 풋살경기장A(구일역하부)\n
+ 접수 11/15(일) 10:00 ~ 12/31(목) 17:00\n선정 방법: 추첨\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S190522144836251426\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:안양천 체육시설 · 서울특별시 구로구 구로동 642-
+ 71(안양천변 구일역 하부)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S190522144836251426
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 안양천 체육시설 풋살경기장A(구일
+ 역하부)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S151223153002877769-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T100000
+DTEND;TZID=Asia/Seoul:20261115T103000
+SUMMARY:[접수 시작] 인재개발원 인재개발원 축구장 대관
+DESCRIPTION:인재개발원 · 인재개발원 축구장 대관\n접수 11/
+ 15(일) 10:00 ~ 11/19(목) 23:59\n선정 방법: 선착순\n예약: https:
+ //yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S151223
+ 153002877769\n동네코트 구독 캘린더예요. 접수 시각은 바뀔
+  수 있으니 예약 사이트에서 확인하세요.
+LOCATION:인재개발원 · 서울특별시 서초구 남부순환로340길
+  58(서초동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S151223153002877769
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 인재개발원 인재개발원 축구장 대
+ 관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114112647893898-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T130000
+DTEND;TZID=Asia/Seoul:20261115T133000
+SUMMARY:[접수 시작] 계남근린공원 (12월)계남근린공원 인조
+ 잔디 축구장(등록팀 추첨제)
+DESCRIPTION:계남근린공원 · (12월)계남근린공원 인조잔디 
+ 축구장(등록팀 추첨제)\n접수 11/15(일) 13:00 ~ 12/28(월) 17:00
+ \n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation
+ /selectReservView.do?rsv_svc_id=S261114112647893898\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:계남근린공원 · 서울 구로구 고척동 산6-1 계남근
+ 린공원
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114112647893898
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 계남근린공원 (12월)계남근린공원 
+ 인조잔디 축구장(등록팀 추첨제)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S260930172347001339-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 광장동 다목적구장(풋살장) 광장동 다
+ 목적구장(풋살장) 대관(12월)
+DESCRIPTION:광장동 다목적구장(풋살장) · 광장동 다목적구
+ 장(풋살장) 대관(12월)\n접수 11/16(월) 10:00 ~ 12/26(토) 23:59\n
+ 선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservatio
+ n/selectReservView.do?rsv_svc_id=S260930172347001339\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:광장동 다목적구장(풋살장) · 서울특별시 광진구 
+ 천호대로140길 60(광장동 582-3)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S260930172347001339
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 광장동 다목적구장(풋살장) 광장동 
+ 다목적구장(풋살장) 대관(12월)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209131904970635-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 야간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209131904970635\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209131904970635
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209133301887008-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 주간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 주간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209133301887008\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209133301887008
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209100846015400-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(평일야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(평일야간)\n접수 11/16(월) 10:00 ~ 11/30(월) 23
+ :00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reser
+ vation/selectReservView.do?rsv_svc_id=S251209100846015400\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209100846015400
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(평일야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102512831709-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-토
+ /일/공휴일(야간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-토/일/공
+ 휴일(야간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113102512831709\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102512831709
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -토/일/공휴일(야간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102843525928-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-토
+ /일/공휴일(조기사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-토/일/공
+ 휴일(조기사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113102843525928\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102843525928
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -토/일/공휴일(조기사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102713871746-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-토
+ /일/공휴일(주간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-토/일/공
+ 휴일(주간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113102713871746\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102713871746
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -토/일/공휴일(주간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113103058779446-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-평
+ 일(야간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-평일(야
+ 간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113103058779446\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113103058779446
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -평일(야간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113103415917306-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-평
+ 일(조기사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-평일(조
+ 기사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113103415917306\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113103415917306
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -평일(조기사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113103235342305-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제2풋살경기장-평
+ 일(주간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제2풋살경기장-평일(주
+ 간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113103235342305\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113103235342305
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제2풋살경기장
+ -평일(주간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113101314920195-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-토
+ /일/공휴일(야간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-토/일/공
+ 휴일(야간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113101314920195\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113101314920195
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -토/일/공휴일(야간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113101818758665-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-토
+ /일/공휴일(조기사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-토/일/공
+ 휴일(조기사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113101818758665\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113101818758665
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -토/일/공휴일(조기사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113101640215242-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-토
+ /일/공휴일(주간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-토/일/공
+ 휴일(주간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S250113101640215242\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113101640215242
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -토/일/공휴일(주간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102023294415-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-평
+ 일(야간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-평일(야
+ 간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113102023294415\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102023294415
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -평일(야간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102338543201-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-평
+ 일(조기사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-평일(조
+ 기사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113102338543201\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102338543201
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -평일(조기사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S250113102201218909-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 잠실종합운동장 잠실제3풋살경기장-평
+ 일(주간사용)
+DESCRIPTION:잠실종합운동장 · 잠실제3풋살경기장-평일(주
+ 간사용)\n접수 11/16(월) 10:00 ~ 12/14(월) 23:55\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S250113102201218909\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:잠실종합운동장 · 서울특별시 송파구 올림픽로 25
+ (잠실동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250113102201218909
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 잠실종합운동장 잠실제3풋살경기장
+ -평일(주간사용)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113180052247618-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 서울특별시 산악문화체험센터 12월 [공
+ 휴일주말]월드컵난지천공원 풋살장 대여 - 11월16일(월) 
+ 오후1시 접수
+DESCRIPTION:서울특별시 산악문화체험센터 · 12월 [공휴일주
+ 말]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시
+  접수\n접수 11/16(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261113180052247618\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울특별시 산악문화체험센터 · 서울 마포구 상
+ 암동 1538
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113180052247618
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울특별시 산악문화체험센터 12월 
+ [공휴일주말]월드컵난지천공원 풋살장 대여 - 11월16일(
+ 월) 오후1시 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113175529145560-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 서울특별시 산악문화체험센터 12월 [평
+ 일]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시
+  접수
+DESCRIPTION:서울특별시 산악문화체험센터 · 12월 [평일]월
+ 드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시 접수
+ \n접수 11/16(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n
+ 예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_
+ svc_id=S261113175529145560\n동네코트 구독 캘린더예요. 접수 
+ 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울특별시 산악문화체험센터 · 서울 마포구 상
+ 암동 1538
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113175529145560
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울특별시 산악문화체험센터 12월 
+ [평일]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후
+ 1시 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S210409130727046749-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261117T090000
+DTEND;TZID=Asia/Seoul:20261117T093000
+SUMMARY:[접수 시작] 난지천 인조잔디 축구장 ■ [토/공휴일
+ ] 마포 난지천 인조잔디 축구장
+DESCRIPTION:난지천 인조잔디 축구장 · ■ [토/공휴일] 마포 
+ 난지천 인조잔디 축구장\n접수 11/17(화) 09:00 ~ 11/18(수) 18:
+ 00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/web/reservati
+ on/selectReservView.do?rsv_svc_id=S210409130727046749\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:난지천 인조잔디 축구장 · 서울특별시 마포구 월
+ 드컵로 365(상암동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S210409130727046749
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 난지천 인조잔디 축구장 ■ [토/공
+ 휴일] 마포 난지천 인조잔디 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261118163400897363-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T100000
+DTEND;TZID=Asia/Seoul:20261120T103000
+SUMMARY:[접수 시작] 오금공원 12월 오금공원 다목적경기장 
+ 풋살장 예약(평일10:00~16:00)(송파구민 우선 예약 서비스)
+DESCRIPTION:오금공원 · 12월 오금공원 다목적경기장 풋살장
+  예약(평일10:00~16:00)(송파구민 우선 예약 서비스)\n접수 1
+ 1/20(금) 10:00 ~ 12/31(목) 23:55\n선정 방법: 선착순\n예약: http
+ s://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611
+ 18163400897363\n동네코트 구독 캘린더예요. 접수 시각은 바
+ 뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:오금공원 · 서울특별시 송파구 오금로 363 (오금동
+ )
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261118163400897363
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 오금공원 12월 오금공원 다목적경기
+ 장 풋살장 예약(평일10:00~16:00)(송파구민 우선 예약 서비
+ 스)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261118164717545214-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T100000
+DTEND;TZID=Asia/Seoul:20261120T103000
+SUMMARY:[접수 시작] 오금공원 12월 오금공원 다목적경기장 
+ 풋살장 예약(평일16:00~20:00)(주말)(송파구민 우선 예약 서
+ 비스)
+DESCRIPTION:오금공원 · 12월 오금공원 다목적경기장 풋살장
+  예약(평일16:00~20:00)(주말)(송파구민 우선 예약 서비스)\n
+ 접수 11/20(금) 10:00 ~ 12/31(목) 23:55\n선정 방법: 선착순\n예
+ 약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc
+ _id=S261118164717545214\n동네코트 구독 캘린더예요. 접수 시
+ 각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:오금공원 · 서울특별시 송파구 오금로 363 (오금동
+ )
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261118164717545214
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 오금공원 12월 오금공원 다목적경기
+ 장 풋살장 예약(평일16:00~20:00)(주말)(송파구민 우선 예약
+  서비스)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261119112731335665-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T100000
+DTEND;TZID=Asia/Seoul:20261120T103000
+SUMMARY:[접수 시작] 효창운동장(축구장\,육상트랙) 효창\,
+ 효창운동장\,축구경기장\,일반대관\,행사대관\,촬영대관
+ \,연습경기\,축구훈련
+DESCRIPTION:효창운동장(축구장\,육상트랙) · 효창\,효창운
+ 동장\,축구경기장\,일반대관\,행사대관\,촬영대관\,연습
+ 경기\,축구훈련\n접수 11/20(금) 10:00 ~ 12/28(월) 14:00\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261119112731335665\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:효창운동장(축구장\,육상트랙) · 효창동3번지
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261119112731335665
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 효창운동장(축구장\,육상트랙) 효창
+ \,효창운동장\,축구경기장\,일반대관\,행사대관\,촬영대
+ 관\,연습경기\,축구훈련
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-훈련원6-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 훈련원공원종합체육관 종합체육관 훈
+ 련원공원종합체육관 종합체육관(풋살장)
+DESCRIPTION:훈련원공원종합체육관 종합체육관 · 훈련원공
+ 원종합체육관 종합체육관(풋살장)\n접수 11/23(월) 00:00 ~ 1
+ 2/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&f
+ acilities_type=T&base_date=20261101&center=JUNGGU05&type=&part=03&place=2\
+ n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:훈련원공원종합체육관 종합체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=T&base_
+ date=20261101&center=JUNGGU05&type=&part=03&place=2
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 훈련원공원종합체육관 종합체육관 
+ 훈련원공원종합체육관 종합체육관(풋살장)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114164421349454-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T100000
+DTEND;TZID=Asia/Seoul:20261123T103000
+SUMMARY:[접수 시작] 서울어린이대공원 잔디축구장 서울어
+ 린이대공원 인조잔디축구장 12월 토·일·공휴일(야간)
+DESCRIPTION:서울어린이대공원 잔디축구장 · 서울어린이대
+ 공원 인조잔디축구장 12월 토·일·공휴일(야간)\n접수 11/
+ 23(월) 10:00 ~ 12/29(화) 23:59\n선정 방법: 선착순\n예약: https:
+ //yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261114
+ 164421349454\n동네코트 구독 캘린더예요. 접수 시각은 바뀔
+  수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울어린이대공원 잔디축구장 · 서울 광진구 능
+ 동 18
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114164421349454
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울어린이대공원 잔디축구장 서울
+ 어린이대공원 인조잔디축구장 12월 토·일·공휴일(야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114163700927671-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T100000
+DTEND;TZID=Asia/Seoul:20261123T103000
+SUMMARY:[접수 시작] 서울어린이대공원 잔디축구장 서울어
+ 린이대공원 인조잔디축구장 12월 토일공휴일(주간)
+DESCRIPTION:서울어린이대공원 잔디축구장 · 서울어린이대
+ 공원 인조잔디축구장 12월 토일공휴일(주간)\n접수 11/23(
+ 월) 10:00 ~ 12/29(화) 23:59\n선정 방법: 선착순\n예약: https://y
+ eyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261114163
+ 700927671\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울어린이대공원 잔디축구장 · 서울 광진구 능
+ 동 18
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114163700927671
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울어린이대공원 잔디축구장 서울
+ 어린이대공원 인조잔디축구장 12월 토일공휴일(주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114162553624879-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T100000
+DTEND;TZID=Asia/Seoul:20261123T103000
+SUMMARY:[접수 시작] 서울어린이대공원 잔디축구장 서울어
+ 린이대공원 인조잔디축구장 12월 평일(야간)
+DESCRIPTION:서울어린이대공원 잔디축구장 · 서울어린이대
+ 공원 인조잔디축구장 12월 평일(야간)\n접수 11/23(월) 10:00
+  ~ 12/29(화) 23:59\n선정 방법: 선착순\n예약: https://yeyak.seoul
+ .go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261114162553624879\
+ n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:서울어린이대공원 잔디축구장 · 서울 광진구 능
+ 동 18
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114162553624879
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울어린이대공원 잔디축구장 서울
+ 어린이대공원 인조잔디축구장 12월 평일(야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114161226450488-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T100000
+DTEND;TZID=Asia/Seoul:20261123T103000
+SUMMARY:[접수 시작] 서울어린이대공원 잔디축구장 서울어
+ 린이대공원 인조잔디축구장 12월 평일(주간)
+DESCRIPTION:서울어린이대공원 잔디축구장 · 서울어린이대
+ 공원 인조잔디축구장 12월 평일(주간)\n접수 11/23(월) 10:00
+  ~ 12/29(화) 23:59\n선정 방법: 선착순\n예약: https://yeyak.seoul
+ .go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261114161226450488\
+ n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:서울어린이대공원 잔디축구장 · 서울 광진구 능
+ 동 18
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114161226450488
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울어린이대공원 잔디축구장 서울
+ 어린이대공원 인조잔디축구장 12월 평일(주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

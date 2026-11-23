@@ -1,0 +1,567 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 동작구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261112111121633305-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (주말-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112111121633305\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112111121633305
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112113052487077-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (주말야간)26.12
+ 월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (주말야간)26.12월 노
+ 량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReser
+ vView.do?rsv_svc_id=S261112113052487077\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112113052487077
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (주말야간)2
+ 6.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112110251056776-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112110251056776\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112110251056776
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112112444891141-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일야간\,주
+ 말주간)26.12월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일야간\,주말주간)
+ 26.12월 노량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n
+ 선정 방법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/s
+ electReservView.do?rsv_svc_id=S261112112444891141\n동네코트 구독 캘
+ 린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서
+  확인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112112444891141
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일야간\,
+ 주말주간)26.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112111652552837-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일주간)26.12
+ 월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일주간)26.12월 노
+ 량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReser
+ vView.do?rsv_svc_id=S261112111652552837\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112111652552837
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일주간)2
+ 6.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115215530981764-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T000100
+DTEND;TZID=Asia/Seoul:20261116T003100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_1. 동작테니스장 
+ / 평일 / 낮 8시~18시 / 1번코트
+DESCRIPTION:동작구 테니스장 · 27년_1. 동작테니스장 / 평일 
+ / 낮 8시~18시 / 1번코트\n접수 11/16(월) 00:01 ~ 12/31(금) 00:02\
+ n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservati
+ on/selectReservView.do?rsv_svc_id=S261115215530981764\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115215530981764
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_1. 동작테니스
+ 장 / 평일 / 낮 8시~18시 / 1번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115221412166751-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T000100
+DTEND;TZID=Asia/Seoul:20261116T003100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_동작테니스장 / 
+ 평일 / 낮 8시~18시 / 2번코트
+DESCRIPTION:동작구 테니스장 · 27년_동작테니스장 / 평일 / 
+ 낮 8시~18시 / 2번코트\n접수 11/16(월) 00:01 ~ 12/31(금) 00:02\n
+ 선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservatio
+ n/selectReservView.do?rsv_svc_id=S261115221412166751\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115221412166751
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_동작테니스장
+  / 평일 / 낮 8시~18시 / 2번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115230133354233-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T000100
+DTEND;TZID=Asia/Seoul:20261116T003100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_동작테니스장 / 
+ 평일 / 저녁할증 (18시~22시) / 5번코트
+DESCRIPTION:동작구 테니스장 · 27년_동작테니스장 / 평일 / 
+ 저녁할증 (18시~22시) / 5번코트\n접수 11/16(월) 00:01 ~ 12/31(
+ 금) 00:02\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261115230133354233\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115230133354233
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_동작테니스장
+  / 평일 / 저녁할증 (18시~22시) / 5번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113172839994741-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(11.25~1
+ 1.29) / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(11.25~11.29) / 
+ 동작구민 3인이상 (월\,화)우선 접수\n접수 11/16(월) 09:00 ~
+  11/27(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.g
+ o.kr/web/reservation/selectReservView.do?rsv_svc_id=S261113172839994741\n
+ 동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니
+  예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113172839994741
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(11.
+ 25~11.29) / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110085850784507-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,화)우
+ 선 접수\n접수 11/16(월) 09:00 ~ 11/29(일) 00:00\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261110085850784507\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110085850784507
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 
+ (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113145249229458-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [4번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [4번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145249229458\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145249229458
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [4번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113145535369854-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [5번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [5번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145535369854\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145535369854
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [5번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113145710127759-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [6번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [6번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145710127759\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145710127759
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [6번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115210721787170-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090100
+DTEND;TZID=Asia/Seoul:20261116T093100
+SUMMARY:[접수 시작] 동작구 테니스장 27년 동작테니스장 / 
+ 평일 / 새벽할증 (6시~9시) / 5번코트
+DESCRIPTION:동작구 테니스장 · 27년 동작테니스장 / 평일 / 
+ 새벽할증 (6시~9시) / 5번코트\n접수 11/16(월) 09:01 ~ 12/31(금
+ ) 09:02\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/r
+ eservation/selectReservView.do?rsv_svc_id=S261115210721787170\n동네코
+ 트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 
+ 사이트에서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115210721787170
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년 동작테니스장
+  / 평일 / 새벽할증 (6시~9시) / 5번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115223234982019-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090100
+DTEND;TZID=Asia/Seoul:20261116T093100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_동작테니스장 / 
+ 평일 / 낮 (8시~18시) / 5번코트
+DESCRIPTION:동작구 테니스장 · 27년_동작테니스장 / 평일 / 
+ 낮 (8시~18시) / 5번코트\n접수 11/16(월) 09:01 ~ 12/31(금) 09:02\
+ n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservati
+ on/selectReservView.do?rsv_svc_id=S261115223234982019\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115223234982019
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_동작테니스장
+  / 평일 / 낮 (8시~18시) / 5번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115222149887839-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090100
+DTEND;TZID=Asia/Seoul:20261116T093100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_동작테니스장 / 
+ 평일 / 낮 8시~18시 / 3번코트
+DESCRIPTION:동작구 테니스장 · 27년_동작테니스장 / 평일 / 
+ 낮 8시~18시 / 3번코트\n접수 11/16(월) 09:01 ~ 12/31(금) 09:02\n
+ 선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservatio
+ n/selectReservView.do?rsv_svc_id=S261115222149887839\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115222149887839
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_동작테니스장
+  / 평일 / 낮 8시~18시 / 3번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261115224227186279-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090100
+DTEND;TZID=Asia/Seoul:20261116T093100
+SUMMARY:[접수 시작] 동작구 테니스장 27년_동작테니스장 / 
+ 평일 / 낮 8시~18시 / 6번코트
+DESCRIPTION:동작구 테니스장 · 27년_동작테니스장 / 평일 / 
+ 낮 8시~18시 / 6번코트\n접수 11/16(월) 09:01 ~ 12/31(금) 09:02\n
+ 선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservatio
+ n/selectReservView.do?rsv_svc_id=S261115224227186279\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:동작구 테니스장 · 동작동 326
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261115224227186279
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작구 테니스장 27년_동작테니스장
+  / 평일 / 낮 8시~18시 / 6번코트
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209131904970635-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 야간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209131904970635\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209131904970635
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209133301887008-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 주간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 주간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209133301887008\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209133301887008
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209100846015400-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(평일야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(평일야간)\n접수 11/16(월) 10:00 ~ 11/30(월) 23
+ :00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reser
+ vation/selectReservView.do?rsv_svc_id=S251209100846015400\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209100846015400
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(평일야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261120124005595744-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(12.2~12
+ .6 / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(12.2~12.6 / 동
+ 작구민 3인이상 (월\,화)우선 접수\n접수 11/23(월) 09:00 ~ 12
+ /4(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr
+ /web/reservation/selectReservView.do?rsv_svc_id=S261120124005595744\n동
+ 네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 
+ 예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261120124005595744
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(12.
+ 2~12.6 / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261118091159041135-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,화)우선 
+ 접수\n접수 11/23(월) 09:00 ~ 12/6(일) 00:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261118091159041135\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261118091159041135
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (
+ 월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

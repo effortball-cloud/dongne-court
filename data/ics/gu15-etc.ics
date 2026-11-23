@@ -1,0 +1,139 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 양천구 기타 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261030132439420603-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(야간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 야간)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030132439420603\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030132439420603
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030131451712725-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(조기)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 조기)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030131451712725\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030131451712725
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(조기)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030132115208358-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(주간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 주간)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030132115208358\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030132115208358
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261102144941077595-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 평일(야
+ 간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 평일(야간)\n접
+ 수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착순\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S261102144941077595\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261102144941077595
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 평일
+ (야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030130831525382-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 평일(주
+ 간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 평일(주간)\n접
+ 수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착순\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S261030130831525382\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030130831525382
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 평일
+ (주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

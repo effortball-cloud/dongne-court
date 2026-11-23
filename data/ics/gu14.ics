@@ -1,0 +1,276 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 마포구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261108164908152268-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T170000
+DTEND;TZID=Asia/Seoul:20261110T173000
+SUMMARY:[접수 시작] 월드컵공원 파크골프장 (★ 신규구장-
+ 월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크
+ 골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+DESCRIPTION:월드컵공원 파크골프장 · (★ 신규구장-월드컵
+ ★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크골프장(
+ 신규조성구장) 이용 - 예약 11월10일(화) 17시\n접수 11/10(
+ 화) 17:00 ~ 11/30(월) 17:00\n선정 방법: 선착순\n예약: https://y
+ eyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261108164
+ 908152268\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 파크골프장 · 서울특별시 마포구 하
+ 늘공원로 100(상암동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261108164908152268
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 파크골프장 (★ 신규구
+ 장-월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파
+ 크골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113180052247618-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 서울특별시 산악문화체험센터 12월 [공
+ 휴일주말]월드컵난지천공원 풋살장 대여 - 11월16일(월) 
+ 오후1시 접수
+DESCRIPTION:서울특별시 산악문화체험센터 · 12월 [공휴일주
+ 말]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시
+  접수\n접수 11/16(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261113180052247618\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울특별시 산악문화체험센터 · 서울 마포구 상
+ 암동 1538
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113180052247618
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울특별시 산악문화체험센터 12월 
+ [공휴일주말]월드컵난지천공원 풋살장 대여 - 11월16일(
+ 월) 오후1시 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113175529145560-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 서울특별시 산악문화체험센터 12월 [평
+ 일]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시
+  접수
+DESCRIPTION:서울특별시 산악문화체험센터 · 12월 [평일]월
+ 드컵난지천공원 풋살장 대여 - 11월16일(월) 오후1시 접수
+ \n접수 11/16(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n
+ 예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_
+ svc_id=S261113175529145560\n동네코트 구독 캘린더예요. 접수 
+ 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:서울특별시 산악문화체험센터 · 서울 마포구 상
+ 암동 1538
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113175529145560
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울특별시 산악문화체험센터 12월 
+ [평일]월드컵난지천공원 풋살장 대여 - 11월16일(월) 오후
+ 1시 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113172435727795-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 A면 (주말) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 A면 (주말) 이용 - 예약 11월16일(월) 13시\n접수 11/16(월)
+  13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https://yeyak
+ .seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131724357
+ 27795\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 
+ 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113172435727795
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 A면 (주말) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113171810112720-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 A면 (평일야간) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 A면 (평일야간) 이용 - 예약 11월16일(월) 13시\n접수 11/1
+ 6(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https:/
+ /yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131
+ 71810112720\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113171810112720
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 A면 (평일야간) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113170619616013-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 A면 (평일주간) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 A면 (평일주간) 이용 - 예약 11월16일(월) 13시\n접수 11/1
+ 6(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https:/
+ /yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131
+ 70619616013\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113170619616013
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 A면 (평일주간) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113173943415640-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 B면 (주말) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 B면 (주말) 이용 - 예약 11월16일(월) 13시\n접수 11/16(월)
+  13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https://yeyak
+ .seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131739434
+ 15640\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 
+ 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113173943415640
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 B면 (주말) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113173613500184-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 B면 (평일야간) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 B면 (평일야간) 이용 - 예약 11월16일(월) 13시\n접수 11/1
+ 6(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https:/
+ /yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131
+ 73613500184\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113173613500184
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 B면 (평일야간) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113173036613036-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T130000
+DTEND;TZID=Asia/Seoul:20261116T133000
+SUMMARY:[접수 시작] 월드컵공원 테니스장 12월 월드컵공원 
+ 테니스장 B면 (평일주간) 이용 - 예약 11월16일(월) 13시
+DESCRIPTION:월드컵공원 테니스장 · 12월 월드컵공원 테니스
+ 장 B면 (평일주간) 이용 - 예약 11월16일(월) 13시\n접수 11/1
+ 6(월) 13:00 ~ 12/31(목) 17:00\n선정 방법: 선착순\n예약: https:/
+ /yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S2611131
+ 73036613036\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 테니스장 · 서울특별시 마포구 월드
+ 컵로 243-48 (성산동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113173036613036
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 테니스장 12월 월드컵공
+ 원 테니스장 B면 (평일주간) 이용 - 예약 11월16일(월) 13시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S210409130727046749-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261117T090000
+DTEND;TZID=Asia/Seoul:20261117T093000
+SUMMARY:[접수 시작] 난지천 인조잔디 축구장 ■ [토/공휴일
+ ] 마포 난지천 인조잔디 축구장
+DESCRIPTION:난지천 인조잔디 축구장 · ■ [토/공휴일] 마포 
+ 난지천 인조잔디 축구장\n접수 11/17(화) 09:00 ~ 11/18(수) 18:
+ 00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/web/reservati
+ on/selectReservView.do?rsv_svc_id=S210409130727046749\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:난지천 인조잔디 축구장 · 서울특별시 마포구 월
+ 드컵로 365(상암동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S210409130727046749
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 난지천 인조잔디 축구장 ■ [토/공
+ 휴일] 마포 난지천 인조잔디 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

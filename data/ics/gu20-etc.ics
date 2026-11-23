@@ -1,0 +1,124 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 동작구 기타 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261113172839994741-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(11.25~1
+ 1.29) / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(11.25~11.29) / 
+ 동작구민 3인이상 (월\,화)우선 접수\n접수 11/16(월) 09:00 ~
+  11/27(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.g
+ o.kr/web/reservation/selectReservView.do?rsv_svc_id=S261113172839994741\n
+ 동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니
+  예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113172839994741
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(11.
+ 25~11.29) / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110085850784507-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,화)우
+ 선 접수\n접수 11/16(월) 09:00 ~ 11/29(일) 00:00\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261110085850784507\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110085850784507
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 
+ (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261120124005595744-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(12.2~12
+ .6 / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(12.2~12.6 / 동
+ 작구민 3인이상 (월\,화)우선 접수\n접수 11/23(월) 09:00 ~ 12
+ /4(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr
+ /web/reservation/selectReservView.do?rsv_svc_id=S261120124005595744\n동
+ 네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 
+ 예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261120124005595744
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(12.
+ 2~12.6 / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261118091159041135-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,화)우선 
+ 접수\n접수 11/23(월) 09:00 ~ 12/6(일) 00:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261118091159041135\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261118091159041135
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (
+ 월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

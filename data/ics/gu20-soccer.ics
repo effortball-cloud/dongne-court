@@ -1,0 +1,144 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 동작구 풋살·축구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261112111121633305-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (주말-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112111121633305\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112111121633305
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (주말-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112110251056776-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)26.1
+ 2월 노량진 축구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일-전국)26.12월 노
+ 량진 축구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261112110251056776\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112110251056776
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일-전국)
+ 26.12월 노량진 축구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209131904970635-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 야간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209131904970635\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209131904970635
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209133301887008-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(토/일/공휴일 주간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(토/일/공휴일 주간)\n접수 11/16(월) 10:00 ~ 1
+ 1/18(수) 23:00\n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/
+ web/reservation/selectReservView.do?rsv_svc_id=S251209133301887008\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209133301887008
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(토/일/공휴일 주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S251209100846015400-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 보라매공원 관리사무소. 12월 보라매공
+ 원 인조잔디 축구장(평일야간)
+DESCRIPTION:보라매공원 관리사무소. · 12월 보라매공원 인
+ 조잔디 축구장(평일야간)\n접수 11/16(월) 10:00 ~ 11/30(월) 23
+ :00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reser
+ vation/selectReservView.do?rsv_svc_id=S251209100846015400\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:보라매공원 관리사무소. · 서울특별시 동작구 여
+ 의대방로20길 33 (신대방동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S251209100846015400
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 보라매공원 관리사무소. 12월 보라
+ 매공원 인조잔디 축구장(평일야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

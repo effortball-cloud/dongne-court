@@ -1,0 +1,215 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 서울 배드민턴 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261113145249229458-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [4번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [4번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145249229458\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145249229458
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [4번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113145535369854-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [5번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [5번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145535369854\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145535369854
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [5번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113145710127759-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 현충실내배드민턴장 현충실내배드민
+ 턴장 주말(11/28~29) 일일이용 [6번 코트]
+DESCRIPTION:현충실내배드민턴장 · 현충실내배드민턴장 주
+ 말(11/28~29) 일일이용 [6번 코트]\n접수 11/16(월) 09:00 ~ 11/29(
+ 일) 00:00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/we
+ b/reservation/selectReservView.do?rsv_svc_id=S261113145710127759\n동네
+ 코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예
+ 약 사이트에서 확인하세요.
+LOCATION:현충실내배드민턴장 · 서울특별시 동작구 서달로
+  50-26 (흑석동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113145710127759
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 현충실내배드민턴장 현충실내배드
+ 민턴장 주말(11/28~29) 일일이용 [6번 코트]
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110141212545360-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T000000
+DTEND;TZID=Asia/Seoul:20261120T003000
+SUMMARY:[접수 시작] 마곡실내배드민턴장 마곡실내배드민
+ 턴장 상반기 대관
+DESCRIPTION:마곡실내배드민턴장 · 마곡실내배드민턴장 상
+ 반기 대관\n접수 11/20(금) 00:00 ~ 11/25(수) 13:00\n선정 방법: 
+ 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261110141212545360\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:마곡실내배드민턴장 · 서울특별시 강서구 양천로
+  251 (마곡동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110141212545360
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 마곡실내배드민턴장 마곡실내배드
+ 민턴장 상반기 대관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-무학봉4-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 무학봉체육관 무학봉체육관(배드민턴
+ 장)
+DESCRIPTION:무학봉체육관 · 무학봉체육관(배드민턴장)\n접
+ 수 11/23(월) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.k
+ r/fmcs/314?action=list&facilities_type=C&base_date=20261101&center=JUNGGU0
+ 3&type=&part=02&place=7\n동네코트 구독 캘린더예요. 접수 시
+ 각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:무학봉체육관 · 서울특별시 중구 난계로6길 8 (신
+ 당동)
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU03&type=&part=02&place=7
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 무학봉체육관 무학봉체육관(배드민
+ 턴장)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-배드민턴-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 배드민턴장(중구) [서
+ 울 중구] 충무스포츠센터 대체육관(배드민턴)
+DESCRIPTION:충무스포츠센터 배드민턴장(중구) · [서울 중구
+ ] 충무스포츠센터 대체육관(배드민턴)\n접수 11/23(월) 00:0
+ 0 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?action=l
+ ist&facilities_type=C&base_date=20261101&center=JUNGGU01&type=&part=08&pla
+ ce=4\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있
+ 으니 예약 사이트에서 확인하세요.
+LOCATION:충무스포츠센터 배드민턴장(중구)
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=08&place=4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 배드민턴장(중구) [
+ 서울 중구] 충무스포츠센터 대체육관(배드민턴)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-훈련원2-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 훈련원공원종합체육관 다목적체육관 
+ 훈련원공원종합체육관 다목적체육관 1층 (배드민턴)
+DESCRIPTION:훈련원공원종합체육관 다목적체육관 · 훈련원
+ 공원종합체육관 다목적체육관 1층 (배드민턴)\n접수 11/23
+ (월) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/31
+ 4?action=list&facilities_type=T&base_date=20261101&center=JUNGGU05&type=&p
+ art=02&place=1\n동네코트 구독 캘린더예요. 접수 시각은 바
+ 뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:훈련원공원종합체육관 다목적체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=T&base_
+ date=20261101&center=JUNGGU05&type=&part=02&place=1
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 훈련원공원종합체육관 다목적체육
+ 관 훈련원공원종합체육관 다목적체육관 1층 (배드민턴)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-훈련원4-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 훈련원공원종합체육관 종합체육관 훈
+ 련원공원종합체육관 종합체육관 지하2층 (배드민턴)
+DESCRIPTION:훈련원공원종합체육관 종합체육관 · 훈련원공
+ 원종합체육관 종합체육관 지하2층 (배드민턴)\n접수 11/23
+ (월) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/31
+ 4?action=list&facilities_type=T&base_date=20261101&center=JUNGGU05&type=&p
+ art=03&place=2\n동네코트 구독 캘린더예요. 접수 시각은 바
+ 뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:훈련원공원종합체육관 종합체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=T&base_
+ date=20261101&center=JUNGGU05&type=&part=03&place=2
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 훈련원공원종합체육관 종합체육관 
+ 훈련원공원종합체육관 종합체육관 지하2층 (배드민턴)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,92 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 구로구 풋살·축구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S250521110752802541-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261112T100000
+DTEND;TZID=Asia/Seoul:20261112T103000
+SUMMARY:[접수 시작] 안양천 체육시설 풋살경기장B(구일역
+ 하부)
+DESCRIPTION:안양천 체육시설 · 풋살경기장B(구일역하부)\n
+ 접수 11/12(목) 10:00 ~ 12/31(목) 17:00\n선정 방법: 추첨\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S250521110752802541\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:안양천 체육시설 · 서울특별시 구로구 구로동 642-
+ 71(안양천변 구일역 하부)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250521110752802541
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 안양천 체육시설 풋살경기장B(구일
+ 역하부)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S190522144836251426-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T100000
+DTEND;TZID=Asia/Seoul:20261115T103000
+SUMMARY:[접수 시작] 안양천 체육시설 풋살경기장A(구일역
+ 하부)
+DESCRIPTION:안양천 체육시설 · 풋살경기장A(구일역하부)\n
+ 접수 11/15(일) 10:00 ~ 12/31(목) 17:00\n선정 방법: 추첨\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S190522144836251426\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:안양천 체육시설 · 서울특별시 구로구 구로동 642-
+ 71(안양천변 구일역 하부)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S190522144836251426
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 안양천 체육시설 풋살경기장A(구일
+ 역하부)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261114112647893898-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T130000
+DTEND;TZID=Asia/Seoul:20261115T133000
+SUMMARY:[접수 시작] 계남근린공원 (12월)계남근린공원 인조
+ 잔디 축구장(등록팀 추첨제)
+DESCRIPTION:계남근린공원 · (12월)계남근린공원 인조잔디 
+ 축구장(등록팀 추첨제)\n접수 11/15(일) 13:00 ~ 12/28(월) 17:00
+ \n선정 방법: 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation
+ /selectReservView.do?rsv_svc_id=S261114112647893898\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:계남근린공원 · 서울 구로구 고척동 산6-1 계남근
+ 린공원
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261114112647893898
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 계남근린공원 (12월)계남근린공원 
+ 인조잔디 축구장(등록팀 추첨제)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

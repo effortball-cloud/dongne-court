@@ -1,0 +1,92 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 종로구 테니스 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261110122658372616-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T060000
+DTEND;TZID=Asia/Seoul:20261120T063000
+SUMMARY:[접수 시작] 삼청테니스장 삼청테니스장 코트이용(
+ 주말)
+DESCRIPTION:삼청테니스장 · 삼청테니스장 코트이용(주말)\n
+ 접수 11/20(금) 06:00 ~ 12/31(목) 20:00\n선정 방법: 선착순\n예
+ 약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc
+ _id=S261110122658372616\n동네코트 구독 캘린더예요. 접수 시
+ 각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:삼청테니스장 · 서울특별시 종로구 삼청로 156 (삼
+ 청동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110122658372616
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 삼청테니스장 삼청테니스장 코트이
+ 용(주말)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110123129554382-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T060000
+DTEND;TZID=Asia/Seoul:20261120T063000
+SUMMARY:[접수 시작] 삼청테니스장 삼청테니스장 코트이용(
+ 주중야간) 19:00~21:00
+DESCRIPTION:삼청테니스장 · 삼청테니스장 코트이용(주중야
+ 간) 19:00~21:00\n접수 11/20(금) 06:00 ~ 12/31(목) 20:00\n선정 방
+ 법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectRe
+ servView.do?rsv_svc_id=S261110123129554382\n동네코트 구독 캘린더
+ 예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확
+ 인하세요.
+LOCATION:삼청테니스장 · 서울특별시 종로구 삼청로 156 (삼
+ 청동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110123129554382
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 삼청테니스장 삼청테니스장 코트이
+ 용(주중야간) 19:00~21:00
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110122224169760-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T060000
+DTEND;TZID=Asia/Seoul:20261120T063000
+SUMMARY:[접수 시작] 삼청테니스장 삼청테니스장 코트이용(
+ 평일)
+DESCRIPTION:삼청테니스장 · 삼청테니스장 코트이용(평일)\n
+ 접수 11/20(금) 06:00 ~ 12/31(목) 20:00\n선정 방법: 선착순\n예
+ 약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc
+ _id=S261110122224169760\n동네코트 구독 캘린더예요. 접수 시
+ 각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:삼청테니스장 · 서울특별시 종로구 삼청로 156 (삼
+ 청동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110122224169760
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 삼청테니스장 삼청테니스장 코트이
+ 용(평일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 마포구 기타 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261108164908152268-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T170000
+DTEND;TZID=Asia/Seoul:20261110T173000
+SUMMARY:[접수 시작] 월드컵공원 파크골프장 (★ 신규구장-
+ 월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크
+ 골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+DESCRIPTION:월드컵공원 파크골프장 · (★ 신규구장-월드컵
+ ★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크골프장(
+ 신규조성구장) 이용 - 예약 11월10일(화) 17시\n접수 11/10(
+ 화) 17:00 ~ 11/30(월) 17:00\n선정 방법: 선착순\n예약: https://y
+ eyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261108164
+ 908152268\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 파크골프장 · 서울특별시 마포구 하
+ 늘공원로 100(상암동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261108164908152268
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 파크골프장 (★ 신규구
+ 장-월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파
+ 크골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

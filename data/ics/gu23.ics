@@ -1,0 +1,94 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 강남구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261109114800279845-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T000000
+DTEND;TZID=Asia/Seoul:20261110T003000
+SUMMARY:[접수 시작] 동부도로사업소 테니스장 동부 도로사
+ 업소 테니스장 A코트 주말 및 공휴일 11월16일~30일
+DESCRIPTION:동부도로사업소 테니스장 · 동부 도로사업소 
+ 테니스장 A코트 주말 및 공휴일 11월16일~30일\n접수 11/10(
+ 화) 00:00 ~ 11/30(월) 00:01\n선정 방법: 선착순\n예약: https://y
+ eyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261109114
+ 800279845\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:동부도로사업소 테니스장 · 서울특별시 강남구 
+ 남부순환로 3142-33(대치동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261109114800279845
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동부도로사업소 테니스장 동부 도
+ 로사업소 테니스장 A코트 주말 및 공휴일 11월16일~30일
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261109114628011770-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T000000
+DTEND;TZID=Asia/Seoul:20261110T003000
+SUMMARY:[접수 시작] 동부도로사업소 테니스장 동부 도로사
+ 업소 테니스장 A코트 평일야간 11월16일~30일
+DESCRIPTION:동부도로사업소 테니스장 · 동부 도로사업소 
+ 테니스장 A코트 평일야간 11월16일~30일\n접수 11/10(화) 00:0
+ 0 ~ 11/30(월) 00:01\n선정 방법: 선착순\n예약: https://yeyak.seou
+ l.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261109114628011770
+ \n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:동부도로사업소 테니스장 · 서울특별시 강남구 
+ 남부순환로 3142-33(대치동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261109114628011770
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동부도로사업소 테니스장 동부 도
+ 로사업소 테니스장 A코트 평일야간 11월16일~30일
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261109113830514637-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T000000
+DTEND;TZID=Asia/Seoul:20261110T003000
+SUMMARY:[접수 시작] 동부도로사업소 테니스장 동부 도로사
+ 업소 테니스장 A코트 평일주간 11월16일~30일
+DESCRIPTION:동부도로사업소 테니스장 · 동부 도로사업소 
+ 테니스장 A코트 평일주간 11월16일~30일\n접수 11/10(화) 00:0
+ 0 ~ 11/30(월) 00:01\n선정 방법: 선착순\n예약: https://yeyak.seou
+ l.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261109113830514637
+ \n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:동부도로사업소 테니스장 · 서울특별시 강남구 
+ 남부순환로 3142-33(대치동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261109113830514637
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동부도로사업소 테니스장 동부 도
+ 로사업소 테니스장 A코트 평일주간 11월16일~30일
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

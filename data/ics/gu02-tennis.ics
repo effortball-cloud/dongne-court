@@ -1,0 +1,319 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 중구 테니스 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261030164439182730-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 2
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 2번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 23:45\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030164439182730\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030164439182730
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 2번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030165448768930-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 3
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 3번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 23:50\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030165448768930\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030165448768930
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 3번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030165736266997-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 4
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 4번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 23:50\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030165736266997\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030165736266997
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 4번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030165950577920-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 7
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 7번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 23:00\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030165950577920\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030165950577920
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 7번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030170609886544-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 8
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 8번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:50\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030170609886544\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030170609886544
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 8번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030170814075943-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30 장충테니스장 9
+ 번코트(평일주간)
+DESCRIPTION:장충테니스장 · 11/16~11/30 장충테니스장 9번코트
+ (평일주간)\n접수 11/10(화) 10:00 ~ 11/30(월) 23:50\n선정 방법:
+  선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReserv
+ View.do?rsv_svc_id=S261030170814075943\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030170814075943
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30 장충테니스
+ 장 9번코트(평일주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030183140494639-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 2
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 2번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030183140494639\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030183140494639
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 2번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030183718981815-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 3
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 3번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:50\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030183718981815\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030183718981815
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 3번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030183949881328-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 4
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 4번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030183949881328\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030183949881328
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 4번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030184151807764-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 7
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 7번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030184151807764\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030184151807764
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 7번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030184355190503-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 8
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 8번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030184355190503\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030184355190503
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 8번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030184658417522-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T100000
+DTEND;TZID=Asia/Seoul:20261110T103000
+SUMMARY:[접수 시작] 장충테니스장 11/16~11/30장충테니스장 9
+ 번코트(주말 및 공휴일)
+DESCRIPTION:장충테니스장 · 11/16~11/30장충테니스장 9번코트(
+ 주말 및 공휴일)\n접수 11/10(화) 10:00 ~ 11/30(월) 22:55\n선정 
+ 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selec
+ tReservView.do?rsv_svc_id=S261030184658417522\n동네코트 구독 캘린
+ 더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 
+ 확인하세요.
+LOCATION:장충테니스장 · 서울특별시 중구 장충단로 91(장
+ 충동2가)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030184658417522
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 장충테니스장 11/16~11/30장충테니스
+ 장 9번코트(주말 및 공휴일)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

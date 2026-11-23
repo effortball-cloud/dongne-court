@@ -1,0 +1,144 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 서울 야구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261112113052487077-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (주말야간)26.12
+ 월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (주말야간)26.12월 노
+ 량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReser
+ vView.do?rsv_svc_id=S261112113052487077\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112113052487077
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (주말야간)2
+ 6.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112112444891141-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일야간\,주
+ 말주간)26.12월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일야간\,주말주간)
+ 26.12월 노량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n
+ 선정 방법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/s
+ electReservView.do?rsv_svc_id=S261112112444891141\n동네코트 구독 캘
+ 린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서
+  확인하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112112444891141
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일야간\,
+ 주말주간)26.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261112111652552837-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 노량진 축구장\, 야구장 (평일주간)26.12
+ 월 노량진 야구장
+DESCRIPTION:노량진 축구장\, 야구장 · (평일주간)26.12월 노
+ 량진 야구장\n접수 11/15(일) 09:00 ~ 12/31(목) 09:00\n선정 방
+ 법: 심사\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReser
+ vView.do?rsv_svc_id=S261112111652552837\n동네코트 구독 캘린더예
+ 요. 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인
+ 하세요.
+LOCATION:노량진 축구장\, 야구장 · 서울특별시 동작구 노
+ 들로 688
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261112111652552837
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 노량진 축구장\, 야구장 (평일주간)2
+ 6.12월 노량진 야구장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261111133755582748-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 서울대공원 서울대공원 리틀야구장 202
+ 6년 12월(추첨)
+DESCRIPTION:서울대공원 · 서울대공원 리틀야구장 2026년 12
+ 월(추첨)\n접수 11/16(월) 10:00 ~ 11/18(수) 16:00\n선정 방법: 
+ 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261111133755582748\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:서울대공원 · 경기도 과천시 대공원광장로 102(막
+ 계동) 363번지
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261111133755582748
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울대공원 서울대공원 리틀야구장
+  2026년 12월(추첨)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261111134407553501-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T100000
+DTEND;TZID=Asia/Seoul:20261116T103000
+SUMMARY:[접수 시작] 서울대공원 서울대공원 성인야구장 202
+ 6년 12월(추첨)
+DESCRIPTION:서울대공원 · 서울대공원 성인야구장 2026년 12
+ 월(추첨)\n접수 11/16(월) 10:00 ~ 11/18(수) 16:00\n선정 방법: 
+ 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261111134407553501\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:서울대공원 · 경기도 과천시 대공원광장로 102(막
+ 계동) 363번지
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261111134407553501
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울대공원 서울대공원 성인야구장
+  2026년 12월(추첨)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

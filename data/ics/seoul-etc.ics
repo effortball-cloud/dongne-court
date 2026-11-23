@@ -1,0 +1,680 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 서울 기타 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S261108164908152268-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261110T170000
+DTEND;TZID=Asia/Seoul:20261110T173000
+SUMMARY:[접수 시작] 월드컵공원 파크골프장 (★ 신규구장-
+ 월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크
+ 골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+DESCRIPTION:월드컵공원 파크골프장 · (★ 신규구장-월드컵
+ ★)11월 17일(화)~11월30일(월) 월드컵공원 제2파크골프장(
+ 신규조성구장) 이용 - 예약 11월10일(화) 17시\n접수 11/10(
+ 화) 17:00 ~ 11/30(월) 17:00\n선정 방법: 선착순\n예약: https://y
+ eyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261108164
+ 908152268\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:월드컵공원 파크골프장 · 서울특별시 마포구 하
+ 늘공원로 100(상암동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261108164908152268
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 월드컵공원 파크골프장 (★ 신규구
+ 장-월드컵★)11월 17일(화)~11월30일(월) 월드컵공원 제2파
+ 크골프장(신규조성구장) 이용 - 예약 11월10일(화) 17시
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S260629103708387263-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 한내 파크골프장 금천 한내 파크골프
+ 장
+DESCRIPTION:한내 파크골프장 · 금천 한내 파크골프장\n접수
+  11/15(일) 09:00 ~ 11/24(화) 23:59\n선정 방법: 선착순\n예약: ht
+ tps://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S26
+ 0629103708387263\n동네코트 구독 캘린더예요. 접수 시각은 
+ 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:한내 파크골프장 · 서울특별시 금천구 가산동 557-
+ 3\, 614-72
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S260629103708387263
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 한내 파크골프장 금천 한내 파크골
+ 프장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S260409140803438659-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261115T090000
+DTEND;TZID=Asia/Seoul:20261115T093000
+SUMMARY:[접수 시작] 중랑물재생센터 파크골프장 중랑물재
+ 생센터 파크골프장
+DESCRIPTION:중랑물재생센터 파크골프장 · 중랑물재생센터 
+ 파크골프장\n접수 11/15(일) 09:00 ~ 11/21(토) 19:00\n선정 방법
+ : 추첨\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservVi
+ ew.do?rsv_svc_id=S260409140803438659\n동네코트 구독 캘린더예요.
+  접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:중랑물재생센터 파크골프장 · 서울특별시 성동구
+  자동차시장3길 64(용답동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S260409140803438659
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 중랑물재생센터 파크골프장 중랑물
+ 재생센터 파크골프장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261113172839994741-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(11.25~1
+ 1.29) / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(11.25~11.29) / 
+ 동작구민 3인이상 (월\,화)우선 접수\n접수 11/16(월) 09:00 ~
+  11/27(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.g
+ o.kr/web/reservation/selectReservView.do?rsv_svc_id=S261113172839994741\n
+ 동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니
+  예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261113172839994741
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(11.
+ 25~11.29) / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261110085850784507-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261116T090000
+DTEND;TZID=Asia/Seoul:20261116T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(11.24~11.29) / 동작구민 3인이상 (월\,화)우
+ 선 접수\n접수 11/16(월) 09:00 ~ 11/29(일) 00:00\n선정 방법: 선
+ 착순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView
+ .do?rsv_svc_id=S261110085850784507\n동네코트 구독 캘린더예요. 
+ 접수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세
+ 요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261110085850784507
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(11.24~11.29) / 동작구민 3인이상 
+ (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261116094833513730-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261118T090000
+DTEND;TZID=Asia/Seoul:20261118T093000
+SUMMARY:[접수 시작] 서울숲 다목적구장-토\,일\,공휴일 미
+ 예약분(서울숲\, 2026년 12월)
+DESCRIPTION:서울숲 · 다목적구장-토\,일\,공휴일 미예약분(
+ 서울숲\, 2026년 12월)\n접수 11/18(수) 09:00 ~ 12/31(목) 09:01\n
+ 선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reservatio
+ n/selectReservView.do?rsv_svc_id=S261116094833513730\n동네코트 구독 
+ 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에
+ 서 확인하세요.
+LOCATION:서울숲 · 성수1가 1동685-20
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261116094833513730
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울숲 다목적구장-토\,일\,공휴일 
+ 미예약분(서울숲\, 2026년 12월)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261116100813630761-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T000000
+DTEND;TZID=Asia/Seoul:20261120T003000
+SUMMARY:[접수 시작] 구로스마트라운지 (구로구민 우선접수
+ )구로스마트라운지 스크린파크골프체험
+DESCRIPTION:구로스마트라운지 · (구로구민 우선접수)구로
+ 스마트라운지 스크린파크골프체험\n접수 11/20(금) 00:00 ~ 
+ 12/31(목) 23:59\n선정 방법: 선착순\n예약: https://yeyak.seoul.go
+ .kr/web/reservation/selectReservView.do?rsv_svc_id=S261116100813630761\n
+ 동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니
+  예약 사이트에서 확인하세요.
+LOCATION:구로스마트라운지 · 서울특별시 구로구 경인로 66
+ 2(신도림동\, 디큐브시티)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261116100813630761
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 구로스마트라운지 (구로구민 우선
+ 접수)구로스마트라운지 스크린파크골프체험
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-무학봉3-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 무학봉체육관 무학봉체육관(배구장)
+DESCRIPTION:무학봉체육관 · 무학봉체육관(배구장)\n접수 11/
+ 23(월) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/
+ 314?action=list&facilities_type=C&base_date=20261101&center=JUNGGU03&type=
+ &part=02&place=7\n동네코트 구독 캘린더예요. 접수 시각은 
+ 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:무학봉체육관 · 서울특별시 중구 난계로6길 8 (신
+ 당동)
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU03&type=&part=02&place=7
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 무학봉체육관 무학봉체육관(배구장
+ )
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-무학봉체육관-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 무학봉체육관 다목적체육관 다목적체
+ 육관
+DESCRIPTION:무학봉체육관 다목적체육관 · 다목적체육관\n
+ 접수 11/23(월) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.o
+ r.kr/fmcs/314?action=list&facilities_type=C&base_date=20261101&center=JUNG
+ GU03&type=&part=02&place=7\n동네코트 구독 캘린더예요. 접수 
+ 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:무학봉체육관 다목적체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU03&type=&part=02&place=7
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 무학봉체육관 다목적체육관 다목적
+ 체육관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-다목적체육관2-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 다목적체육관1 [서울 
+ 중구] 충무센터 다목적체육관2(필라테스실 등)
+DESCRIPTION:충무스포츠센터 다목적체육관1 · [서울 중구] 
+ 충무센터 다목적체육관2(필라테스실 등)\n접수 11/23(월) 0
+ 0:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?actio
+ n=list&facilities_type=C&base_date=20261101&center=JUNGGU01&type=&part=10&
+ place=7\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 
+ 있으니 예약 사이트에서 확인하세요.
+LOCATION:충무스포츠센터 다목적체육관1
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=10&place=7
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 다목적체육관1 [서
+ 울 중구] 충무센터 다목적체육관2(필라테스실 등)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-다목적체육관1-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 다목적체육관1 [서울 
+ 중구] 충무스포츠센터 다목적체육관1(요가실 등)
+DESCRIPTION:충무스포츠센터 다목적체육관1 · [서울 중구] 
+ 충무스포츠센터 다목적체육관1(요가실 등)\n접수 11/23(월
+ ) 00:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?ac
+ tion=list&facilities_type=C&base_date=20261101&center=JUNGGU01&type=&part=
+ 10&place=3\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 
+ 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:충무스포츠센터 다목적체육관1
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=10&place=3
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 다목적체육관1 [서
+ 울 중구] 충무스포츠센터 다목적체육관1(요가실 등)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-다목적체육관3-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 다목적체육관1 [서울 
+ 중구] 충무스포츠센터 다목적체육관3(댄스 등)
+DESCRIPTION:충무스포츠센터 다목적체육관1 · [서울 중구] 
+ 충무스포츠센터 다목적체육관3(댄스 등)\n접수 11/23(월) 0
+ 0:00 ~ 12/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?actio
+ n=list&facilities_type=C&base_date=20261101&center=JUNGGU01&type=&part=10&
+ place=8\n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 
+ 있으니 예약 사이트에서 확인하세요.
+LOCATION:충무스포츠센터 다목적체육관1
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=10&place=8
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 다목적체육관1 [서
+ 울 중구] 충무스포츠센터 다목적체육관3(댄스 등)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-대체육관-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 대체육관 [서울 중구] 
+ 충무스포츠센터 대체육관
+DESCRIPTION:충무스포츠센터 대체육관 · [서울 중구] 충무스
+ 포츠센터 대체육관\n접수 11/23(월) 00:00 ~ 12/31(목) 00:00\n예
+ 약: https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&bas
+ e_date=20261101&center=JUNGGU01&type=&part=08&place=4\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:충무스포츠센터 대체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=08&place=4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 대체육관 [서울 중
+ 구] 충무스포츠센터 대체육관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-배구-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 배구장 중구 [서울 중
+ 구] 충무스포츠센터 대체육관(배구)
+DESCRIPTION:충무스포츠센터 배구장 중구 · [서울 중구] 충
+ 무스포츠센터 대체육관(배구)\n접수 11/23(월) 00:00 ~ 12/31(
+ 목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&facili
+ ties_type=C&base_date=20261101&center=JUNGGU01&type=&part=08&place=4\n동
+ 네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 
+ 예약 사이트에서 확인하세요.
+LOCATION:충무스포츠센터 배구장 중구
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=08&place=4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 배구장 중구 [서울 
+ 중구] 충무스포츠센터 대체육관(배구)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-소체육관-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 소체육관 [서울 중구] 
+ 충무스포츠센터 소체육관
+DESCRIPTION:충무스포츠센터 소체육관 · [서울 중구] 충무스
+ 포츠센터 소체육관\n접수 11/23(월) 00:00 ~ 12/31(목) 00:00\n예
+ 약: https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&bas
+ e_date=20261101&center=JUNGGU01&type=&part=09&place=2\n동네코트 구독
+  캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트
+ 에서 확인하세요.
+LOCATION:충무스포츠센터 소체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=09&place=2
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 소체육관 [서울 중
+ 구] 충무스포츠센터 소체육관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-수영장-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 수영장 [서울 중구] 충
+ 무스포츠센터 수영장
+DESCRIPTION:충무스포츠센터 수영장 · [서울 중구] 충무스포
+ 츠센터 수영장\n접수 11/23(월) 00:00 ~ 12/31(목) 00:00\n예약: h
+ ttps://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_date
+ =20261101&center=JUNGGU01&type=&part=02&place=6\n동네코트 구독 캘
+ 린더예요. 접수 시각은 바뀔 수 있으니 예약 사이트에서
+  확인하세요.
+LOCATION:충무스포츠센터 수영장
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=02&place=6
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 수영장 [서울 중구]
+  충무스포츠센터 수영장
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-대체육관(족구)-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 족구장 [서울 중구] 충
+ 무스포츠센터 대체육관(족구)
+DESCRIPTION:충무스포츠센터 족구장 · [서울 중구] 충무스포
+ 츠센터 대체육관(족구)\n접수 11/23(월) 00:00 ~ 12/31(목) 00:00
+ \n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=
+ C&base_date=20261101&center=JUNGGU01&type=&part=08&place=4\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:충무스포츠센터 족구장
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=08&place=4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 족구장 [서울 중구]
+  충무스포츠센터 대체육관(족구)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-대체육관(탁구)-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 충무스포츠센터 탁구장 [서울 중구] 충
+ 무스포츠센터 대체육관(탁구)
+DESCRIPTION:충무스포츠센터 탁구장 · [서울 중구] 충무스포
+ 츠센터 대체육관(탁구)\n접수 11/23(월) 00:00 ~ 12/31(목) 00:00
+ \n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=
+ C&base_date=20261101&center=JUNGGU01&type=&part=08&place=4\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:충무스포츠센터 탁구장
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=C&base_
+ date=20261101&center=JUNGGU01&type=&part=08&place=4
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 충무스포츠센터 탁구장 [서울 중구]
+  충무스포츠센터 대체육관(탁구)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-훈련원1-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 훈련원공원종합체육관 다목적체육관 
+ 훈련원공원종합체육관 다목적체육관
+DESCRIPTION:훈련원공원종합체육관 다목적체육관 · 훈련원
+ 공원종합체육관 다목적체육관\n접수 11/23(월) 00:00 ~ 12/31(
+ 목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&facili
+ ties_type=T&base_date=20261101&center=JUNGGU05&type=&part=02&place=1\n동
+ 네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 
+ 예약 사이트에서 확인하세요.
+LOCATION:훈련원공원종합체육관 다목적체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=T&base_
+ date=20261101&center=JUNGGU05&type=&part=02&place=1
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 훈련원공원종합체육관 다목적체육
+ 관 훈련원공원종합체육관 다목적체육관
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:XML-훈련원5-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T000000
+DTEND;TZID=Asia/Seoul:20261123T003000
+SUMMARY:[접수 시작] 훈련원공원종합체육관 종합체육관 훈
+ 련원공원종합체육관 종합체육관(배구장)
+DESCRIPTION:훈련원공원종합체육관 종합체육관 · 훈련원공
+ 원종합체육관 종합체육관(배구장)\n접수 11/23(월) 00:00 ~ 1
+ 2/31(목) 00:00\n예약: https://www.e-junggu.or.kr/fmcs/314?action=list&f
+ acilities_type=T&base_date=20261101&center=JUNGGU05&type=&part=03&place=2\
+ n동네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으
+ 니 예약 사이트에서 확인하세요.
+LOCATION:훈련원공원종합체육관 종합체육관
+URL:https://www.e-junggu.or.kr/fmcs/314?action=list&facilities_type=T&base_
+ date=20261101&center=JUNGGU05&type=&part=03&place=2
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 훈련원공원종합체육관 종합체육관 
+ 훈련원공원종합체육관 종합체육관(배구장)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261120124005595744-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 동작파크골프장 동작파크골프장(12.2~12
+ .6 / 동작구민 3인이상 (월\,화)우선 접수
+DESCRIPTION:동작파크골프장 · 동작파크골프장(12.2~12.6 / 동
+ 작구민 3인이상 (월\,화)우선 접수\n접수 11/23(월) 09:00 ~ 12
+ /4(금) 23:55\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr
+ /web/reservation/selectReservView.do?rsv_svc_id=S261120124005595744\n동
+ 네코트 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 
+ 예약 사이트에서 확인하세요.
+LOCATION:동작파크골프장 · 서울특별시 동작구 현충로 257(
+ 동작동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261120124005595744
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 동작파크골프장 동작파크골프장(12.
+ 2~12.6 / 동작구민 3인이상 (월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261118091159041135-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T090000
+DTEND;TZID=Asia/Seoul:20261123T093000
+SUMMARY:[접수 시작] 상도역 스크린파크골프장 상도역 스크
+ 린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,
+ 화)우선 접수
+DESCRIPTION:상도역 스크린파크골프장 · 상도역 스크린파크
+ 골프 스테이션(12.1~12.6) / 동작구민 3인이상 (월\,화)우선 
+ 접수\n접수 11/23(월) 09:00 ~ 12/6(일) 00:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261118091159041135\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:상도역 스크린파크골프장 · 서울특별시 동작구 
+ 상도로 지하272(상도1동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261118091159041135
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 상도역 스크린파크골프장 상도역 
+ 스크린파크골프 스테이션(12.1~12.6) / 동작구민 3인이상 (
+ 월\,화)우선 접수
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030132439420603-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(야간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 야간)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030132439420603\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030132439420603
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030131451712725-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(조기)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 조기)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030131451712725\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030131451712725
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(조기)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030132115208358-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 주말\,
+ 공휴일(주간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 주말\,공휴일(
+ 주간)\n접수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착
+ 순\n예약: https://yeyak.seoul.go.kr/web/reservation/selectReservView.do
+ ?rsv_svc_id=S261030132115208358\n동네코트 구독 캘린더예요. 접
+ 수 시각은 바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030132115208358
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 주말
+ \,공휴일(주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261102144941077595-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 평일(야
+ 간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 평일(야간)\n접
+ 수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착순\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S261102144941077595\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261102144941077595
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 평일
+ (야간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:S261030130831525382-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261123T110000
+DTEND;TZID=Asia/Seoul:20261123T113000
+SUMMARY:[접수 시작] 목동운동장 목동다목적경기장 평일(주
+ 간)
+DESCRIPTION:목동운동장 · 목동다목적경기장 평일(주간)\n접
+ 수 11/23(월) 11:00 ~ 11/25(수) 18:00\n선정 방법: 선착순\n예약:
+  https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=
+ S261030130831525382\n동네코트 구독 캘린더예요. 접수 시각은
+  바뀔 수 있으니 예약 사이트에서 확인하세요.
+LOCATION:목동운동장 · 서울특별시 양천구 안양천로 939 (목
+ 동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S261030130831525382
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 목동운동장 목동다목적경기장 평일
+ (주간)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

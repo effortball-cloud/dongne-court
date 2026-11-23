@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//dongne-court//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:동네코트 성동구 농구 접수 시작
+X-WR-TIMEZONE:Asia/Seoul
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VTIMEZONE
+TZID:Asia/Seoul
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:KST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:S250116161456124384-rcpt@dongne-court
+DTSTAMP:20261123T002313Z
+DTSTART;TZID=Asia/Seoul:20261120T100000
+DTEND;TZID=Asia/Seoul:20261120T103000
+SUMMARY:[접수 시작] 서울교육문화센터 실내체육관 서울교
+ 육문화센터 실내체육관(농구장)
+DESCRIPTION:서울교육문화센터 실내체육관 · 서울교육문화
+ 센터 실내체육관(농구장)\n접수 11/20(금) 10:00 ~ 12/31(목) 19
+ :00\n선정 방법: 선착순\n예약: https://yeyak.seoul.go.kr/web/reser
+ vation/selectReservView.do?rsv_svc_id=S250116161456124384\n동네코트 
+ 구독 캘린더예요. 접수 시각은 바뀔 수 있으니 예약 사
+ 이트에서 확인하세요.
+LOCATION:서울교육문화센터 실내체육관 · 서울특별시 성동
+ 구 천호대로78길 15-48(용답동)
+URL:https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_i
+ d=S250116161456124384
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:[접수 시작] 서울교육문화센터 실내체육관 서울
+ 교육문화센터 실내체육관(농구장)
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
